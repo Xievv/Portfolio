@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+  </head>
+
+  <body>
+  
+    <div class="Objectives">
+      <td><span style="font-size: large;">Objectives This Week</span></td>
+      <table style="width: 750px; height: 28px;" border="4" cellspacing="5">
+        ObjectiveText
+      </table>
+      <p></p>
+    </div>
+    
+    <div class="ByThisTime">
+      <td><span style="font-size: large;">By This Time</span></td>
+      <table style="width: 750px; height: 28px;" border="4" cellspacing="5">
+        ByThisTimeText
+      </table>
+      <p></p>
+    </div>
+    
+    <div class="Labs">
+      <td><span style="font-size: large;">Labs This Week</span></td>
+      <table style="width: 750px; height: 28px;" border="4" cellspacing="5">
+        LabsText
+      </table>
+      <p></p>
+    </div>
+    
+    <div class="Assignment">
+      <td><span style="font-size: large;">Programming Assignment This Week</span></td>
+      <table style="width: 750px; height: 28px;" border="4" cellspacing="5">
+        AssignmentText
+      </table>
+      <p></p>
+    </div>
+
+    <div class="Readings">
+      <td><span style="font-size: large;">Readings For This Week</span></td>
+      <table style="width: 750px; height: 28px;" border="4" cellspacing="5">
+        <td>
+          ReadingsText
+        </td>
+      </table>
+      <p></p>
+    </div>
+   
+  </body>
+  
+</html>
