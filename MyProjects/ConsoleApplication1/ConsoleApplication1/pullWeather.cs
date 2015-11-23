@@ -1,52 +1,66 @@
 ﻿using System;
 using System.Net;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApplication1
 {
     class pullWeather
     {
-        public string location;
+        public string city;
+        public string state;
         public string skies;
-        public int temperature;
+        public string temperature;
 
         public string weatherScrape()
         {
-            string data = null;
-            string urlAddress = "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Manchester%2C+NH";
+            string data = null;  // This string will hold the html code for gathering weather information
+            string urlAddress = "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Manchester%2C+NH";  // URL used to grab Manchester, NH weather
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                Stream receiveStream = response.GetResponseStream();
-                StreamReader readStream = null;
-
-                if (response.CharacterSet == null)
-                {
-                    readStream = new StreamReader(receiveStream);
-                }
-                else
-                {
-                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
-                }
-
+            try {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);   // Sends request to urlAddress
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();        // Gets html response
+                StreamReader readStream = new StreamReader(response.GetResponseStream()); // Using StreamReader to read html into string variable data
                 data = readStream.ReadToEnd();
-
-                response.Close();
-                readStream.Close();
-
             }
+            catch(Exception e)
+            {
+                Console.WriteLine("An error has occured in \"weatherScrape\": " + e);
+            }            
             return data;
         }
         public void weatherSearch(string raw_data)
         {
-            Console.WriteLine(raw_data);
+            string[] raw = null;                                                         // Initialize raw array
+            Regex regex = new Regex("(<meta property=\"og:title).*");                    // Searches for weather data in raw_data string
+            if (regex.IsMatch(raw_data))
+            {
+                string raw_weather = regex.Match(raw_data).ToString();                   // Creates new string of the found weather data
+                raw = Regex.Split(raw_weather, ("\\s(|)|(content=\")|(,)|(&)|(\")"));    // Split string into array
+            }
+            else
+            {
+                Console.WriteLine("Error has occured: No match found.");
+            }
+            /*for(int i = 0; i < raw.Length; i++)                                        // Used for trouble shooting, formats line number from array
+            {
+                Console.WriteLine("{0}) {1}", i, raw[i]);
+            }*/
+            city = raw[10];
+            state = raw[14];
+            skies = raw[24];
+            temperature = raw[18];
+        }
+        public void displayWeather()
+        {
+            string printTime = DateTime.Now.ToString("h:mm tt");
+
+            Console.WriteLine("The weather at {0} is:\n", printTime);
+            Console.WriteLine("State: {0}", state);
+            Console.WriteLine("City: {0}", city);
+            Console.WriteLine("temperature: {0}°", temperature);
+            Console.WriteLine("Skies: {0}", skies);
+            Console.WriteLine("\nWeather information provided by: www.wunderground.com");
         }
     }
 }
