@@ -2,8 +2,9 @@
 using System.Net;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading;
 
-namespace ConsoleApplication1
+namespace WeatherApplication
 {
     class pullWeather
     {
@@ -17,16 +18,17 @@ namespace ConsoleApplication1
             string data = null;  // This string will hold the html code for gathering weather information
             string urlAddress = "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Manchester%2C+NH";  // URL used to grab Manchester, NH weather
 
-            try {
+            try
+            {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);   // Sends request to urlAddress
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();        // Gets html response
                 StreamReader readStream = new StreamReader(response.GetResponseStream()); // Using StreamReader to read html into string variable data
                 data = readStream.ReadToEnd();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("An error has occured in \"weatherScrape\": " + e);
-            }            
+            }
             return data;
         }
         public void weatherSearch(string raw_data)
@@ -42,7 +44,7 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("Error has occured: No match found.");
             }
-            for(int i = 0; i < raw.Length; i++)                                        // Used for trouble shooting, formats line number from array
+            for (int i = 0; i < raw.Length; i++)                                        // Used for trouble shooting, formats line number from array
             {
                 Console.WriteLine("{0}) {1}", i, raw[i]);
             }
@@ -53,14 +55,7 @@ namespace ConsoleApplication1
         }
         public void displayWeather()
         {
-            string printTime = DateTime.Now.ToString("h:mm tt");
-
-            Console.WriteLine("The weather at {0} is:\n", printTime);
-            Console.WriteLine("State: {0}", state);
-            Console.WriteLine("City: {0}", city);
-            Console.WriteLine("temperature: {0}°", temperature);
-            Console.WriteLine("Skies: {0}", skies);
-            Console.WriteLine("\nWeather information provided by: www.wunderground.com");
         }
     }
 }
+
