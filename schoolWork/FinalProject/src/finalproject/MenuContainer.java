@@ -26,10 +26,12 @@ public class MenuContainer {
             String menuDir = getPath.menuFolder() + "\\mainScreen.txt";  // Uses our toolbox constructor to pull the directory for menu folder.
             readText.displayText(menuDir);                               // Displays our text file from the directory we pulled.
             
+            int maxRange = 3;                                            // Highest number option user can choose.
             String userInput = scan.nextLine();
-            while(input.validateInteger(userInput) != true){
-                input.validateInteger(userInput);
-            } 
+            
+            while(input.validateInteger(userInput, maxRange) != true){
+                userInput = scan.nextLine();
+            }
         }
     }
 }

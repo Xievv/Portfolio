@@ -121,9 +121,9 @@ public class Utilities {
         private void menuScreenCont(){          
             ArrayList check = new ArrayList();                              // This arraylist is used to validate users input.
             
-            Utilities.tool tool = new Utilities.tool();                         // Constructor for Tool Utility.
-            Utilities.tool.LineCount count = tool.new LineCount();            // Constructor for LineCount class in Utility.
-            Utilities.tool.LineSize size = tool.new LineSize();               // Constructor for LineSize class in Utility.
+            Utilities.Tool tool = new Utilities.Tool();                         // Constructor for Tool Utility.
+            Utilities.Tool.LineCount count = tool.new LineCount();            // Constructor for LineCount class in Utility.
+            Utilities.Tool.LineSize size = tool.new LineSize();               // Constructor for LineSize class in Utility.
             
             String userInput = input.nextLine();
             int choice = Integer.parseInt(userInput);                       // Get the integer value of users input to use as an index selector in the file array.
@@ -144,9 +144,9 @@ public class Utilities {
         private void recipeScreenCont(){          
             ArrayList check = new ArrayList();                              // This arraylist is used to validate users input.
             
-            Utilities.tool tool = new Utilities.tool();                         // Constructor for Tool Utility.
-            Utilities.tool.LineCount count = tool.new LineCount();            // Constructor for LineCount class in Utility.
-            Utilities.tool.LineSize size = tool.new LineSize();               // Constructor for LineSize class in Utility.
+            Utilities.Tool tool = new Utilities.Tool();                         // Constructor for Tool Utility.
+            Utilities.Tool.LineCount count = tool.new LineCount();            // Constructor for LineCount class in Utility.
+            Utilities.Tool.LineSize size = tool.new LineSize();               // Constructor for LineSize class in Utility.
             
             String userInput = input.nextLine();
             int choice = Integer.parseInt(userInput);                       // Get the integer value of users input to use as an index selector in the file array.
@@ -210,14 +210,22 @@ public class Utilities {
     // This class will be used to validate input from user
     class ValidateInput{
         // This method is going to validate integer input
-        public boolean validateInteger(String userInput){
-            try{
-                int testInt = Integer.parseInt(userInput);
+        public boolean validateInteger(String userInput, int rangeMax){
+            int testInt;
+            try{                
+                testInt = Integer.parseInt(userInput);
+                System.out.println("Validation success!");           // Troubleshooting.
             } catch (Exception e){
                 System.out.println("This is not an integer!");
                 return false;
             }
-            return true;
+            if(testInt < rangeMax && testInt > 0){
+                System.out.println("This number is within range!");  // Troubleshooting
+                return true;
+            } else {
+                System.out.println("This number was not a choice."); // Troubleshooting
+                return false;
+            }           
         }
     }
 }
