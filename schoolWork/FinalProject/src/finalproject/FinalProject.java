@@ -9,8 +9,8 @@ package finalproject;
 public class FinalProject {
 
     public static void main(String[] args) {
-        Utilities utility = new Utilities();
-        Utilities.txtFile help = utility.new txtFile();
-        help.displayText("E:\\Programming\\Java\\menu\\mainScreen.txt");
+        MenuContainer menu = new MenuContainer();
+        MenuContainer.mainMenu startProgram = menu.new mainMenu();
+        startProgram.displayScreen();
     }
 }

@@ -12,16 +12,14 @@ package finalproject;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.FileInputStream;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
 
 public class Utilities {
     // This class will hold the classes and methods needed to count lines and the character amounts.
-    class tool{
+    class Tool{
         private final String outputPath = "E:\\Programming\\Java\\programs\\FinalProject\\src\\Output.txt";    
 
         private ArrayList fileStorage = new ArrayList(); // This array will be used to hold the contents of each file for both classes.
@@ -81,7 +79,7 @@ public class Utilities {
         }
     }
     // This class is where the user provide the screens for the user to interact with the tool class.
-    class userInterface{
+    class UserInterface{
  
         private final Scanner input = new Scanner(System.in);                                      // To be used for user input.
         
@@ -168,16 +166,58 @@ public class Utilities {
         }
     }  
     // This class will write our txt files throughout the program for the user.
-    class txtFile{
+    class TxtFile{
         public void displayText(String path){
             try{
-                Scanner read = new Scanner(new File(path));
-                while(read.hasNextLine() != false){
+                Scanner read = new Scanner(new File(path));     // Using scanner to read from the file.                
+                while(read.hasNextLine() != false){             // While loop runs as long as more text in txt file remains.
                     System.out.println(read.nextLine());
                 }
             } catch (Exception e){
                 System.out.println("An error has occured in \"Utilities.displayText\": " + e);
             }
+        }
+    }
+    // This class will pull the directory paths we need to ensure the program will work regardless to where it is on someones computer.
+    class FilePaths{
+        // This method will get the menu folder directory.
+        public String menuFolder(){
+            File file;
+            String startDir = System.getProperty("user.dir");
+            file = new File(startDir + "\\src\\menu");
+            String returnPath = null;
+            try{
+                returnPath = file.getCanonicalPath();
+            } catch(Exception e) {
+                System.out.println("An error has occured in \"filePaths.menuFolder\": " + e);        
+            }
+            return returnPath;
+        }
+        // this method will get the recipe folder director.
+        public String recipeFolder(){
+            File file;
+            String startDir = System.getProperty("user.dir");
+            file = new File(startDir + "\\src\\recipes");
+            String returnPath = null;
+            try{
+                returnPath = file.getCanonicalPath();
+            } catch(Exception e) {
+                System.out.println("An error has occured in \"filePaths.menuFolder\": " + e);        
+            }
+            return returnPath;
+        }
+    }
+    // This class will be used to validate input from user
+    class ValidateInput{
+        // This method is going to validate integer input
+        public boolean validateInteger(String userInput){
+            try{
+                int testInt = Integer.parseInt(userInput);
+            } catch (Exception e){
+                System.out.println("This is not an integer!");
+                return false;
+            }
+            return true;
         }
     }
 }
