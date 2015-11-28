@@ -6,7 +6,7 @@ Class: Java        |                                      | Date:Oct 23rd, 2015
 
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
                    *+----------------------------------+*
-                   *| Welcome to Shawn's Final Program |*
+                   *|    Welcome to the Recipe Menu    |*
                    *|                                  |*
                    *|     Please Select an option:     |*
                    *|                                  |*
@@ -16,6 +16,8 @@ Class: Java        |                                      | Date:Oct 23rd, 2015
                    *|    4) Chicken Stew               |*
                    *|    5) Sweet and Sour Chicken     |*
                    *|    6) Tomato Rice Soup           |*
+                   *|                                  |*
+                   *|    7) Return                     |*
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
