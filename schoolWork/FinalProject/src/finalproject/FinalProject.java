@@ -10,7 +10,7 @@ public class FinalProject {
 
     public static void main(String[] args) {
         MenuContainer menu = new MenuContainer();
-        MenuContainer.mainMenu startProgram = menu.new mainMenu();
+        MenuContainer.MainMenu startProgram = menu.new MainMenu();
         startProgram.displayScreen();
     }
 }

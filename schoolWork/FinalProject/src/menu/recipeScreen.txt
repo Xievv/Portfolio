@@ -1,4 +1,4 @@
-Main Menu          |                                      |     By Shawn Giroux
+Recipes: Menu      |                                      |     By Shawn Giroux
 Class: Java        |                                      | Date:Oct 23rd, 2015
 -------------------+                                      +--------------------
 
@@ -10,14 +10,14 @@ Class: Java        |                                      | Date:Oct 23rd, 2015
                    *|                                  |*
                    *|     Please Select an option:     |*
                    *|                                  |*
-                   *|     1) Recipe Menu               |*
-                   *|                                  |*
-                   *|     2) Algorithms                |*
-                   *|                                  |*
-                   *|     3) Exit                      |*
+                   *|    1) Baked chicken and potato   |*
+                   *|    2) Beef Stew                  |*
+                   *|    3) Chicken Cacciatore         |*
+                   *|    4) Chicken Stew               |*
+                   *|    5) Sweet and Sour Chicken     |*
+                   *|    6) Tomato Rice Soup           |*
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
-
 
 
