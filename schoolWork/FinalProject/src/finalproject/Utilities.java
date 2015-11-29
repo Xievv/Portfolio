@@ -221,7 +221,7 @@ public class Utilities {
                 System.out.println("This is not an integer!");
                 return false;
             }
-            if(testInt < rangeMax && testInt > 0){
+            if(testInt <= rangeMax && testInt > 0){
                 //System.out.println("This number is within range!");  // Troubleshooting
                 return true;
             } else {

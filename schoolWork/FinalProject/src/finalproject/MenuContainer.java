@@ -76,7 +76,8 @@ public class MenuContainer {
                     break;
                 case 6: readText.displayText(recipeDir + "/sweetSourChicken.txt");
                     break;
-                case 7: // Return to main menu
+                case 7: MainMenu menu = new MainMenu();
+                    menu.displayScreen();
                     break;
                 default: System.out.println("An error has occured in \"MenuContainer.RecipeMenu.jumpTree\"");
                     break;
