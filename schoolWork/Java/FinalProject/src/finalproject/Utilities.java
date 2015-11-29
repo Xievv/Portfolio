@@ -1,11 +1,9 @@
 /*
  * Name: Shawn Giroux
  * Date: 11/6/2015
- * Summary: The goal of this class will be to take the path of a file,
- * read in the text, and tell the user how many lines are in a text file
- * along with the amount of characters in each line.  This information
- * will be used to help modify their text file for reading use later
- * on in the project.
+ * Summary: This class will be used to hold the tools that will
+ * help us complete tasks that would otherwise need to be
+ * repeated throughout the entire program.
  */
 
 package finalproject;
@@ -173,7 +171,7 @@ public class Utilities {
             try{
                 Scanner read = new Scanner(new File(path));     // Using scanner to read from the file.                
                 while(read.hasNextLine() != false){             // While loop runs as long as more text in txt file remains.
-                    System.out.println(read.nextLine());
+                    System.out.println(read.nextLine());        // Prints out our text from the text file.
                 }
             } catch (Exception e){
                 System.out.println("An error has occured in \"Utilities.Txt.File.displayText\": " + e);
@@ -184,12 +182,12 @@ public class Utilities {
     class FilePaths{
         // This method will get the menu folder directory.
         public String menuFolder(){
-            File file;
-            String startDir = System.getProperty("user.dir");
-            file = new File(startDir + "/src/menu");
-            String returnPath = null;
+            File file;                                          // Used for manipulation of file paths
+            String startDir = System.getProperty("user.dir");   // Grabs directory that the program resides in
+            file = new File(startDir + "/src/menu");            // Prepares the path for the menu directory
+            String returnPath = null;                           // Initializes returnPath for the method's return
             try{
-                returnPath = file.getCanonicalPath();
+                returnPath = file.getCanonicalPath();           // Finalizes the menu directory path
             } catch(Exception e) {
                 System.out.println("An error has occured in \"Utilities.FilePaths.menuFolder\": " + e);        
             }
@@ -197,12 +195,12 @@ public class Utilities {
         }
         // this method will get the recipe folder director.
         public String recipeFolder(){
-            File file;
-            String startDir = System.getProperty("user.dir");
-            file = new File(startDir + "/src/recipes");
-            String returnPath = null;
+            File file;                                           // Used for manipulation of file paths
+            String startDir = System.getProperty("user.dir");    // Grabs directory that the program resides in
+            file = new File(startDir + "/src/recipes");          // Prepares the path for the recipe directory
+            String returnPath = null;                            // Intializes returnPath for the method's return
             try{
-                returnPath = file.getCanonicalPath();
+                returnPath = file.getCanonicalPath();            // Finalizes the menu directory path
             } catch(Exception e) {
                 System.out.println("An error has occured in \"Utilities.FilePaths.menuFolder\": " + e);        
             }
@@ -213,15 +211,15 @@ public class Utilities {
     class ValidateInput{
         // This method is going to validate integer input
         public boolean validateInteger(String userInput, int rangeMax){
-            int testInt;
+            int testInt;                                       // Int for attempting to convert user input
             try{                
-                testInt = Integer.parseInt(userInput);
+                testInt = Integer.parseInt(userInput);         // Tries to convert user input to an integer
                 //System.out.println("Validation success!");           // Troubleshooting.
             } catch (Exception e){
-                System.out.println("This is not an integer!");
+                System.out.println("This is not an integer!"); // If conversion fails, send message to user and return false
                 return false;
             }
-            if(testInt <= rangeMax && testInt > 0){
+            if(testInt <= rangeMax && testInt > 0){            // This if statement checks if we're within the specified boundaries of the text file
                 //System.out.println("This number is within range!");  // Troubleshooting
                 return true;
             } else {

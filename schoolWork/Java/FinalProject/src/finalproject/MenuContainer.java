@@ -23,7 +23,7 @@ public class MenuContainer {
     // This class will hold all methods correlating to the main menu
     public class MainMenu{
         
-        RecipeMenu recipe = new RecipeMenu(); // Constructor to go to recipe menu
+        RecipeMenu recipe = new RecipeMenu();                            // Constructor to go to recipe menu
         
         public void displayScreen(){
             String menuDir = getPath.menuFolder() + "/mainScreen.txt";   // Uses our toolbox constructor to pull the directory for menu folder.
@@ -42,6 +42,9 @@ public class MenuContainer {
                 case 1:  recipe.displayScreen();
                     break;
                 case 2:  // To algorithsm
+                    break;
+                case 3:
+                    System.exit(0);
                     break;
                 default: System.out.println("There was an error in \"MainMenu.jumptree\"");
             }
@@ -62,26 +65,38 @@ public class MenuContainer {
             jumpTree(Integer.parseInt(userInput));
         }
         public void jumpTree(int userChoice){
-            String recipeDir = getPath.recipeFolder();
+            String recipeDir = getPath.recipeFolder();  // This constructor gets us the path where the recipe files are held.
+            Scanner scan = new Scanner(System.in);
+            // case 1 - 6 will display recipes, case 7 will return to the menu.
             switch(userChoice){
-                case 1: readText.displayText(recipeDir + "/bakedChickenPotatoFinal.txt");
+                case 1: 
+                    readText.displayText(recipeDir + "/bakedChickenPotatoFinal.txt");
                     break;
-                case 2: readText.displayText(recipeDir + "/beefstewFinal.txt");
+                case 2: 
+                    readText.displayText(recipeDir + "/beefstewFinal.txt");
                     break;
-                case 3: readText.displayText(recipeDir + "/chickenCacciatore.txt");
+                case 3: 
+                    readText.displayText(recipeDir + "/chickenCacciatoreFinal.txt");
                     break;
-                case 4: readText.displayText(recipeDir + "/chickenStewFinal.txt");
+                case 4: 
+                    readText.displayText(recipeDir + "/chickenStewFinal.txt");
                     break;
-                case 5: readText.displayText(recipeDir + "/sweetSourChickenFinal.txt");
+                case 5: 
+                    readText.displayText(recipeDir + "/sweetSourChickenFinal.txt");
                     break;
-                case 6: readText.displayText(recipeDir + "/sweetSourChicken.txt");
+                case 6: 
+                    readText.displayText(recipeDir + "/tomatoRiceSoupFinal.txt");
                     break;
-                case 7: MainMenu menu = new MainMenu();
+                case 7: 
+                    MainMenu menu = new MainMenu();
                     menu.displayScreen();
                     break;
-                default: System.out.println("An error has occured in \"MenuContainer.RecipeMenu.jumpTree\"");
+                default: 
+                    System.out.println("An error has occured in \"MenuContainer.RecipeMenu.jumpTree\"");
                     break;
             }
+            scan.hasNextLine();
+            displayScreen();
         }
     }
     // This class will hold all methods correlating to the algorithm menu

@@ -1,0 +1,12 @@
+E:\Programming\C#\programs\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+E:\Programming\C#\programs\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+E:\Programming\C#\programs\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+E:\Programming\C#\programs\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+E:\Programming\C#\programs\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+E:\Programming\C#\programs\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
