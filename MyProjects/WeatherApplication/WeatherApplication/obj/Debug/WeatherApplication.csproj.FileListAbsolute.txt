@@ -1,0 +1,9 @@
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\bin\Debug\WeatherApplication.exe.config
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\bin\Debug\WeatherApplication.exe
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\bin\Debug\WeatherApplication.pdb
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\obj\Debug\WeatherApplication.csprojResolveAssemblyReference.cache
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\obj\Debug\WeatherApplication.Form1.resources
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\obj\Debug\WeatherApplication.Properties.Resources.resources
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\obj\Debug\WeatherApplication.csproj.GenerateResource.Cache
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\obj\Debug\WeatherApplication.exe
+C:\Users\Littletop\Documents\Portfolio\MyProjects\WeatherApplication\WeatherApplication\obj\Debug\WeatherApplication.pdb

@@ -113,5 +113,49 @@ namespace FinalProject
                 displayScreen();
             }
         }
+        // Display and lets the user interact with the algorithm menu
+        public class AlgorithmMenu
+        {
+            MenuContainer Tools = new MenuContainer();
+
+            public void displayScreen()
+            {
+                //string recipePath = Tools.FindDir.getMenuDir() + "recipeScreen.txt";  // Recipe menu screen path
+                //Tools.Display.displayText(recipePath);                                // Displays the recipe menu screen text
+
+                int maxRange = 4;                                                     // Max amount of options in the text file
+                string userInput = Console.ReadLine();
+
+                while (Tools.Validate.checkInput(userInput, maxRange) != true)         // Passes user input to our validation method and checks until it returns true
+                {
+                    userInput = Console.ReadLine();
+                }
+                jumpTree(Convert.ToInt32(userInput));                                 // Convert to int to pass to a switch case
+            }
+            public void jumpTree(int userChoice)
+            {
+                MainMenu Return = new MainMenu();                                     // Allows us to return to the main menu
+                //string recipePath = Tools.FindDir.getRecipeDir();                     // Grabs path to recipes directory
+
+                switch (userChoice)
+                {
+                    case 1:
+                        //Tools.Display.displayText();
+                        break;
+                    case 2:
+                        //Tools.Display.displayText();
+                        break;
+                    case 3:
+                        //Tools.Display.displayText();
+                        break;
+                    case 4:
+                        //Return.displayScreen();
+                        break;
+                    default:
+                        Console.WriteLine("Something went wrong in the jumpTree");
+                        break;
+                }
+            }
+        }
     }
 }

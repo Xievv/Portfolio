@@ -10,3 +10,6 @@ C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\o
 C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\bin\Debug\FinalProject.exe
 C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
 C:\Users\Shawn\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\Littletop\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\Littletop\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\Littletop\Documents\Portfolio\schoolWork\CSharp\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
