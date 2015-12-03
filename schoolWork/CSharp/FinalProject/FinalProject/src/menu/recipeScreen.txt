@@ -1,5 +1,5 @@
 Recipes: Menu      |                                      |     By Shawn Giroux
-Class: Java        |                                      | Date:Oct 23rd, 2015
+Class: CIS158M     |                                      | Date:Oct 23rd, 2015
 -------------------+                                      +--------------------
 
 
@@ -8,7 +8,7 @@ Class: Java        |                                      | Date:Oct 23rd, 2015
                    *+----------------------------------+*
                    *|    Welcome to the Recipe Menu    |*
                    *|                                  |*
-                   *|     Please Select an option:     |*
+                   *|     Please Select a recipe:      |*
                    *|                                  |*
                    *|    1) Baked chicken and potato   |*
                    *|    2) Beef Stew                  |*
@@ -21,5 +21,4 @@ Class: Java        |                                      | Date:Oct 23rd, 2015
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
-
 

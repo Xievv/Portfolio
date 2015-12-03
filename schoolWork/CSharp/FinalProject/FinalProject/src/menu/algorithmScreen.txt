@@ -1,24 +1,24 @@
-Main Menu          |                                      |     By Shawn Giroux
-Class: CIS158M     |                                      | Date:Oct 23rd, 2015
+Algorithms: Menu   |                                      |     By Shawn Giroux
+Class: CIS158M     |                                      |  Date:Dec 3rd, 2015
 -------------------+                                      +--------------------
 
 
 
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
                    *+----------------------------------+*
-                   *| Welcome to Shawn's Final Program |*
+                   *| Welcome to the Algorithm Section |*
                    *|                                  |*
-                   *|     Please Select an option:     |*
+                   *|     Please Select an Algorithm:  |*
                    *|                                  |*
-                   *|     1) Recipe Menu               |*
+                   *|     1) Bubble Sort               |*
                    *|                                  |*
-                   *|     2) Algorithms                |*
+                   *|     2) Euclidean Algorithm       |*
                    *|                                  |*
-                   *|     3) Exit                      |*
+                   *|     3) Sieve of Eratosthenes     |*
+                   *|                                  |*
+                   *|     4) Return                    |*
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
-
-
 
 

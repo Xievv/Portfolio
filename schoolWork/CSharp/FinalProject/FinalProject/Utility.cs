@@ -3,8 +3,8 @@ using System.IO;
 
 /// <summary>
 /// Name: Shawn Giroux
-/// Started Date: 11/3/2015
-/// Finished Date: 11/4/2015
+/// Class: CIS158M
+/// Date: 11/4/2015
 /// Summary: This class will hold all tools needed to
 /// complete the tasks that need to be repeated
 /// throughout the program.
@@ -14,7 +14,7 @@ namespace FinalProject
 {
     public class Utility
     {
-        // This class was used to write some code for an old version of this program.
+        // This class was used to write some code for straight line programming
         public class WriteCode
         {
             private string localFilePath;                     // Variable of the submitted filepath to be used by other methods
@@ -77,7 +77,7 @@ namespace FinalProject
         // This class will be used to gather our directories for our files.
         public class FindDirectories
         {
-            
+            // This method will get the file path to where we store our menus
             public string getMenuDir()
             {
                 string currentDir = Directory.GetCurrentDirectory();                    // Gets directory of program.
@@ -85,6 +85,7 @@ namespace FinalProject
                 string menuPath = upDir + @"src\menu\";                                 // Adds menu path.
                 return menuPath;
             }
+            // This method will get the file path to where we store our recipes
             public string getRecipeDir()
             {
                 string currentDir = Directory.GetCurrentDirectory();                   // Gets directory of program.
@@ -97,6 +98,7 @@ namespace FinalProject
         // This class will be used to display our text files.
         public class PrintTxt
         {
+            // This method will display text of a file from a passed file path
             public void displayText(string path)
             {
                 try
@@ -117,7 +119,7 @@ namespace FinalProject
         // This class will be used to validate user input.
         public class ValidateInput
         {
-            // Returns boolean to let us know if user input was a number or not
+            // This method returns boolean to let us know if user input was a number or not
             public Boolean checkInput(string userChoice, int maxRange)
             {
                 int testInt;                                               // Int used to try and convert userChoice

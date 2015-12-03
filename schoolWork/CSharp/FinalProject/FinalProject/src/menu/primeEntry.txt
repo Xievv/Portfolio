@@ -1,0 +1,11 @@
+Algorithms: Primes |                                      |     By Shawn Giroux
+Class: CIS158M     |                                      |  Date:Dec 3rd, 2015
+-------------------+                                      +--------------------
+
+
+
+
+                         ~ [Sieve of Eratosthenes] ~
+
+               The Sieve of Eratosthenes is an ancient algorithm
+           that is used to find any prime number up to a given value.

@@ -2,6 +2,7 @@
 
 /// <summary>
 /// Name: Shawn Giroux
+/// Class: CIS158M
 /// Date: 10/29/2015
 /// Summary: This class is the entry screen into the program
 /// </summary>

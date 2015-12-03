@@ -2,6 +2,7 @@
 
 /// <summary>
 /// Name: Shawn Giroux
+/// Class: CIS158M
 /// Date: 10/31/2015
 /// Summary: This class will hold all menus for both the menu, recipe and algorithm section.
 /// It will display the recipes and the algorithms along with the menu to get to them.
@@ -11,7 +12,7 @@ namespace FinalProject
 {
     class MenuContainer
     {
-        public Utility.FindDirectories FindDir = new Utility.FindDirectories();  // Constructor for our premade tools
+        Utility.FindDirectories FindDir = new Utility.FindDirectories();         // Constructor for our premade tools
         Utility.PrintTxt Display = new Utility.PrintTxt();                       // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         Utility.ValidateInput Validate = new Utility.ValidateInput();            // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -20,8 +21,10 @@ namespace FinalProject
         {
             MenuContainer Tools = new MenuContainer();
 
+            // This Method will display the screen we made in a text file
             public void displayScreen()
             {
+                Console.Clear();                                                  // Clear console for aesthetics
                 string menuPath = Tools.FindDir.getMenuDir() + "mainScreen.txt";  // Menu screen path
                 Tools.Display.displayText(menuPath);                              // Displays menu screen
 
@@ -34,17 +37,19 @@ namespace FinalProject
                 }
                 jumpTree(Convert.ToInt32(userInput));                             // Converts user input for switch case statement
             }
-            public void jumpTree(int userChoice)
+            // This Method will use a jump tree allows the user to select from optioned provided in the text file.
+            private void jumpTree(int userChoice)
             {
                 string recipePath = Tools.FindDir.getMenuDir() + "recipeScreen.txt";  // Recipe menu screen
                 RecipeMenu Recipe = new RecipeMenu();                                 // Allows us to move to the RecipeMenu class
+                AlgorithmMenu Algorithm = new AlgorithmMenu();                        // Allows us to move to the AlgorithmMenu class
                 switch (userChoice)
                 {
                     case 1:
                         Recipe.displayScreen();
                         break;
-                    case 2: 
-                        // Display algorithms menu
+                    case 2:
+                        Algorithm.displayScreen();
                         break;
                     case 3:
                         Environment.Exit(0);                                      // Closes program is user selects exit
@@ -56,12 +61,14 @@ namespace FinalProject
             }
         }
         // Displays and lets the user interact with the recipe menu
-        public class RecipeMenu
+        private class RecipeMenu
         {
             MenuContainer Tools = new MenuContainer();
 
+            // This Method will display the screen we made in a text file
             public void displayScreen()
             {
+                Console.Clear();                                                      // Clear console for aesthetics
                 string recipePath = Tools.FindDir.getMenuDir() + "recipeScreen.txt";  // Recipe menu screen path
                 Tools.Display.displayText(recipePath);                                // Displays the recipe menu screen text
                 
@@ -74,7 +81,8 @@ namespace FinalProject
                 }
                 jumpTree(Convert.ToInt32(userInput));                                 // Convert to int to pass to a switch case
             }
-            public void jumpTree(int userChoice)
+            // This Method will use a jump tree allows the user to select from optioned provided in the text file.
+            private void jumpTree(int userChoice)
             {
                 MainMenu Return = new MainMenu();                                     // Allows us to return to the main menu
                 string recipePath = Tools.FindDir.getRecipeDir();                     // Grabs path to recipes directory
@@ -114,28 +122,31 @@ namespace FinalProject
             }
         }
         // Display and lets the user interact with the algorithm menu
-        public class AlgorithmMenu
+        private class AlgorithmMenu
         {
             MenuContainer Tools = new MenuContainer();
 
+            // This Method will display the screen we made in a text file
             public void displayScreen()
             {
-                //string recipePath = Tools.FindDir.getMenuDir() + "recipeScreen.txt";  // Recipe menu screen path
-                //Tools.Display.displayText(recipePath);                                // Displays the recipe menu screen text
+                Console.Clear();                                                            // Clear console for aesthetics
+                string algorithmPath = Tools.FindDir.getMenuDir() + "algorithmScreen.txt";  // Algorithm menu screen path
+                Tools.Display.displayText(algorithmPath);                                   // Displays the algorithm menu screen text
 
-                int maxRange = 4;                                                     // Max amount of options in the text file
+                int maxRange = 4;                                                           // Max amount of options in the text file
                 string userInput = Console.ReadLine();
 
-                while (Tools.Validate.checkInput(userInput, maxRange) != true)         // Passes user input to our validation method and checks until it returns true
+                while (Tools.Validate.checkInput(userInput, maxRange) != true)              // Passes user input to our validation method and checks until it returns true
                 {
                     userInput = Console.ReadLine();
                 }
-                jumpTree(Convert.ToInt32(userInput));                                 // Convert to int to pass to a switch case
+                jumpTree(Convert.ToInt32(userInput));                                       // Convert to int to pass to a switch case
             }
-            public void jumpTree(int userChoice)
+            // This Method will use a jump tree allows the user to select from optioned provided in the text file.
+            private void jumpTree(int userChoice)
             {
-                MainMenu Return = new MainMenu();                                     // Allows us to return to the main menu
-                //string recipePath = Tools.FindDir.getRecipeDir();                     // Grabs path to recipes directory
+                MainMenu Return = new MainMenu();                                           // Allows us to return to the main menu
+                Algorithms algorithms = new Algorithms();
 
                 switch (userChoice)
                 {
@@ -146,10 +157,12 @@ namespace FinalProject
                         //Tools.Display.displayText();
                         break;
                     case 3:
-                        //Tools.Display.displayText();
+                        Algorithms.Eratosthenes primes = new Algorithms.Eratosthenes();
+                        primes.EntryScreen();
+                        displayScreen();
                         break;
                     case 4:
-                        //Return.displayScreen();
+                        Return.displayScreen();
                         break;
                     default:
                         Console.WriteLine("Something went wrong in the jumpTree");
