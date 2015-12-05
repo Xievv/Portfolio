@@ -9,10 +9,6 @@ package finalproject;
 
 import java.util.Scanner;
 
-/**
- *
- * @author CISPupil
- */
 public class MenuContainer {
     Utilities toolbox = new Utilities();
     Utilities.FilePaths getPath = toolbox.new FilePaths();       // This will get our menu paths to ensure the program can be used from any directory.
@@ -24,6 +20,7 @@ public class MenuContainer {
     public class MainMenu{
         
         RecipeMenu recipe = new RecipeMenu();                            // Constructor to go to recipe menu
+        AlgorithmMenu algorithm = new AlgorithmMenu();
         
         public void displayScreen(){
             String menuDir = getPath.menuFolder() + "/mainScreen.txt";   // Uses our toolbox constructor to pull the directory for menu folder.
@@ -37,11 +34,13 @@ public class MenuContainer {
             }
             jumpTree(Integer.parseInt(userInput));
         }
-        public void jumpTree(int userChoice){
+        private void jumpTree(int userChoice){
             switch(userChoice){
-                case 1:  recipe.displayScreen();
+                case 1:  
+                    recipe.displayScreen();
                     break;
-                case 2:  // To algorithsm
+                case 2:  
+                    algorithm.displayScreen();
                     break;
                 case 3:
                     System.exit(0);
@@ -51,10 +50,10 @@ public class MenuContainer {
         }
     }
     // This class will hold all methods correlating to the recipe menu
-    public class RecipeMenu{
+    private class RecipeMenu{
         public void displayScreen(){
-            String menuDir = getPath.menuFolder() + "/recipeScreen.txt"; // Uses our toolbox constructor to pull the directory for menu folder.
-            readText.displayText(menuDir);                               // Displays our text file from the directory we pulled.
+            String recipePath = getPath.menuFolder() + "/recipeScreen.txt"; // Uses our toolbox constructor to pull the directory for menu folder.
+            readText.displayText(recipePath);                               // Displays our text file from the directory we pulled.
             
             int maxRange = 7;                                            // Highest number option user can choose.
             String userInput = scan.nextLine();
@@ -64,7 +63,7 @@ public class MenuContainer {
             }
             jumpTree(Integer.parseInt(userInput));
         }
-        public void jumpTree(int userChoice){
+        private void jumpTree(int userChoice){
             String recipeDir = getPath.recipeFolder();  // This constructor gets us the path where the recipe files are held.
             Scanner scan = new Scanner(System.in);
             // case 1 - 6 will display recipes, case 7 will return to the menu.
@@ -101,6 +100,41 @@ public class MenuContainer {
     }
     // This class will hold all methods correlating to the algorithm menu
     public class AlgorithmMenu{
-        
+        public void displayScreen(){
+            String algorithmPath = getPath.menuFolder() + "/algorithmScreen.txt";
+            readText.displayText(algorithmPath);
+            
+            int maxRange = 4;
+            String userInput = scan.nextLine();
+            
+            while(input.validateInteger(userInput,maxRange) != true){
+                userInput = scan.nextLine();
+            }
+            jumpTree(Integer.parseInt(userInput));
+        }
+        private void jumpTree(int userChoice){
+            Algorithms algorithms = new Algorithms();
+            Algorithms.Eratosthenes eratosthenes = algorithms.new Eratosthenes();
+            Scanner scan = new Scanner(System.in);
+            // case 1 - 3 will run algorithms, case 4 will return to the menu.
+            switch(userChoice){
+                case 1: 
+                    // Bubble Sort
+                    break;
+                case 2: 
+                    // Euclidean Algorithm
+                    break;
+                case 3: 
+                    eratosthenes.EntryScreen();
+                    break;
+                case 4: 
+                    MainMenu menu = new MainMenu();
+                    menu.displayScreen();
+                    break;
+                default: 
+                    System.out.println("An error has occured in \"MenuContainer.RecipeMenu.jumpTree\"");
+                    break;
+            }
+        }
     }
 }
