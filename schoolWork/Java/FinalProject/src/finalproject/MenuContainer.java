@@ -115,11 +115,12 @@ public class MenuContainer {
         private void jumpTree(int userChoice){
             Algorithms algorithms = new Algorithms();
             Algorithms.Eratosthenes eratosthenes = algorithms.new Eratosthenes();
+            Algorithms.BubbleSort bubbleSort = algorithms.new BubbleSort();
             Scanner scan = new Scanner(System.in);
             // case 1 - 3 will run algorithms, case 4 will return to the menu.
             switch(userChoice){
                 case 1: 
-                    // Bubble Sort
+                    bubbleSort.entryScreen();
                     break;
                 case 2: 
                     // Euclidean Algorithm
