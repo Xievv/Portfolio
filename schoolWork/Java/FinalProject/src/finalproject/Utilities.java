@@ -220,7 +220,6 @@ public class Utilities {
                 return false;
             }
             if(testInt <= rangeMax && testInt > 0){            // This if statement checks if we're within the specified boundaries of the text file
-                //System.out.println("This number is within range!");  // Troubleshooting
                 return true;
             } else {
                 System.out.println("This number was not a choice."); 

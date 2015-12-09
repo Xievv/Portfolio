@@ -1,6 +1,6 @@
-Chicken Stew       |                                      |     By Shawn Giroux
-Project:RecipeBook |                                      | Date:Sept 9th, 2015
--------------------+                                      +--------------------
+Recipe: Chicken Stew|                                     |      By Shawn Giroux
+Class: CIS148M      |                                     |  Date:Sept 9th, 2015
+--------------------+                                     +---------------------
 
 
                         Shawn's Chicken Stew Recipe

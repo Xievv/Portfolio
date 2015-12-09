@@ -8,8 +8,6 @@ Class: CIS148M     |                                      | Date:Oct 23rd, 2015
                    *+----------------------------------+*
                    *| Welcome to Shawn's Final Program |*
                    *|                                  |*
-                   *|     Please Select an option:     |*
-                   *|                                  |*
                    *|     1) Recipe Menu               |*
                    *|                                  |*
                    *|     2) Algorithms                |*
@@ -18,7 +16,6 @@ Class: CIS148M     |                                      | Date:Oct 23rd, 2015
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
-
 
 
 

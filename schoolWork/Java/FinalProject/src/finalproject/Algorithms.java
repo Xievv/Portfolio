@@ -1,8 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Name: Shawn Giroux
+ * Class: CIS148M
+ * Date: 12/9/2015
+ * Summary: This class will be used to handle our algorithm menus
+ * and run the algorithms itself. The user will be given a brief
+ * discription of the algorithm and then get the results.
  */
+
 package finalproject;
 
 import java.io.*;
@@ -15,12 +19,16 @@ public class Algorithms {
     Utilities.TxtFile readText = toolbox.new TxtFile();          // This constructor will display text files.
     Utilities.ValidateInput input = toolbox.new ValidateInput(); // This constructor is used for validating input
     
+    // Allows us to return to the algorithm menu
     MenuContainer menu = new MenuContainer();
     MenuContainer.AlgorithmMenu algorithmMenu = menu.new AlgorithmMenu();
-    Scanner scan = new Scanner(System.in);
+    
+    Scanner scan = new Scanner(System.in); // Used to get user input throughout the program.
     
     // This class handles the algorithm for Sieve of Eratosthenes
     public class Eratosthenes{
+        
+        // Entry screen into the Eratosthenes program. User will interact here
         public void EntryScreen(){
             String entryText = getPath.menuFolder() + "/primeEntry.txt";
             readText.displayText(entryText);
@@ -37,6 +45,7 @@ public class Algorithms {
             scan.nextLine();
             algorithmMenu.displayScreen();
         }
+        // This will create our array of numbers and print out the prime number results
         private void primeArray(int userInput){
             int startNum = 2;
             int[] primes = new int[userInput - 1]; 
@@ -55,6 +64,7 @@ public class Algorithms {
                 }
             }
         }
+        // This will sort out all non-primes and return the list back to primeArray
         private int[] sortPrimes(int[] primes){
             int nextPrime = 2;
             int checkForPrime = 1;
@@ -84,15 +94,25 @@ public class Algorithms {
     // This class handles the algorithm for a bubble sort
     public class BubbleSort{
         
+        // These two strings will serve as the paths and displays for the input and output of our bubble sort numbers
         private final String inputPath = getPath.menuFolder() + "\\bubbleInput.txt";
         private final String outputPath = getPath.menuFolder() + "\\bubbleOutput.txt";
         
+        // Entry screen into the Bubble sort program. User will interact here
         public void entryScreen(){
-            String entryText = getPath.menuFolder() + "/bubbleEntry.txt";
-            readText.displayText(entryText);
-            System.out.printf("%n%n%n%nInput Path: %s", inputPath);
-            System.out.printf("%nOutput Path: %s%n", outputPath);
-            generate();
+            
+            String entryText = getPath.menuFolder() + "/bubbleEntry.txt";     // Gets path to the menu screen for the bubble sort
+            readText.displayText(entryText);     // Displays our text from the .txt file
+            
+            System.out.printf("%n%nInput Path: %s", inputPath);    // Shows user where to view the files
+            System.out.printf("%nOutput Path: %s%n", outputPath);  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            
+            generate();  // runs the process for bubble sort and creates the files at the input and output locations
+            
+            System.out.printf("%n%n%n                         Press any key to return%n");
+            
+            scan.nextLine();
+            algorithmMenu.displayScreen();
         }
         // Create file with numbers 1,000 - 10,000 
         private void generate(){                                   
@@ -169,4 +189,64 @@ public class Algorithms {
             }
         }
     }
+    // This class handles the algorithm for the Euclidean Algorithm
+    public class Euclid{
+        
+        // Entry screen into the Euclid program. User will interact here
+        public void entryScreen(){            
+            
+            String entryText = getPath.menuFolder() + "\\euclidEntry.txt";    // Path for the Euclid menu screen
+            readText.displayText(entryText);  // Prints out the text from a text file
+                        
+            System.out.print("  Enter in a non-negative integer under 1,000,000 for first number: ");
+            String firstNum = scan.nextLine();   
+            
+            // This while loop will use our validate integer utility to check for a number under 1,000,000
+            while(input.validateInteger(firstNum, 1000000) != true){
+                firstNum = scan.nextLine();
+            }
+            
+            System.out.print("\n  Enter in a non-negative integer under 1,000,000 for the second number: ");
+            String secondNum = scan.nextLine();
+            
+            // This while loop will use our validate integer utility to check for a number under 1,000,000
+            while(input.validateInteger(secondNum, 1000000) != true){
+                secondNum = scan.nextLine();
+            }
+            euclideanAlgorithm(Integer.parseInt(firstNum),Integer.parseInt(secondNum));  // We must convert out strings to integers before passing the parameters
+            
+            System.out.println("\n                         Press any key to return");
+            
+            scan.nextLine();
+            algorithmMenu.displayScreen();
+        }
+        // This method will do the process for the Euclidean Algorithm
+        private void euclideanAlgorithm(int firstNum, int secondNum){
+            int remainder = 0;
+
+            if (firstNum < secondNum){ // Swap if firstNum is less than secondNum
+                remainder = firstNum;
+                firstNum = secondNum;
+                secondNum = remainder;
+            }
+
+            while(true){  // Runs loops to find if there is a GCD between two numbers given by user
+                remainder = firstNum - secondNum;
+                firstNum = remainder;
+                if (firstNum < secondNum){
+                    firstNum = secondNum;
+                    secondNum = remainder;
+                }
+                if (remainder == 0){
+                    System.out.println("\n                    The GCD between these two numbers is: " + firstNum);
+                    break;
+                }
+                if (remainder == 1){
+                    System.out.println("\n                One of these numbers is prime or there is no GCD.");
+                    break;
+                }
+            }
+        }
+    }
 }
+~

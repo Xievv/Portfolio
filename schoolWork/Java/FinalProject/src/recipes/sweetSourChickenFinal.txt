@@ -1,6 +1,6 @@
-Sweet&SourChicken  |                                      |     By Shawn Giroux
-Project:RecipeBook |                                      | Date:Sept 9th, 2015
--------------------+                                      +--------------------
+Recipe: Sweet&SourChicken|                          |           By Shawn Giroux
+Class: CIS148M           |                          |       Date:Sept 9th, 2015
+-------------------------+                          +--------------------------
 
 
                      Shawn's Sweet & Sour Chicken Recipe

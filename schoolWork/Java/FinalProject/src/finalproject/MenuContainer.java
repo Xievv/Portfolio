@@ -20,13 +20,15 @@ public class MenuContainer {
     public class MainMenu{
         
         RecipeMenu recipe = new RecipeMenu();                            // Constructor to go to recipe menu
-        AlgorithmMenu algorithm = new AlgorithmMenu();
+        AlgorithmMenu algorithm = new AlgorithmMenu();                   // Constructor to go to algorithm menu
         
         public void displayScreen(){
             String menuDir = getPath.menuFolder() + "/mainScreen.txt";   // Uses our toolbox constructor to pull the directory for menu folder.
             readText.displayText(menuDir);                               // Displays our text file from the directory we pulled.
             
             int maxRange = 3;                                            // Highest number option user can choose.
+            
+            System.out.print("Please select an option: ");
             String userInput = scan.nextLine();
             
             while(input.validateInteger(userInput, maxRange) != true){   // Checks for a "true" value from method validate to see if the input is a number.
@@ -35,6 +37,7 @@ public class MenuContainer {
             jumpTree(Integer.parseInt(userInput));
         }
         private void jumpTree(int userChoice){
+            // case 1 and 2 will bring us to our other menus. Case 3 will end our program
             switch(userChoice){
                 case 1:  
                     recipe.displayScreen();
@@ -45,7 +48,7 @@ public class MenuContainer {
                 case 3:
                     System.exit(0);
                     break;
-                default: System.out.println("There was an error in \"MainMenu.jumptree\"");
+                default: System.out.println("There was an error in \"MenuContainer.MainMenu.jumptree\"");
             }
         }
     }
@@ -55,10 +58,12 @@ public class MenuContainer {
             String recipePath = getPath.menuFolder() + "/recipeScreen.txt"; // Uses our toolbox constructor to pull the directory for menu folder.
             readText.displayText(recipePath);                               // Displays our text file from the directory we pulled.
             
-            int maxRange = 7;                                            // Highest number option user can choose.
+            int maxRange = 7;      // Highest number option user can choose.
+            
+            System.out.print("Please select an option: ");
             String userInput = scan.nextLine();
             
-            while(input.validateInteger(userInput, maxRange) != true){   // Checks for a "true" value from method validate to see if the input is a number.
+            while(input.validateInteger(userInput, maxRange) != true){      // Checks for a "true" value from method validate to see if the input is a number.
                 userInput = scan.nextLine();
             }
             jumpTree(Integer.parseInt(userInput));
@@ -66,6 +71,7 @@ public class MenuContainer {
         private void jumpTree(int userChoice){
             String recipeDir = getPath.recipeFolder();  // This constructor gets us the path where the recipe files are held.
             Scanner scan = new Scanner(System.in);
+            
             // case 1 - 6 will display recipes, case 7 will return to the menu.
             switch(userChoice){
                 case 1: 
@@ -101,39 +107,46 @@ public class MenuContainer {
     // This class will hold all methods correlating to the algorithm menu
     public class AlgorithmMenu{
         public void displayScreen(){
-            String algorithmPath = getPath.menuFolder() + "/algorithmScreen.txt";
-            readText.displayText(algorithmPath);
+            String algorithmPath = getPath.menuFolder() + "/algorithmScreen.txt";  // Gets path to the menu folder directory
+            readText.displayText(algorithmPath); // Displays the text file on screen
             
-            int maxRange = 4;
+            int maxRange = 4;                    // This is the max number a user can select up to
+            
+            System.out.print("Please select an option: ");
             String userInput = scan.nextLine();
-            
-            while(input.validateInteger(userInput,maxRange) != true){
+                        
+            while(input.validateInteger(userInput,maxRange) != true){ // Input validation for integers
                 userInput = scan.nextLine();
             }
-            jumpTree(Integer.parseInt(userInput));
+            jumpTree(Integer.parseInt(userInput));                    // Move to our jump tree with the user's selection
         }
         private void jumpTree(int userChoice){
+            
+            // The algorithm constructors are used to jump to our algorithm sections of our Algorithms class
             Algorithms algorithms = new Algorithms();
             Algorithms.Eratosthenes eratosthenes = algorithms.new Eratosthenes();
             Algorithms.BubbleSort bubbleSort = algorithms.new BubbleSort();
-            Scanner scan = new Scanner(System.in);
+            Algorithms.Euclid euclid = algorithms.new Euclid();
+            
+            Scanner scan = new Scanner(System.in);    // Used to gather input
+            
             // case 1 - 3 will run algorithms, case 4 will return to the menu.
             switch(userChoice){
                 case 1: 
                     bubbleSort.entryScreen();
                     break;
                 case 2: 
-                    // Euclidean Algorithm
+                    euclid.entryScreen();
                     break;
                 case 3: 
                     eratosthenes.EntryScreen();
                     break;
                 case 4: 
-                    MainMenu menu = new MainMenu();
+                    MainMenu menu = new MainMenu(); // Takes us back to the main menu
                     menu.displayScreen();
                     break;
                 default: 
-                    System.out.println("An error has occured in \"MenuContainer.RecipeMenu.jumpTree\"");
+                    System.out.println("An error has occured in \"MenuContainer.AlgorithmMenu.jumpTree\"");
                     break;
             }
         }

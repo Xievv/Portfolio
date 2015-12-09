@@ -1,6 +1,6 @@
-Tomato Rice Soup   |                                      |     By Shawn Giroux
-Project:RecipeBook |                                      | Date:Sept 9th, 2015
--------------------+                                      +--------------------
+Recipe: Tomato Rice Soup|                            |          By Shawn Giroux
+Class: CIS148M          |                            |      Date:Sept 9th, 2015
+------------------------+                            +-------------------------
 
 
 
