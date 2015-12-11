@@ -4,7 +4,7 @@
  * Date: 12/9/2015
  * Summary: This class will be used to handle our algorithm menus
  * and run the algorithms itself. The user will be given a brief
- * discription of the algorithm and then get the results.
+ * description of the algorithm and then get the results.
  */
 
 package finalproject;

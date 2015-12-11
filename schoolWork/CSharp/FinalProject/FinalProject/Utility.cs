@@ -5,9 +5,9 @@ using System.IO;
 /// Name: Shawn Giroux
 /// Class: CIS158M
 /// Date: 11/4/2015
-/// Summary: This class will hold all tools needed to
-/// complete the tasks that need to be repeated
-/// throughout the program.
+/// Summary: This class will be used to hold the tools that will
+/// help us complete tasks that would otherwise need to be
+/// repeated throughout the entire program.
 /// </summary>
 
 namespace FinalProject
@@ -129,7 +129,8 @@ namespace FinalProject
                 }
                 catch(Exception e)
                 {
-                    Console.WriteLine("This is not an integer!");
+                    Console.WriteLine("\n                         This is not an integer!");
+                    Console.Write("\n                        Press any key to continue...");
                     return false;
                 }
                 if (testInt <= maxRange && testInt > 0)                    // If convert is successful, checks number for boundaries specified in the text file
@@ -138,7 +139,8 @@ namespace FinalProject
                 }
                 else
                 {
-                    Console.WriteLine("This number was not a choice.");
+                    Console.WriteLine("\n                       This number was not a choice.");
+                    Console.Write("\n                           Press any key to continue...");
                     return false;
                 }
             }

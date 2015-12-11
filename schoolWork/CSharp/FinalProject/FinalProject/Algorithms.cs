@@ -1,10 +1,21 @@
 ﻿using System;
 using System.IO;
 
+/// <summary>
+/// Name: Shawn Giroux
+/// Class: CIS158M
+/// Date: 12/11/2015
+/// Summary: This class will be used to handle our algorithm menus
+/// and run the algorithms itself. The user will be given a brief
+/// description of the algorithm and then get the results.
+/// </summary>
+
 namespace FinalProject
 {
     class Algorithms
     {
+        MenuContainer.AlgorithmMenu backToMenu = new MenuContainer.AlgorithmMenu();
+
         Utility.FindDirectories FindDir = new Utility.FindDirectories();         // Constructor for our premade tools
         Utility.PrintTxt Display = new Utility.PrintTxt();                       // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         Utility.ValidateInput Validate = new Utility.ValidateInput();            // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -12,15 +23,32 @@ namespace FinalProject
         // This class will be used to create files for the bubble sort algorithm
         public class BubbleSort
         {
-            private string inputPath = @"E:\Programming\C#\programs\BubbleSort\BubbleSort\src\input.txt";        // Input file path
-            private string outputPath = @"E:\Programming\C#\programs\BubbleSort\BubbleSort\src\output.txt";      // Output file path
-
             Algorithms Tools = new Algorithms();
+
+            private string inputPath;   // Input file path
+            private string outputPath;  // Output file path
 
             public void entryScreen()
             {
+                Console.Clear();
+
+                string initInputPath = Tools.FindDir.getMenuDir() + "bubbleInput.txt";        // Input file path
+                string initOutputPath = Tools.FindDir.getMenuDir() + "bubbleOutput.txt";       // Output file 
+
+                inputPath = initInputPath;
+                outputPath = initOutputPath;
+
                 string entryScreen = Tools.FindDir.getMenuDir() + "bubbleEntry.txt";
                 Tools.Display.displayText(entryScreen);
+
+                generate();
+
+                Console.WriteLine("\n\n\n\n   " + inputPath);
+                Console.WriteLine("\n   " + outputPath);
+
+                Console.Write("\n\n\n                   Press any key to continue...");
+                Console.ReadKey();
+                Tools.backToMenu.displayScreen();
             }
             // Create file with numbers 1,000 - 10,000
             private void generate()
@@ -41,6 +69,7 @@ namespace FinalProject
                             increment++;
                         }
                         writeFile.Close();                                                  // Close file to save text
+                        createArray();                                                      // Go to our createArray method for the beginning of the algorithm to sort
                     }
                 }
                 catch (Exception e)
@@ -102,14 +131,71 @@ namespace FinalProject
                             writeFile.WriteLine(item);                                     // Foreach loop that writes each array element into output.txt
                         }
                     }
-                    Console.WriteLine("Process Complete.");                                // Notifies user that the process is complete
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine("An error has occured in 'printOutput': " + e);      // Error catching
                 }
+            }
+        }
+        public class Euclid
+        {
+            Algorithms Tools = new Algorithms();
+
+            public void entryScreen()
+            {
+                Console.Clear();
+
+                string entryPath = Tools.FindDir.getMenuDir() + "euclidEntry.txt";
+                Tools.Display.displayText(entryPath);
+                
+                Console.Write("  Enter a non-negative integer under 1,000,000 for the first number: ");
+                string firstNum = Console.ReadLine();
+
+                // Validation for the input of first number up to 1,000,000
+                if (Tools.Validate.checkInput(firstNum, 1000000) != true)
+                {
+                    Console.ReadKey();
+                    entryScreen();
+                }
+
+                Console.Write("\n  Enter a non-negative integer under 1,000,000 for the first number: ");
+                string secondNum = Console.ReadLine();
+
+                // Validation for the input of first number up to 1,000,000
+                if (Tools.Validate.checkInput(secondNum, 1000000) != true)
+                {
+                    Console.ReadKey();
+                    entryScreen();
+                }
+
+                euclideanAlgorithm(Convert.ToInt32(firstNum), Convert.ToInt32(secondNum));
+
+                Console.Write("\n\n\n                       Press any key to continue...");
+                Console.ReadKey();
+                Tools.backToMenu.displayScreen();
+            }
+            // This method will run euclids algorithm
+            private void euclideanAlgorithm(int firstNum, int secondNum)
+            {
+                int remainder;
+
+                // Swapping numbers if the first one is smaller than the second so that algorithm works properly
+                if (secondNum > firstNum)
+                {
+                    remainder = firstNum;
+                    firstNum = secondNum;
+                    secondNum = remainder;
+                }
+
+                while (true)
+                {
+                    remainder = firstNum % secondNum;
+                    firstNum = secondNum;
+                    secondNum = remainder;
+                    if (remainder == 0) { Console.WriteLine("\n                  The GCD between these two numbers is {0}", firstNum); break; }
+                    if (remainder == 1) { Console.WriteLine("\n                   There is either a prime number or no GCD"); break; }
+                }                
             }
         }
         // This class will be used to show off our prime number generator
@@ -118,23 +204,26 @@ namespace FinalProject
             Algorithms Tools = new Algorithms();                                 // Lets us use our tools
 
             // This is the entry screen; the user will interact with the program here.
-            public void EntryScreen()
+            public void entryScreen()
             {
                 Console.Clear();                                                     // Clear console for aesthetics
+
                 string entryText = Tools.FindDir.getMenuDir() + "primeEntry.txt";    // Get path to our entry screen text file
                 Tools.Display.displayText(entryText);                                // Use display utility to print text to console
 
                 Console.Write("\n           Please select a number under 1000 to generate primes to: ");
 
                 string userInput = Console.ReadLine();                               // Grabbing user input
-                while(Tools.Validate.checkInput(userInput, 1000) != true)            // Validating input through the validation utility
+                if (Tools.Validate.checkInput(userInput, 1000) != true)            // Validating input through the validation utility
                 {
-                    userInput = Console.ReadLine();
+                    Console.ReadKey();
+                    entryScreen();
                 }
                 primeArray(Convert.ToInt32(userInput));                              // Pass user input to our algorithm
 
                 Console.WriteLine("\n\n\n                         Press any key to return");
                 Console.ReadKey();
+                Tools.backToMenu.displayScreen();
             }
             // This method will create our array full of primes and print out our prime numbers.
             private void primeArray(int userInput)

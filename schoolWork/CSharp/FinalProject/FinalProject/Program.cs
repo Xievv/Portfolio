@@ -4,7 +4,9 @@
 /// Name: Shawn Giroux
 /// Class: CIS158M
 /// Date: 10/29/2015
-/// Summary: This class is the entry screen into the program
+/// Summary: This class is just the entry into the program.
+/// It will immediately send the program off to the menu 
+/// container class.
 /// </summary>
 
 namespace FinalProject

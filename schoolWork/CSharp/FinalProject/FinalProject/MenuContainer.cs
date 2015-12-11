@@ -33,9 +33,10 @@ namespace FinalProject
                 Console.Write("                       Please select an option: ");
                 string userInput = Console.ReadLine();
 
-                while (Tools.Validate.checkInput(userInput, maxRange) != true)    // Calls boolean method to validate input and checks if true or false
+                if (Tools.Validate.checkInput(userInput, maxRange) != true)    // Calls boolean method to validate input and checks if true or false
                 {
-                    userInput = Console.ReadLine();
+                    Console.ReadKey();
+                    displayScreen();
                 }
                 jumpTree(Convert.ToInt32(userInput));                             // Converts user input for switch case statement
             }
@@ -79,9 +80,10 @@ namespace FinalProject
                 Console.Write("                       Please select an option: ");
                 string userInput = Console.ReadLine();
 
-                while(Tools.Validate.checkInput(userInput, maxRange) != true)         // Passes user input to our validation method and checks until it returns true
+                if (Tools.Validate.checkInput(userInput, maxRange) != true)    // Calls boolean method to validate input and checks if true or false
                 {
-                    userInput = Console.ReadLine();
+                    Console.ReadKey();
+                    displayScreen();
                 }
                 Console.Clear();
                 jumpTree(Convert.ToInt32(userInput));                                 // Convert to int to pass to a switch case
@@ -127,7 +129,7 @@ namespace FinalProject
             }
         }
         // Display and lets the user interact with the algorithm menu
-        private class AlgorithmMenu
+        public class AlgorithmMenu
         {
             MenuContainer Tools = new MenuContainer();
 
@@ -143,30 +145,34 @@ namespace FinalProject
                 Console.Write("                       Please select an option: ");
                 string userInput = Console.ReadLine();
 
-                while (Tools.Validate.checkInput(userInput, maxRange) != true)              // Passes user input to our validation method and checks until it returns true
+                if (Tools.Validate.checkInput(userInput, maxRange) != true)    // Calls boolean method to validate input and checks if true or false
                 {
-                    userInput = Console.ReadLine();
+                    Console.ReadKey();
+                    displayScreen();
                 }
+                Console.Clear();
                 jumpTree(Convert.ToInt32(userInput));                                       // Convert to int to pass to a switch case
             }
             // This Method will use a jump tree allows the user to select from optioned provided in the text file.
             private void jumpTree(int userChoice)
             {
                 MainMenu Return = new MainMenu();                                           // Allows us to return to the main menu
+
                 Algorithms algorithms = new Algorithms();
+                Algorithms.Eratosthenes primes = new Algorithms.Eratosthenes();
+                Algorithms.BubbleSort bubblesort = new Algorithms.BubbleSort();
+                Algorithms.Euclid euclid = new Algorithms.Euclid();
 
                 switch (userChoice)
                 {
                     case 1:
-                        //Tools.Display.displayText();
+                        bubblesort.entryScreen();
                         break;
                     case 2:
-                        //Tools.Display.displayText();
+                        euclid.entryScreen();
                         break;
                     case 3:
-                        Algorithms.Eratosthenes primes = new Algorithms.Eratosthenes();
-                        primes.EntryScreen();
-                        displayScreen();
+                        primes.entryScreen();                        
                         break;
                     case 4:
                         Return.displayScreen();
@@ -175,6 +181,7 @@ namespace FinalProject
                         Console.WriteLine("Something went wrong in the jumpTree");
                         break;
                 }
+                displayScreen();
             }
         }
     }

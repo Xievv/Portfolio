@@ -4,7 +4,6 @@ Class: CIS158M          |                             |      Date:Dec 3rd, 2015
 
 
 
-
                            ~ [Euclidean Algorithm] ~
 
          This algorithm is going to take two numbers from you and find
