@@ -8,17 +8,16 @@ Class: CIS158M     |                                      |  Date:Dec 3rd, 2015
                    *+----------------------------------+*
                    *| Welcome to the Algorithm Section |*
                    *|                                  |*
-                   *|     Please Select an Algorithm:  |*
-                   *|                                  |*
                    *|     1) Bubble Sort               |*
                    *|                                  |*
                    *|     2) Euclidean Algorithm       |*
                    *|                                  |*
                    *|     3) Sieve of Eratosthenes     |*
                    *|                                  |*
-                   *|     4) Return                    |*
+                   *|     4) Back to main menu         |*
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
 
 

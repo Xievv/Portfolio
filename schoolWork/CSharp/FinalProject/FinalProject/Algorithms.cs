@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace FinalProject
 {
@@ -8,6 +9,109 @@ namespace FinalProject
         Utility.PrintTxt Display = new Utility.PrintTxt();                       // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         Utility.ValidateInput Validate = new Utility.ValidateInput();            // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+        // This class will be used to create files for the bubble sort algorithm
+        public class BubbleSort
+        {
+            private string inputPath = @"E:\Programming\C#\programs\BubbleSort\BubbleSort\src\input.txt";        // Input file path
+            private string outputPath = @"E:\Programming\C#\programs\BubbleSort\BubbleSort\src\output.txt";      // Output file path
+
+            Algorithms Tools = new Algorithms();
+
+            public void entryScreen()
+            {
+                string entryScreen = Tools.FindDir.getMenuDir() + "bubbleEntry.txt";
+                Tools.Display.displayText(entryScreen);
+            }
+            // Create file with numbers 1,000 - 10,000
+            private void generate()
+            {
+                Random random = new Random();                                               // This will create our random numbers
+
+                int increment = 0;                                                          // Lets the while loop fill the input.txt 100 times
+                int min = 1000;                                                             // Our minimum value for the random numbers
+                int max = 10000;                                                            // Our maximum value for the random numbers
+
+                try
+                {
+                    using (StreamWriter writeFile = new StreamWriter(inputPath))    // Constructor to write into another file (input.txt)
+                    {
+                        while (increment < 100)
+                        {
+                            writeFile.WriteLine(random.Next(min, max) + 1);                 // Writes random numbers between min and max (+1 to offset the 0)
+                            increment++;
+                        }
+                        writeFile.Close();                                                  // Close file to save text
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("An error has occured in 'generate': " + e);          // Error catching
+                }
+
+            }
+            // Read file into array
+            private void createArray()
+            {
+                try
+                {
+                    int[] numbers = Array.ConvertAll(File.ReadAllLines(inputPath), int.Parse);    // Creates an array full of the input.txt values and converts them to an integer
+                    sortArray(numbers);                                                                   // Pass array (numbers) to sortArray method
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("An error has occured in 'createArray': " + e);                     // Error catching
+                }
+            }
+            // Pass array from createArray and sort it
+            private void sortArray(int[] numbers)
+            {
+                Boolean check = false;                                // Set out check to false for the while loop
+                int swap;                                             // Variable for swapping elements in the array
+                try
+                {
+                    while (check == false)
+                    {
+                        check = true;                                 // Sets to true to end the while loop; if this continues through the loop, algorithm is done
+                        for (int i = 0; i < numbers.Length - 1; i++)
+                        {
+                            if (numbers[i] > numbers[i + 1])           // Checks if previous element is larger than the latter
+                            {
+                                swap = numbers[i];                    // Swaps variables
+                                numbers[i] = numbers[i + 1];          // ^^^^^^^^^^^^^^^
+                                numbers[i + 1] = swap;                // ^^^^^^^^^^^^^^^
+                                check = false;                        // Continues while loop if it hits this if statement
+                            }
+                        }
+                    }
+                    printOutput(numbers);                             // Pass array (numbers) to printOutput method
+                }
+                catch (Exception e)                                    // Error catching
+                {
+                    Console.WriteLine("An error has occured in 'sortArray': " + e);
+                }
+            }
+            // Pass array from sortArray and output into a .txt file
+            private void printOutput(int[] numbers)
+            {
+                try
+                {
+                    using (StreamWriter writeFile = new StreamWriter(outputPath))  // Constructor to write text into output.txt
+                    {
+                        foreach (var item in numbers)
+                        {
+                            writeFile.WriteLine(item);                                     // Foreach loop that writes each array element into output.txt
+                        }
+                    }
+                    Console.WriteLine("Process Complete.");                                // Notifies user that the process is complete
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("An error has occured in 'printOutput': " + e);      // Error catching
+                }
+            }
+        }
         // This class will be used to show off our prime number generator
         public class Eratosthenes
         {
@@ -95,6 +199,6 @@ namespace FinalProject
                 }
                 return primes;
             }
-        }
+        }       
     }
 }

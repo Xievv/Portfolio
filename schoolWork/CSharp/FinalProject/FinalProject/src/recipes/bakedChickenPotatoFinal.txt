@@ -1,6 +1,6 @@
-BakedChickenPotato |                                      |     By Shawn Giroux
-Project:RecipeBook |                                      | Date:Sept 9th, 2015
--------------------+                                      +--------------------
+Recipe: BakedChickenPotato|                        |            By Shawn Giroux
+Class: CIS158M            |                        |        Date:Sept 9th, 2015
+--------------------------+                        +---------------------------
 
 
                     Shawn's Baked Chicken & Potatoes Recipe
@@ -21,4 +21,4 @@ Project:RecipeBook |                                      | Date:Sept 9th, 2015
                           
 
                              
-                           Press any key to continue...                           
+                           Press any key to continue...

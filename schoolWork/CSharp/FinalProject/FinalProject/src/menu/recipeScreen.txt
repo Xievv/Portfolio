@@ -8,8 +8,6 @@ Class: CIS158M     |                                      | Date:Oct 23rd, 2015
                    *+----------------------------------+*
                    *|    Welcome to the Recipe Menu    |*
                    *|                                  |*
-                   *|     Please Select a recipe:      |*
-                   *|                                  |*
                    *|    1) Baked chicken and potato   |*
                    *|    2) Beef Stew                  |*
                    *|    3) Chicken Cacciatore         |*
@@ -17,8 +15,9 @@ Class: CIS158M     |                                      | Date:Oct 23rd, 2015
                    *|    5) Sweet and Sour Chicken     |*
                    *|    6) Tomato Rice Soup           |*
                    *|                                  |*
-                   *|    7) Return                     |*
+                   *|    7) Back to main menu          |*
                    *|                                  |*
                    *+----------------------------------+*
                   *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
 

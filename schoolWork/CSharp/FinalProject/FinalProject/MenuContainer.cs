@@ -29,6 +29,8 @@ namespace FinalProject
                 Tools.Display.displayText(menuPath);                              // Displays menu screen
 
                 int maxRange = 3;                                                 // Max range of menu choices in the txt file
+
+                Console.Write("                       Please select an option: ");
                 string userInput = Console.ReadLine();
 
                 while (Tools.Validate.checkInput(userInput, maxRange) != true)    // Calls boolean method to validate input and checks if true or false
@@ -73,12 +75,15 @@ namespace FinalProject
                 Tools.Display.displayText(recipePath);                                // Displays the recipe menu screen text
                 
                 int maxRange = 7;                                                     // Max amount of options in the text file
+
+                Console.Write("                       Please select an option: ");
                 string userInput = Console.ReadLine();
 
                 while(Tools.Validate.checkInput(userInput, maxRange) != true)         // Passes user input to our validation method and checks until it returns true
                 {
                     userInput = Console.ReadLine();
                 }
+                Console.Clear();
                 jumpTree(Convert.ToInt32(userInput));                                 // Convert to int to pass to a switch case
             }
             // This Method will use a jump tree allows the user to select from optioned provided in the text file.
@@ -134,6 +139,8 @@ namespace FinalProject
                 Tools.Display.displayText(algorithmPath);                                   // Displays the algorithm menu screen text
 
                 int maxRange = 4;                                                           // Max amount of options in the text file
+
+                Console.Write("                       Please select an option: ");
                 string userInput = Console.ReadLine();
 
                 while (Tools.Validate.checkInput(userInput, maxRange) != true)              // Passes user input to our validation method and checks until it returns true
