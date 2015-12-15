@@ -6,6 +6,7 @@
 /// Date: 10/31/2015
 /// Summary: This class will hold all menus for both the menu, recipe and algorithm section.
 /// It will display the recipes and the algorithms along with the menu to get to them.
+/// ASCII used in the exit screen was generated from patorjk.com/software/taag/
 /// </summary>
 
 namespace FinalProject
@@ -46,6 +47,7 @@ namespace FinalProject
                 string recipePath = Tools.FindDir.getMenuDir() + "recipeScreen.txt";  // Recipe menu screen
                 RecipeMenu Recipe = new RecipeMenu();                                 // Allows us to move to the RecipeMenu class
                 AlgorithmMenu Algorithm = new AlgorithmMenu();                        // Allows us to move to the AlgorithmMenu class
+                ExitScreen Exit = new ExitScreen();                                   // Allows us to move to the Exit class
                 switch (userChoice)
                 {
                     case 1:
@@ -55,7 +57,7 @@ namespace FinalProject
                         Algorithm.displayScreen();
                         break;
                     case 3:
-                        Environment.Exit(0);                                      // Closes program is user selects exit
+                        Exit.exitScreen();
                         break;
                     default:
                         Console.WriteLine("Something went wrong in the jumpTree");
@@ -182,6 +184,23 @@ namespace FinalProject
                         break;
                 }
                 displayScreen();
+            }
+        }
+        // Displays the exit screen when the user is quitting
+        private class ExitScreen
+        {            
+            MenuContainer Tools = new MenuContainer();
+
+            public void exitScreen()
+            {
+                Console.Clear();
+
+                string exitPath = Tools.FindDir.getMenuDir() + "exitScreen.txt";
+                Tools.Display.displayText(exitPath);
+
+                Console.Write("                          Press any key to quit...");
+                Console.ReadKey();
+                Environment.Exit(0);                 // Closes program is user selects exit
             }
         }
     }

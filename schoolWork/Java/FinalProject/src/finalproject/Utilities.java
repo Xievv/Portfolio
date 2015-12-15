@@ -1,6 +1,6 @@
 /*
  * Name: Shawn Giroux
- * Date: 11/6/2015
+ * Date: 12/15/2015
  * Summary: This class will be used to hold the tools that will
  * help us complete tasks that would otherwise need to be
  * repeated throughout the entire program.
@@ -214,15 +214,17 @@ public class Utilities {
             int testInt;                                       // Int for attempting to convert user input
             try{                
                 testInt = Integer.parseInt(userInput);         // Tries to convert user input to an integer
-                //System.out.println("Validation success!");           // Troubleshooting.
+
             } catch (Exception e){
-                System.out.println("This is not an integer!"); // If conversion fails, send message to user and return false
+                System.out.println("\n                         This is not an integer!");
+                System.out.print("\n                        Press any key to continue...");
                 return false;
             }
             if(testInt <= rangeMax && testInt > 0){            // This if statement checks if we're within the specified boundaries of the text file
                 return true;
             } else {
-                System.out.println("This number was not a choice."); 
+                System.out.println("\n                       This number was not a choice.");
+                System.out.print("\n                           Press any key to continue...");
                 return false;
             }           
         }

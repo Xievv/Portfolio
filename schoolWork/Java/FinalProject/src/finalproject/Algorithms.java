@@ -29,15 +29,16 @@ public class Algorithms {
     public class Eratosthenes{
         
         // Entry screen into the Eratosthenes program. User will interact here
-        public void EntryScreen(){
+        public void entryScreen(){
             String entryText = getPath.menuFolder() + "/primeEntry.txt";
             readText.displayText(entryText);
             
             System.out.printf("%n           Please select a number under 1000 to generate primes to: ");
             
             String userInput = scan.nextLine();
-            while(input.validateInteger(userInput, 1000) != true){
-                userInput = scan.nextLine();
+            if(input.validateInteger(userInput, 1000) != true){
+                scan.nextLine();
+                entryScreen();
             }
             primeArray(Integer.parseInt(userInput));
             
@@ -202,16 +203,18 @@ public class Algorithms {
             String firstNum = scan.nextLine();   
             
             // This while loop will use our validate integer utility to check for a number under 1,000,000
-            while(input.validateInteger(firstNum, 1000000) != true){
-                firstNum = scan.nextLine();
+            if(input.validateInteger(firstNum, 1000000) != true){
+                scan.nextLine();
+                entryScreen();
             }
             
             System.out.print("\n  Enter in a non-negative integer under 1,000,000 for the second number: ");
             String secondNum = scan.nextLine();
             
             // This while loop will use our validate integer utility to check for a number under 1,000,000
-            while(input.validateInteger(secondNum, 1000000) != true){
-                secondNum = scan.nextLine();
+            if(input.validateInteger(secondNum, 1000000) != true){
+                scan.nextLine();
+                entryScreen();
             }
             euclideanAlgorithm(Integer.parseInt(firstNum),Integer.parseInt(secondNum));  // We must convert out strings to integers before passing the parameters
             
@@ -249,4 +252,3 @@ public class Algorithms {
         }
     }
 }
-~

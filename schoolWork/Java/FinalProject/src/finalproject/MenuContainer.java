@@ -1,8 +1,9 @@
 /*
  * Name: Shawn Giroux
- * Date: 10/28/2015
- * Summary: This class will be used to display the recipes that the
- * user would like to view with a switch statement.
+ * Date: 10/15/2015
+ * Summary: This class will hold all menus for both the menu, recipe and algorithm section.
+ * It will display the recipes and the algorithms along with the menu to get them.
+ * ASCII used in the exit screen was generated from patorjk.com/software/taag/
  */
 
 package finalproject;
@@ -21,18 +22,21 @@ public class MenuContainer {
         
         RecipeMenu recipe = new RecipeMenu();                            // Constructor to go to recipe menu
         AlgorithmMenu algorithm = new AlgorithmMenu();                   // Constructor to go to algorithm menu
+        ExitScreen exit = new ExitScreen();                              // Constructor to go to exit screen
         
         public void displayScreen(){
+            
             String menuDir = getPath.menuFolder() + "/mainScreen.txt";   // Uses our toolbox constructor to pull the directory for menu folder.
             readText.displayText(menuDir);                               // Displays our text file from the directory we pulled.
             
             int maxRange = 3;                                            // Highest number option user can choose.
-            
-            System.out.print("Please select an option: ");
+
+            System.out.print("                       Please select an option: ");
             String userInput = scan.nextLine();
             
-            while(input.validateInteger(userInput, maxRange) != true){   // Checks for a "true" value from method validate to see if the input is a number.
-                userInput = scan.nextLine();
+            if(input.validateInteger(userInput, maxRange) != true){   // Checks for a "true" value from method validate to see if the input is a number.
+                scan.nextLine();
+                displayScreen();
             }
             jumpTree(Integer.parseInt(userInput));
         }
@@ -46,7 +50,7 @@ public class MenuContainer {
                     algorithm.displayScreen();
                     break;
                 case 3:
-                    System.exit(0);
+                    exit.exitScreen();
                     break;
                 default: System.out.println("There was an error in \"MenuContainer.MainMenu.jumptree\"");
             }
@@ -60,11 +64,12 @@ public class MenuContainer {
             
             int maxRange = 7;      // Highest number option user can choose.
             
-            System.out.print("Please select an option: ");
+            System.out.print("                       Please select an option: ");
             String userInput = scan.nextLine();
             
-            while(input.validateInteger(userInput, maxRange) != true){      // Checks for a "true" value from method validate to see if the input is a number.
-                userInput = scan.nextLine();
+            if(input.validateInteger(userInput, maxRange) != true){      // Checks for a "true" value from method validate to see if the input is a number.
+                scan.nextLine();
+                displayScreen();
             }
             jumpTree(Integer.parseInt(userInput));
         }
@@ -112,11 +117,12 @@ public class MenuContainer {
             
             int maxRange = 4;                    // This is the max number a user can select up to
             
-            System.out.print("Please select an option: ");
+            System.out.print("                       Please select an option: ");
             String userInput = scan.nextLine();
                         
-            while(input.validateInteger(userInput,maxRange) != true){ // Input validation for integers
-                userInput = scan.nextLine();
+            if(input.validateInteger(userInput,maxRange) != true){ // Input validation for integers
+                scan.nextLine();
+                displayScreen();
             }
             jumpTree(Integer.parseInt(userInput));                    // Move to our jump tree with the user's selection
         }
@@ -139,7 +145,7 @@ public class MenuContainer {
                     euclid.entryScreen();
                     break;
                 case 3: 
-                    eratosthenes.EntryScreen();
+                    eratosthenes.entryScreen();
                     break;
                 case 4: 
                     MainMenu menu = new MainMenu(); // Takes us back to the main menu
@@ -149,6 +155,18 @@ public class MenuContainer {
                     System.out.println("An error has occured in \"MenuContainer.AlgorithmMenu.jumpTree\"");
                     break;
             }
+        }
+    }
+    // Displays the exit screen when the user is quitting
+    private class ExitScreen{
+        
+        public void exitScreen(){
+            String exitPath = getPath.menuFolder() + "/exitScreen.txt";
+            readText.displayText(exitPath);
+            
+            System.out.print("                          Press any key to quit...");
+            scan.nextLine();
+            System.exit(0);     // Ends the program
         }
     }
 }
