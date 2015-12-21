@@ -30,17 +30,17 @@ public class Algorithms {
         
         // Entry screen into the Eratosthenes program. User will interact here
         public void entryScreen(){
-            String entryText = getPath.menuFolder() + "/primeEntry.txt";
-            readText.displayText(entryText);
+            String entryText = getPath.menuFolder() + "/primeEntry.txt";                                // Finalize our path for the Eratosthenes user prompt
+            readText.displayText(entryText);                                                            // Displays the text from the text file
             
-            System.out.printf("%n           Please select a number under 1000 to generate primes to: ");
+            System.out.printf("%n         Please select a number up to 1000 to generate primes to: ");
             
-            String userInput = scan.nextLine();
-            if(input.validateInteger(userInput, 1000) != true){
+            String userInput = scan.nextLine();                                                         // Gathers user input into a string
+            if(input.validateInteger(userInput, 1000) != true){                                         // Validates user input for an integer
                 scan.nextLine();
-                entryScreen();
+                entryScreen();                                                                          // If input is not an integer, reload the screen
             }
-            primeArray(Integer.parseInt(userInput));
+            primeArray(Integer.parseInt(userInput));                                                    // Pass input to primeArray as an integer (since it was validated)
             
             System.out.printf("%n%n%n                         Press any key to return%n");
             scan.nextLine();
@@ -48,17 +48,19 @@ public class Algorithms {
         }
         // This will create our array of numbers and print out the prime number results
         private void primeArray(int userInput){
-            int startNum = 2;
-            int[] primes = new int[userInput - 1]; 
+            int startNum = 2;                            // This will be used to populate our primes array
+            int[] primes = new int[userInput - 1];       // Creates an array to the size that the user selected
             
-            for(int i = 0; i < primes.length; i++){
+            for(int i = 0; i < primes.length; i++){      // Fill our array with numbers 1 through the users selection
                 primes[i] = startNum;
                 startNum++;
             }
             
-            sortPrimes(primes);
+            sortPrimes(primes);                          // Passes the array to our prime number finding algorithm
             
             System.out.printf("%n%n                       [Prime Numbers from 2 - %d]%n", userInput);
+            
+            // This loop will print out only the prime numbers, as composite numbers were marked as a "0"
             for(int i = 0; i < primes.length; i++){
                 if(primes[i] != 0){
                     System.out.printf("%d  ", primes[i]);
@@ -67,26 +69,33 @@ public class Algorithms {
         }
         // This will sort out all non-primes and return the list back to primeArray
         private int[] sortPrimes(int[] primes){
-            int nextPrime = 2;
-            int checkForPrime = 1;
+            int nextPrime = 2;                                  // This will be used to determine what our next prime is
+            int checkForPrime = 1;                              // This will be used to check the index of array 'primes' for the next prime number
             
+            // This loop will find all numbers in our array and mark the composite number as 0
             while(true){
+                // This nested loop will search through our list current prime-checking number
                 for(int i = 0; i< primes.length; i++){
                     if(primes[i] != nextPrime){
-                        if(primes[i] % nextPrime == 0){
-                            primes[i] = 0;
+                        if(primes[i] % nextPrime == 0){ // If we get a 0, the number is composite
+                            primes[i] = 0;              // Mark composite number as 0
                         }
                     }
                 }
+                // This nested loop will find our next number to divide by
                 while(true){
+                    // If the element in primes isn't 0 or the end of our array, then it's our next number
                     if(primes[checkForPrime] != 0 && checkForPrime != primes.length){
                         nextPrime = primes[checkForPrime];
                         checkForPrime++;
                         break;
                     }
+                    // If the element is the last in the array, we can break this
                     else if (checkForPrime == primes.length - 1){ break; }
+                    // Increase our checking number to move through our array index
                     else { checkForPrime++; }
                 }
+                // If our prime checker is equal to the end of the array, we are done because all numbers are checked
                 if (checkForPrime == primes.length - 1){ break; }
             }
             return primes;

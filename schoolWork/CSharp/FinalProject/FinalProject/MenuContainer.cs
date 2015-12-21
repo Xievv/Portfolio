@@ -44,7 +44,6 @@ namespace FinalProject
             // This Method will use a jump tree allows the user to select from optioned provided in the text file.
             private void jumpTree(int userChoice)
             {
-                string recipePath = Tools.FindDir.getMenuDir() + "recipeScreen.txt";  // Recipe menu screen
                 RecipeMenu Recipe = new RecipeMenu();                                 // Allows us to move to the RecipeMenu class
                 AlgorithmMenu Algorithm = new AlgorithmMenu();                        // Allows us to move to the AlgorithmMenu class
                 ExitScreen Exit = new ExitScreen();                                   // Allows us to move to the Exit class

@@ -140,7 +140,7 @@ namespace FinalProject
                 else
                 {
                     Console.WriteLine("\n                       This number was not a choice.");
-                    Console.Write("\n                           Press any key to continue...");
+                    Console.Write("\n                        Press any key to continue...");
                     return false;
                 }
             }

@@ -46,7 +46,7 @@ namespace FinalProject
                 Console.WriteLine("\n\n\n\n   " + inputPath);
                 Console.WriteLine("\n   " + outputPath);
 
-                Console.Write("\n\n\n                   Press any key to continue...");
+                Console.Write("\n\n                   Press any key to continue...");
                 Console.ReadKey();
                 Tools.backToMenu.displayScreen();
             }
@@ -211,7 +211,7 @@ namespace FinalProject
                 string entryText = Tools.FindDir.getMenuDir() + "primeEntry.txt";    // Get path to our entry screen text file
                 Tools.Display.displayText(entryText);                                // Use display utility to print text to console
 
-                Console.Write("\n           Please select a number under 1000 to generate primes to: ");
+                Console.Write("\n         Please select a number up to 1000 to generate primes to: ");
 
                 string userInput = Console.ReadLine();                               // Grabbing user input
                 if (Tools.Validate.checkInput(userInput, 1000) != true)            // Validating input through the validation utility
@@ -244,7 +244,7 @@ namespace FinalProject
                 {
                     if(primes[i] != 0) // If the number is marked as a '0', it is not a prime number
                     {
-                        Console.Write("{0}  ", primes[i]);  // puts ',' between numbers
+                        Console.Write("{0}  ", primes[i]);
                     }
                 }
             }

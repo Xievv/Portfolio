@@ -224,7 +224,7 @@ public class Utilities {
                 return true;
             } else {
                 System.out.println("\n                       This number was not a choice.");
-                System.out.print("\n                           Press any key to continue...");
+                System.out.print("\n                        Press any key to continue...");
                 return false;
             }           
         }

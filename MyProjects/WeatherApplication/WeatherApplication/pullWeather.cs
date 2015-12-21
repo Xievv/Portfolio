@@ -12,6 +12,7 @@ namespace WeatherApplication
         public string state;
         public string skies;
         public string temperature;
+        public string time;
 
         public string weatherScrape()
         {
@@ -44,17 +45,20 @@ namespace WeatherApplication
             {
                 Console.WriteLine("Error has occured: No match found.");
             }
-            for (int i = 0; i < raw.Length; i++)                                        // Used for trouble shooting, formats line number from array
+            /*for (int i = 0; i < raw.Length; i++)                                        // Used for trouble shooting, formats line number from array
             {
                 Console.WriteLine("{0}) {1}", i, raw[i]);
-            }
+            }*/
             city = raw[10];
             state = raw[14];
             skies = raw[24] + " " + raw[26];
             temperature = raw[18];
         }
-        public void displayWeather()
+        public void getTime()
         {
+            string currentTime = DateTime.Now.ToString();
+            string prompt = "Data pulled on " + currentTime;
+            time = prompt;
         }
     }
 }
