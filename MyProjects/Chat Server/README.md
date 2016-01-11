@@ -6,6 +6,8 @@ As a side project during my winter break, I decided to get a headstart on learni
 
 It took me about a weeks worth of work (some days heavy hours, couple days off).  The code itself was probably destroyed and rewritten from the ground up about 20 times before I was finally understanding exactly what I was doing.  By the time I figured out what I was doing, I would keep having a new idea I would want to implement which would require me to rebuild the code in a cleaner way.  It was an excellent project for me to learn with.
 
+For reference, this program was built after my Intro to C# class was finished at Manchester Community College.
+
 ## Future Potential Features To Add
 - Give User ability to manually modify port number with a console prompt
 - Give user ability to restrict number of total clients
