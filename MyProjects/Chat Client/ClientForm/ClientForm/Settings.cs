@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ClientForm
 {
     public partial class Settings : Form
     {
+        /*******************************************************
+        * Gets some possible presets from Form1
+        *******************************************************/
         private void Settings_Load(object sender, EventArgs e)
         {
             textBoxUsername.Text = Form1.username;
+            textBoxServerPort.Text = Form1.port.ToString();
         }
 
         public Settings()
@@ -40,14 +38,21 @@ namespace ClientForm
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        /*******************************************************
+        * Close without saving any information
+        *******************************************************/
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /*******************************************************
+        * Save information that the user filled in on Form1
+        *******************************************************/
         private void buttonOk_Click(object sender, EventArgs e)
         {
             Form1.username = textBoxUsername.Text;
+            Form1.serverIP = IPAddress.Parse(textBoxServerIP.Text);
             this.Close();
         }
 

@@ -8,7 +8,7 @@ using System.Net.Sockets;
 /// Name: Shawn Giroux
 /// Date: January 11th, 2016
 /// Summary: Entry into program.  Bulk of the code is held
-/// in the RunServer.cs
+/// in the RunServer.cs back o
 /// </summary>
 
 namespace ServerApplication

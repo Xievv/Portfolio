@@ -57,7 +57,7 @@
             // textBoxSendMessage
             // 
             this.textBoxSendMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSendMessage.Location = new System.Drawing.Point(12, 336);
+            this.textBoxSendMessage.Location = new System.Drawing.Point(12, 338);
             this.textBoxSendMessage.Multiline = true;
             this.textBoxSendMessage.Name = "textBoxSendMessage";
             this.textBoxSendMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -67,7 +67,7 @@
             // buttonSend
             // 
             this.buttonSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSend.Location = new System.Drawing.Point(423, 336);
+            this.buttonSend.Location = new System.Drawing.Point(423, 338);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(89, 48);
             this.buttonSend.TabIndex = 3;
@@ -168,8 +168,10 @@
             this.Controls.Add(this.LabelConnectionStatus);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Coffee Bean";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

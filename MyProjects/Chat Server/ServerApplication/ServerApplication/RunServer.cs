@@ -94,6 +94,10 @@ namespace ServerApplication
                     stream = newClient.GetStream();
                     int bufferSize = newClient.ReceiveBufferSize;
                     message = getData(stream, bufferSize);
+
+                    // This is a string that may be sent from the client to let the server
+                    // know that they are disconnecting so that the server can gracefully
+                    // remove the client.
                     if(message != "43ijF#1jio34IO!")
                     {
                         sendData(stream, bufferSize, message);
@@ -109,17 +113,14 @@ namespace ServerApplication
                 }
                 catch (ObjectDisposedException e)
                 {
-                    //Console.WriteLine("Client at {0} has disconnected.", connectingClient);
                     Console.WriteLine("Error in handleClient: " + e);
                 }
                 catch (IOException e)
                 {
-                    //Console.WriteLine("Client at {0} has disconnected.", connectingClient);
                     Console.WriteLine("Error in handleClient: " + e);
                 }
                 catch (Exception catchAll)
                 {
-                    //Console.WriteLine("Error occured in handleClient(Exception): " + catchAll);
                     Console.WriteLine("Error in handleClient: " + catchAll);
                 }
             }
@@ -158,7 +159,6 @@ namespace ServerApplication
             catch(ObjectDisposedException e)
             {
                 Console.WriteLine("Error in handleClient: " + e);
-                //Console.WriteLine("Client at {0} has disconnected.", connectingClient);
             }
             catch(Exception catchAll)
             {

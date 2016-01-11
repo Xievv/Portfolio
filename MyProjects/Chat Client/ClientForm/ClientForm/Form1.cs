@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Net;
@@ -25,8 +20,9 @@ namespace ClientForm
         *******************************************************/
 
         /* Server info */
-        int port = 26900;
-        IPAddress serverIP = IPAddress.Parse("10.0.0.245"); // For LAN connection
+        public static int port = 26900;
+        public static IPAddress serverIP;
+        //public static IPAddress serverIP = IPAddress.Parse("10.0.0.245"); // For LAN connection
         //IPAddress serverIP = IPAddress.Parse("24.62.170.60"); // For external connections
 
         /* Used for handling server */
@@ -103,7 +99,8 @@ namespace ClientForm
         * connections to the server. "isConnected" will become
         * false to gracefully end other parts of the program.
         * Menustrip dialogs trade enabled status for
-        * aesthetics.
+        * aesthetics. "43ijF#1jio34IO!" is sent to let the
+        * server know that the user is disconnecting. 
         *******************************************************/
         private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
         {
