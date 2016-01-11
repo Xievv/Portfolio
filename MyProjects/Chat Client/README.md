@@ -9,10 +9,10 @@ The chat client originally ran in the command prompt, but I quickly realized tha
 For reference, this program was built after my Intro to C# class was finished at Manchester Community College.
 
 ## Future Potential Features To Add
-- Restrict user from resizing the window (works off pixel placement, not percentages.  Everything will look wonky)
+- ~~Restrict user from resizing the window~~  (Added)
 - Sound notification for incoming messages
 - Randomly colored usernames for easy distinction
-- Allow user to select server IP and Port
+- ~~Allow user to select server IP and Port~~  (Added)
 - Prompt user to enter a username when program is started
 
 ## Known Bugs
