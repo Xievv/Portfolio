@@ -4,6 +4,3 @@ C:\Users\Shawn\Documents\Visual Studio 2015\Projects\ServerApplication\ServerApp
 C:\Users\Shawn\Documents\Visual Studio 2015\Projects\ServerApplication\ServerApplication\obj\Debug\ServerApplication.csprojResolveAssemblyReference.cache
 C:\Users\Shawn\Documents\Visual Studio 2015\Projects\ServerApplication\ServerApplication\obj\Debug\ServerApplication.exe
 C:\Users\Shawn\Documents\Visual Studio 2015\Projects\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb
-C:\Users\Shawn\Desktop\ServerApplication\ServerApplication\bin\Debug\ServerApplication.exe.config
-C:\Users\Shawn\Desktop\ServerApplication\ServerApplication\obj\Debug\ServerApplication.exe
-C:\Users\Shawn\Desktop\ServerApplication\ServerApplication\obj\Debug\ServerApplication.pdb

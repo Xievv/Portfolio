@@ -6,6 +6,12 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Collections;
 
+/// <summary>
+/// Name: Shawn Giroux
+/// Date: January 11th, 2016
+/// Summary: A simple chat server that handles multiple clients.
+/// </summary>
+
 namespace ServerApplication
 {
     class RunServer

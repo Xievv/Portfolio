@@ -10,6 +10,12 @@ using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
 
+/// <summary>
+/// Name: Shawn Giroux
+/// Date: January 11th, 2016
+/// Summary: A windows form chat client to connect a chat server.
+/// </summary>
+
 namespace ClientForm
 {
     public partial class Form1 : Form
