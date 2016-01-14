@@ -1,5 +1,5 @@
 # Chat Client
-Date README updated on: January 11th, 2016
+Date README updated on: January 14th, 2016
 
 ## Overview
 As a side project during my winter break, I decided to get a headstart on learning some networking basics before I took the class in the fall of 2016. What originally started as just trying to get a basic chat/server client to work in command prompt, evolved into me diving head-first into windows forms and making a functioning chat client to handle multiple users.
@@ -18,3 +18,4 @@ For reference, this program was built after my Intro to C# class was finished at
 ## Known Bugs
 - Spamming connect/disconnect can break the server
 - Spamming send button can send multiple lines in one byte stream
+- Modifying the settings page while connected to server brings unfortunate circumstances
