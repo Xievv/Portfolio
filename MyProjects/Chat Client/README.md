@@ -18,4 +18,4 @@ For reference, this program was built after my Intro to C# class was finished at
 ## Known Bugs
 - Spamming connect/disconnect can break the server
 - Spamming send button can send multiple lines in one byte stream
-- Modifying the settings page while connected to server brings unfortunate circumstances
+- Modifying the settings page while connected to server brings unfortunate consequences
