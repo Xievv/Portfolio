@@ -1,0 +1,47 @@
+SQL> set linesize 80
+SQL> SELECT DISTINCT zipcode, city
+  2  FROM customer_address_data
+  3  ORDER BY zipcode;
+
+Zipcode City                                                                    
+======= ===========                                                             
+03038   DERRY                                                                   
+03051   HUDSON                                                                  
+03053   LONDONDERRY                                                             
+03054   MERRIMACK                                                               
+03060   NASHUA                                                                  
+03061   NASHUA                                                                  
+03062   NASHUA                                                                  
+03063   NASHUA                                                                  
+03064   NASHUA                                                                  
+03089   SALEM                                                                   
+03101   MANCHESTER                                                              
+
+Zipcode City                                                                    
+======= ===========                                                             
+03102   MANCHESTER                                                              
+03103   MANCHESTER                                                              
+03104   MANCHESTER                                                              
+03105   MANCHESTER                                                              
+03107   MANCHESTER                                                              
+03108   MANCHESTER                                                              
+03109   MANCHESTER                                                              
+03111   MANCHESTER                                                              
+03301   CONCORD                                                                 
+03302   CONCORD                                                                 
+03303   CONCORD                                                                 
+
+Zipcode City                                                                    
+======= ===========                                                             
+03305   CONCORD                                                                 
+03820   DOVER                                                                   
+03821   DOVER                                                                   
+03822   DOVER                                                                   
+03839   ROCHESTER                                                               
+03866   ROCHESTER                                                               
+03867   ROCHESTER                                                               
+03868   ROCHESTER                                                               
+
+30 rows selected.
+
+SQL> spool off

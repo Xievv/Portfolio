@@ -1,0 +1,63 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'HUDSON'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+MARION          ALLEBACH        858 AINSWORTH AVE         03051                                                                                       
+HANK            BARNER          501 JOSHUA DR             03051                                                                                       
+KEENA           BODENSTEIN      593 SPRAGUE ST            03051                                                                                       
+WOODROW         BORROEL         247 DEWEY ST              03051                                                                                       
+AUDREA          BOSQUES         488 PARENTEAU ST          03051                                                                                       
+ROGER           CASSADAY        842 STERLING AVE          03051                                                                                       
+DOUGLASS        CEREGHINO       288 LANCASTER AVE         03051                                                                                       
+CHANTE          CRAIGER         314 THOMAS ST             03051                                                                                       
+COLEMAN         DAYLEY          719 DALE ST               03051                                                                                       
+LEIGHA          DOMBKOWSKI      382 GANTRY ST             03051                                                                                       
+ALLINE          DUGI            130 WATSON ST             03051                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+GAVIN           FLAND           626 ALPHONSE ST           03051                                                                                       
+APOLONIA        FORISTER        190 LINGARD ST            03051                                                                                       
+ALICE           GAURON          508 PRESCOTT ST           03051                                                                                       
+WILBURN         GOODEMOTE       375 BROADHEAD AVE         03051                                                                                       
+ENOCH           GRAMZA          850 NASHUA ST             03051                                                                                       
+ARON            GRUBEL          555 ELLIOT WAY            03051                                                                                       
+CAREY           JIN             284 WILSON ST             03051                                                                                       
+DUSTIN          KOEPPEN         898 WILSON ST             03051                                                                                       
+BROCK           LOOFT           662 BURNETT AVE           03051                                                                                       
+VAN             MADDOY          991 FERNDALE ST           03051                                                                                       
+MOZELLE         MAJCHER         848 CEDAR ST              03051                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+JUANITA         MATTEO          781 MARGUERITE ST         03051                                                                                       
+EVAN            MAZION          158 WILDWOOD ST           03051                                                                                       
+CAROLANN        MCCARRY         810 KENNEY ST             03051                                                                                       
+DANIELL         MCDEARMONT      455 AUBURN ST             03051                                                                                       
+DARCY           PEROZO          738 DIX ST                03051                                                                                       
+AMPARO          PICKETT         941 ANTHONY ST            03051                                                                                       
+ELIA            PREISS          275 CHENETTE AVE          03051                                                                                       
+QUENTIN         ROOP            937 ALMEDA ST             03051                                                                                       
+AYESHA          SCHUETT         865 OVERLAND ST           03051                                                                                       
+TOMMIE          SEVEDGE         954 WILLOW ST             03051                                                                                       
+NOAH            STOLTENBURG     804 RICHARD ST            03051                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KIM             TENPENNY        407 CEDAR ST              03051                                                                                       
+SPENCER         TOMBERLIN       640 NELSON ST             03051                                                                                       
+RUEBEN          TRUMBLE         152 MOLLIE DR             03051                                                                                       
+SAL             UPCHURCH        439 WYOMING AVE           03051                                                                                       
+CINDA           VIDRIO          378 BRENT CT              03051                                                                                       
+BILLY           WYDO            639 TYLER AVE             03051                                                                                       
+MONICA          ZACK            325 PINE ST               03051                                                                                       
+
+40 rows selected.
+
+SQL> spool off

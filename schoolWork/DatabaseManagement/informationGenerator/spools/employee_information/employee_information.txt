@@ -1,0 +1,119 @@
+SQL> set linesize 150
+SQL> SELECT first_name, last_name, employee_address_data.phone_number, employee_job_data.salary, employee_job_data.department
+  2  FROM employee_data
+  3  INNER JOIN employee_address_data
+  4  ON employee_data.employee_id=employee_address_Data.employee_id
+  5  INNER JOIN employee_job_data
+  6  ON employee_data.employee_id=employee_job_data.employee_id
+  7  ORDER BY employee_job_data.department, employee_job_data.salary DESC;
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+INDIA           TSOU            (603)259-9350    $6,667.00 DEVELOPMENT                                                                                
+SHANTE          KINTIGH         (603)288-9483    $6,667.00 DEVELOPMENT                                                                                
+EVELINE         DEBRUYN         (603)377-3751    $6,667.00 DEVELOPMENT                                                                                
+LYNETTE         DENEEN          (603)974-4231    $6,667.00 DEVELOPMENT                                                                                
+HARLAND         MARCEL          (603)275-9560    $6,667.00 DEVELOPMENT                                                                                
+FREDIA          ZAYA            (603)856-4255    $6,667.00 DEVELOPMENT                                                                                
+JUAN            SCARSDALE       (603)589-0613    $6,667.00 DEVELOPMENT                                                                                
+KRIS            ONDRICK         (603)819-6685    $6,667.00 DEVELOPMENT                                                                                
+TAYNA           EMDE            (603)249-4123    $6,667.00 DEVELOPMENT                                                                                
+IKE             GINES           (603)465-8981    $6,667.00 DEVELOPMENT                                                                                
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+TERESITA        ESTEP           (603)583-4161    $6,667.00 DEVELOPMENT                                                                                
+VERONIQUE       MUGLESTON       (603)863-1183    $6,500.00 DEVELOPMENT                                                                                
+DENAE           PETTENGILL      (603)861-4032    $6,500.00 DEVELOPMENT                                                                                
+EDITH           STRATIS         (603)744-2773    $6,500.00 DEVELOPMENT                                                                                
+VICENTE         HUMAN           (603)867-7666    $6,500.00 DEVELOPMENT                                                                                
+NORIKO          DIFFEY          (603)191-3181    $6,500.00 DEVELOPMENT                                                                                
+FRANCIS         REMBOLD         (603)902-2638    $6,500.00 DEVELOPMENT                                                                                
+PIA             MOSCOVIC        (603)460-6180    $6,500.00 DEVELOPMENT                                                                                
+DEBERA          ALTER           (603)294-0007    $6,500.00 DEVELOPMENT                                                                                
+SPRING          HEPPLER         (603)326-9748    $6,500.00 DEVELOPMENT                                                                                
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+ADRIAN          ENGLEHART       (603)875-6739    $6,166.00 DEVELOPMENT                                                                                
+CHERRYL         RIGLER          (603)202-9702    $6,166.00 DEVELOPMENT                                                                                
+MELINA          GEISE           (603)853-7884    $6,166.00 DEVELOPMENT                                                                                
+DIANNE          ASFOUR          (603)782-4439    $5,833.00 DEVELOPMENT                                                                                
+JAMISON         BUSHART         (603)567-5702    $5,833.00 DEVELOPMENT                                                                                
+IVELISSE        BOONSTRA        (603)994-4401    $5,833.00 DEVELOPMENT                                                                                
+ESTA            DEAVILLE        (603)868-7871    $5,833.00 DEVELOPMENT                                                                                
+SHARILYN        CARSTENSEN      (603)344-6092    $5,833.00 DEVELOPMENT                                                                                
+CAMMIE          VIOLETTA        (603)516-6026    $5,833.00 DEVELOPMENT                                                                                
+LILLIA          HERWIG          (603)928-2073    $5,833.00 DEVELOPMENT                                                                                
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+TOMIKA          STUBBLEFIELD    (603)292-8071    $5,833.00 DEVELOPMENT                                                                                
+SOCORRO         LECEA           (603)242-1687    $5,833.00 FINANCE                                                                                    
+CLINTON         HASTEN          (603)217-7818    $5,833.00 FINANCE                                                                                    
+IRVIN           ARAI            (603)495-9534    $5,666.00 FINANCE                                                                                    
+VALORIE         ROUFF           (603)755-4693    $5,666.00 FINANCE                                                                                    
+DEE             WYDO            (603)719-2279    $5,416.00 FINANCE                                                                                    
+ELIA            TANTUM          (603)446-1904    $4,917.00 FINANCE                                                                                    
+ADAH            SCHAF           (603)791-0202    $4,917.00 FINANCE                                                                                    
+CAMMY           WANSING         (603)397-5357    $4,830.00 HUMAN RESOURCE                                                                             
+KIMI            GOUKER          (603)119-9272    $4,830.00 HUMAN RESOURCE                                                                             
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+MAYOLA          HOFFIS          (603)851-2298    $4,830.00 HUMAN RESOURCE                                                                             
+HALINA          ASAELI          (603)255-6842    $4,583.00 HUMAN RESOURCE                                                                             
+KIYOKO          RETTA           (603)495-2863    $4,583.00 HUMAN RESOURCE                                                                             
+RAY             CHECCA          (603)879-0021    $4,361.00 HUMAN RESOURCE                                                                             
+WILLENE         ALARCON         (603)722-0241    $4,361.00 HUMAN RESOURCE                                                                             
+KIRBY           ZEHERQUIST      (603)850-5603    $4,361.00 HUMAN RESOURCE                                                                             
+CHELSEA         TOOF            (603)675-1362    $4,833.00 INFORMATION TECHNOLOGY                                                                     
+GILBERTE        GALASHAW        (603)282-9441    $4,833.00 INFORMATION TECHNOLOGY                                                                     
+COLENE          AABERG          (603)420-8673    $4,333.00 INFORMATION TECHNOLOGY                                                                     
+RONALD          BLEAKLEY        (603)544-2339    $3,917.00 INFORMATION TECHNOLOGY                                                                     
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+YULANDA         LAMELA          (603)742-7874    $4,833.00 MARKETING                                                                                  
+LIGIA           NEIFER          (603)483-3170    $4,833.00 MARKETING                                                                                  
+TINY            CRANS           (603)913-3089    $4,833.00 MARKETING                                                                                  
+MANDI           GIONFRIDDO      (603)581-1440    $4,833.00 MARKETING                                                                                  
+TRACEY          PAPPAS          (603)397-6397    $4,833.00 MARKETING                                                                                  
+CARMELIA        HURD            (603)489-8702    $4,833.00 MARKETING                                                                                  
+OLIMPIA         DZIEDZIC        (603)756-2301    $4,833.00 MARKETING                                                                                  
+JOSHUA          DENNEN          (603)201-6615    $4,833.00 MARKETING                                                                                  
+OTIS            STOESSER        (603)539-8860    $4,833.00 MARKETING                                                                                  
+MARISOL         MERRYWEATHER    (603)400-4467    $4,333.00 MARKETING                                                                                  
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+DEANDRE         HUSSMAN         (603)873-1712    $4,333.00 MARKETING                                                                                  
+SHIRLEEN        FRY             (603)570-2257    $4,333.00 MARKETING                                                                                  
+EDWARDO         FERTITTA        (603)993-5557    $3,917.00 MARKETING                                                                                  
+JOAQUIN         BUSHART         (603)407-1191    $3,917.00 MARKETING                                                                                  
+LELIA           FUJIHARA        (603)814-4882    $3,917.00 MARKETING                                                                                  
+KYM             RAGAS           (603)527-3081    $3,917.00 MARKETING                                                                                  
+LIZBETH         GRACEY          (603)590-3383    $3,917.00 MARKETING                                                                                  
+LEONEL          VANZYL          (603)862-0739    $3,917.00 MARKETING                                                                                  
+ANIBAL          HOGLAN          (603)417-6655    $3,500.00 MARKETING                                                                                  
+CAITLYN         SABINS          (603)394-8221    $3,500.00 MARKETING                                                                                  
+
+                                Phone              Monthly                                                                                            
+First Name      Last Name       Number              Salary Department                                                                                 
+=============== =============== ============= ============ ======================                                                                     
+GABRIELLE       FRIELER         (603)631-0834    $3,500.00 MARKETING                                                                                  
+JESUSA          LENNAN          (603)236-6497    $3,500.00 MARKETING                                                                                  
+ALFREDA         FISTER          (603)708-2678    $3,500.00 MARKETING                                                                                  
+MARQUITTA       FAVOR           (603)133-0118    $3,500.00 MARKETING                                                                                  
+MATILDE         GJELTEMA        (603)411-2836    $3,500.00 MARKETING                                                                                  
+
+75 rows selected.
+
+SQL> spool off

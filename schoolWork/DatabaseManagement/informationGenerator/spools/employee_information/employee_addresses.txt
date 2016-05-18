@@ -1,0 +1,106 @@
+SQL> set linesize 150
+SQL> SELECT employee_data.first_name, employee_data.last_name, street, city, state, country, zipcode
+  2  FROM employee_address_data
+  3  INNER JOIN employee_data
+  4  ON employee_address_data.employee_id=employee_data.employee_id
+  5  ORDER BY city, zipcode, employee_data.last_name;
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+OTIS            STOESSER        246 CALEF RD              CONCORD     NEW HAMPSHIRE UNITED STATES 03301                                               
+TERESITA        ESTEP           757 WILSON ST             CONCORD     NEW HAMPSHIRE UNITED STATES 03303                                               
+FREDIA          ZAYA            197 JEWETT ST             CONCORD     NEW HAMPSHIRE UNITED STATES 03303                                               
+EVELINE         DEBRUYN         819 WILDWOOD ST           CONCORD     NEW HAMPSHIRE UNITED STATES 03305                                               
+VICENTE         HUMAN           796 JUSTIN PL             CONCORD     NEW HAMPSHIRE UNITED STATES 03305                                               
+JOSHUA          DENNEN          635 CHARTRAND ST          DERRY       NEW HAMPSHIRE UNITED STATES 03038                                               
+TAYNA           EMDE            830 GLENDALE AVE          DERRY       NEW HAMPSHIRE UNITED STATES 03038                                               
+MARISOL         MERRYWEATHER    313 SOMERVILLE ST         DERRY       NEW HAMPSHIRE UNITED STATES 03038                                               
+TRACEY          PAPPAS          367 KILBY ST              DERRY       NEW HAMPSHIRE UNITED STATES 03038                                               
+EDITH           STRATIS         867 ALPHEUS ST            DERRY       NEW HAMPSHIRE UNITED STATES 03038                                               
+COLENE          AABERG          349 JOSHUA DR             DOVER       NEW HAMPSHIRE UNITED STATES 03820                                               
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+IVELISSE        BOONSTRA        357 BAKER ST              DOVER       NEW HAMPSHIRE UNITED STATES 03820                                               
+SHARILYN        CARSTENSEN      373 KARA ST               DOVER       NEW HAMPSHIRE UNITED STATES 03820                                               
+DIANNE          ASFOUR          709 KNOWLTON ST           DOVER       NEW HAMPSHIRE UNITED STATES 03822                                               
+ADRIAN          ENGLEHART       541 LINGARD ST            DOVER       NEW HAMPSHIRE UNITED STATES 03822                                               
+MANDI           GIONFRIDDO      134 MANCHESTER ST         DOVER       NEW HAMPSHIRE UNITED STATES 03822                                               
+CLINTON         HASTEN          881 CYPRESS ST            DOVER       NEW HAMPSHIRE UNITED STATES 03822                                               
+LIZBETH         GRACEY          656 PERKINS AVE           HUDSON      NEW HAMPSHIRE UNITED STATES 03051                                               
+CHERRYL         RIGLER          488 HAZELTON AVE          HUDSON      NEW HAMPSHIRE UNITED STATES 03051                                               
+TOMIKA          STUBBLEFIELD    972 PEPPERIDGE DR         HUDSON      NEW HAMPSHIRE UNITED STATES 03051                                               
+CHELSEA         TOOF            934 TROLLEY WAY           HUDSON      NEW HAMPSHIRE UNITED STATES 03051                                               
+INDIA           TSOU            107 FLINT ST              HUDSON      NEW HAMPSHIRE UNITED STATES 03051                                               
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+WILLENE         ALARCON         665 HICKORY ST            LONDONDERRY NEW HAMPSHIRE UNITED STATES 03053                                               
+GILBERTE        GALASHAW        785 ARMAND AVE            LONDONDERRY NEW HAMPSHIRE UNITED STATES 03053                                               
+KIRBY           ZEHERQUIST      275 FLINT ST              LONDONDERRY NEW HAMPSHIRE UNITED STATES 03053                                               
+JESUSA          LENNAN          457 WOLCOTT ST            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03101                                               
+ELIA            TANTUM          882 ROSEMONT AVE          MANCHESTER  NEW HAMPSHIRE UNITED STATES 03101                                               
+ESTA            DEAVILLE        786 FREMONT ST            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03102                                               
+LEONEL          VANZYL          103 HICKORY CT            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03103                                               
+TINY            CRANS           662 MACK AVE              MANCHESTER  NEW HAMPSHIRE UNITED STATES 03104                                               
+OLIMPIA         DZIEDZIC        898 MITCHELL ST           MANCHESTER  NEW HAMPSHIRE UNITED STATES 03105                                               
+IKE             GINES           499 LINCOLN ST            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03105                                               
+KRIS            ONDRICK         922 MANCHESTER ST         MANCHESTER  NEW HAMPSHIRE UNITED STATES 03105                                               
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+JAMISON         BUSHART         430 FLOYD AVE             MANCHESTER  NEW HAMPSHIRE UNITED STATES 03107                                               
+VERONIQUE       MUGLESTON       975 JOBIN DR              MANCHESTER  NEW HAMPSHIRE UNITED STATES 03107                                               
+RONALD          BLEAKLEY        292 HILLCREST AVE         MANCHESTER  NEW HAMPSHIRE UNITED STATES 03109                                               
+ALFREDA         FISTER          968 NORFOLK ST            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03109                                               
+MELINA          GEISE           605 PINE AVE              MANCHESTER  NEW HAMPSHIRE UNITED STATES 03109                                               
+JUAN            SCARSDALE       978 CROWLEY ST            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03109                                               
+LYNETTE         DENEEN          862 LUCILLE ST            MANCHESTER  NEW HAMPSHIRE UNITED STATES 03111                                               
+MARQUITTA       FAVOR           167 NORRIS ST             MANCHESTER  NEW HAMPSHIRE UNITED STATES 03111                                               
+SHANTE          KINTIGH         937 LANCASTER AVE         MANCHESTER  NEW HAMPSHIRE UNITED STATES 03111                                               
+CAITLYN         SABINS          209 ROYSAN ST             MANCHESTER  NEW HAMPSHIRE UNITED STATES 03111                                               
+NORIKO          DIFFEY          936 LEON AVE              NASHUA      NEW HAMPSHIRE UNITED STATES 03060                                               
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+LELIA           FUJIHARA        702 WILSON ST             NASHUA      NEW HAMPSHIRE UNITED STATES 03060                                               
+DEANDRE         HUSSMAN         757 MEADOW ST             NASHUA      NEW HAMPSHIRE UNITED STATES 03060                                               
+SOCORRO         LECEA           392 MANCHESTER ST         NASHUA      NEW HAMPSHIRE UNITED STATES 03060                                               
+HARLAND         MARCEL          267 HICKORY CT            NASHUA      NEW HAMPSHIRE UNITED STATES 03060                                               
+DENAE           PETTENGILL      779 ELLINGWOOD ST         NASHUA      NEW HAMPSHIRE UNITED STATES 03060                                               
+GABRIELLE       FRIELER         410 HAMPTON ST            NASHUA      NEW HAMPSHIRE UNITED STATES 03061                                               
+SPRING          HEPPLER         227 SPRINGDALE RD         NASHUA      NEW HAMPSHIRE UNITED STATES 03061                                               
+LIGIA           NEIFER          431 CHASE AVE             NASHUA      NEW HAMPSHIRE UNITED STATES 03061                                               
+FRANCIS         REMBOLD         494 WINTHROP ST           NASHUA      NEW HAMPSHIRE UNITED STATES 03061                                               
+CARMELIA        HURD            507 LAUREL ST             NASHUA      NEW HAMPSHIRE UNITED STATES 03062                                               
+IRVIN           ARAI            782 GAY ST                NASHUA      NEW HAMPSHIRE UNITED STATES 03063                                               
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+MAYOLA          HOFFIS          467 FOSTER AVE            NASHUA      NEW HAMPSHIRE UNITED STATES 03063                                               
+KIYOKO          RETTA           496 WILSON ST             NASHUA      NEW HAMPSHIRE UNITED STATES 03063                                               
+RAY             CHECCA          384 BOURNE ST             NASHUA      NEW HAMPSHIRE UNITED STATES 03064                                               
+ADAH            SCHAF           937 FOX ST                NASHUA      NEW HAMPSHIRE UNITED STATES 03064                                               
+CAMMY           WANSING         608 OLIVER ST             NASHUA      NEW HAMPSHIRE UNITED STATES 03064                                               
+SHIRLEEN        FRY             215 BILLINGS ST           ROCHESTER   NEW HAMPSHIRE UNITED STATES 03867                                               
+KYM             RAGAS           124 NELSON ST             ROCHESTER   NEW HAMPSHIRE UNITED STATES 03867                                               
+CAMMIE          VIOLETTA        190 PRESIDENT RD          ROCHESTER   NEW HAMPSHIRE UNITED STATES 03867                                               
+DEBERA          ALTER           797 TROLLEY ST            SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+HALINA          ASAELI          360 SHERWOOD DR           SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+JOAQUIN         BUSHART         738 SOMMERVILLE ST        SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+
+First Name      Last Name       Street                    City        State         Country       Zipcode                                             
+=============== =============== ========================= =========== ============= ============= =======                                             
+EDWARDO         FERTITTA        704 PARKVIEW ST           SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+MATILDE         GJELTEMA        429 WATSON ST             SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+KIMI            GOUKER          365 ELWOOD AVE            SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+LILLIA          HERWIG          822 ELLEN CT              SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+ANIBAL          HOGLAN          174 VALENTINE DR          SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+YULANDA         LAMELA          776 HILLCREST AVE         SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+PIA             MOSCOVIC        751 GARLAND AVE           SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+VALORIE         ROUFF           830 VINTON ST             SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+DEE             WYDO            990 CLOUGH AVE            SALEM       NEW HAMPSHIRE UNITED STATES 03089                                               
+
+75 rows selected.
+
+SQL> spool off

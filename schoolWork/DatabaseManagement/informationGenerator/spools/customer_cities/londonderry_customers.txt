@@ -1,0 +1,71 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'LONDONDERRY'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CLEO            AHLFIELD        988 MCILVIN ST            03053                                                                                       
+CAMMIE          AZZANO          303 FERNDALE ST           03053                                                                                       
+LYNDA           BARGEN          718 REYNOLDS AVE          03053                                                                                       
+JENNEFER        BARNETT         862 MEADOW ST             03053                                                                                       
+DANIELA         BENEVIDES       151 DIXWELL ST            03053                                                                                       
+MARGENE         BERENDS         379 JOHNSON ST            03053                                                                                       
+AMOS            BIRKETT         717 BRENT ST              03053                                                                                       
+JOSEPHINA       BOESER          832 CLAREMONT AVE         03053                                                                                       
+MARRY           BOSHNACK        575 LEON AVE              03053                                                                                       
+MALKA           BRAYLEY         177 KNOLLWOOD WAY         03053                                                                                       
+GERALDINE       CARDIEL         605 HOSPITAL AVE          03053                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+NADENE          CZAPLA          561 WILSON ST             03053                                                                                       
+CHAROLETTE      DEADMOND        789 KRAKOW AVE            03053                                                                                       
+MICKIE          DEGRAFFENREID   547 CEDAR ST              03053                                                                                       
+JEWEL           DEMARZIO        765 CIRCLE RD             03053                                                                                       
+BENITO          DETOMMASO       876 GRAY CT               03053                                                                                       
+ROBT            DURGAN          796 HUSE RD               03053                                                                                       
+OLIVER          FARLEE          444 BOYNTON CT            03053                                                                                       
+QUENTIN         GELLER          503 SPRUCE ST             03053                                                                                       
+HOBERT          GOETTSCH        522 COLDWELL ST           03053                                                                                       
+ALBERTINE       JAUREZ          134 MAPLETON RD           03053                                                                                       
+ISABELL         JEMMINGS        786 WATSON ST             03053                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KRAIG           JOACHIN         152 LAUREN DR             03053                                                                                       
+RHONDA          KADING          477 ELMWOOD AVE           03053                                                                                       
+DANNA           KEPLEY          473 RILEY AVE             03053                                                                                       
+LORIS           KNOKE           302 TILDEN DR             03053                                                                                       
+JOLEEN          KOSLOSKY        366 GARFIELD ST           03053                                                                                       
+PASQUALE        LENAHAN         190 WOLCOTT ST            03053                                                                                       
+JOELLE          LINS            466 MERRIMACK ST          03053                                                                                       
+CRIS            MAIORANO        461 EXETER AVE            03053                                                                                       
+MARCELO         MCWHERTER       162 GREEN ST              03053                                                                                       
+OLLIE           NESSER          322 RIVERDALE AVE         03053                                                                                       
+DOMINGO         PAYEUR          203 SOMERVILLE ST         03053                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+AMBROSE         PIECH           369 KEVIN ST              03053                                                                                       
+KENYETTA        REATHERFORD     710 HILLCREST AVE         03053                                                                                       
+JUDE            SECORA          876 BRENT ST              03053                                                                                       
+MARC            SLEETER         254 DIX ST                03053                                                                                       
+YURIKO          STOCKING        918 MILTON ST             03053                                                                                       
+CHASIDY         SUCCAR          294 CENTRAL ST            03053                                                                                       
+EVETTE          SULLIVANT       349 JOBIN DR              03053                                                                                       
+VINCENZO        TOMSON          283 WATSON ST             03053                                                                                       
+TERRELL         VANDERSCHEL     502 MOODY ST              03053                                                                                       
+DENICE          VEVE            651 MCGUIGAN AVE          03053                                                                                       
+ALEXIS          YOSTEN          460 ANTHONY ST            03053                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+IKE             ZUKOSKI         642 LAKE AVE              03053                                                                                       
+
+45 rows selected.
+
+SQL> spool off

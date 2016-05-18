@@ -1,0 +1,290 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'MANCHESTER'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KARA            BAISEY          720 KEVIN ST              03101                                                                                       
+ALESIA          BEAUDETTE       220 STEVENS ST            03101                                                                                       
+BETTYE          BISACCIA        383 FERNDALE ST           03101                                                                                       
+DREMA           CAMPI           939 CHARLOTTE ST          03101                                                                                       
+GABRIELE        DUNNAVANT       271 NASHUA ST             03101                                                                                       
+KENTON          EMECHE          358 STERLING AVE          03101                                                                                       
+WENDI           EVERLEY         766 MAPLE ST              03101                                                                                       
+ROMEO           FANTROY         432 ROCKWELL ST           03101                                                                                       
+FAUSTO          KERSCHER        707 GLENDALE AVE          03101                                                                                       
+TYRON           KOTTKE          741 BELL ST               03101                                                                                       
+GRAZYNA         LACAILLE        960 ELMWOOD AVE           03101                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+MONIKA          LAYEL           852 TRAFFORD ST           03101                                                                                       
+JULIUS          MACHOLD         839 SARGENT RD            03101                                                                                       
+YANG            MAZZARIELLO     996 WATERMAN ST           03101                                                                                       
+NEWTON          RINDONE         332 RAMSAY ST             03101                                                                                       
+DELTA           RUGER           668 BRENT ST              03101                                                                                       
+SELINA          SHAH            156 LAXSON AVE            03101                                                                                       
+ERROL           SMIGEL          115 WESTWOOD DR           03101                                                                                       
+PRINCE          STAMER          123 SPRUCE ST             03101                                                                                       
+LAMAR           TONDREAU        272 GLENDALE AVE          03101                                                                                       
+CAMILLE         TORRA           446 TARRYTOWN RD          03101                                                                                       
+DONN            TROENDLE        193 PEPPERIDGE DR         03101                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+JANESSA         WILTS           452 SOMMERVILLE ST        03101                                                                                       
+GREGORIO        YAMAUCHI        560 PORTER ST             03101                                                                                       
+VERNA           ALEXANDERS      466 PORTER ST             03102                                                                                       
+RENETTA         CORNMAN         340 STANTON ST            03102                                                                                       
+ZACHARIAH       DESANTIS        732 PLUMMER ST            03102                                                                                       
+AMIRA           DOAKES          836 SPRUCE ST             03102                                                                                       
+WILLARD         DUSTON          600 PEPPERIDGE DR         03102                                                                                       
+COLBY           MEHRER          198 KARA ST               03102                                                                                       
+BLYTHE          NORDAN          613 SILVER ST             03102                                                                                       
+BRITTANY        RURY            374 LANCASTER AVE         03102                                                                                       
+RENEA           SCHROPE         724 GRAY CT               03102                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+WALLY           SCHWENTKER      540 FREMONT ST            03102                                                                                       
+EMERSON         SKATES          511 ROSE AVE              03102                                                                                       
+HARLAND         VIERLING        671 DEVCO DR              03102                                                                                       
+AUGUSTINA       WENGERT         629 GEM DR                03102                                                                                       
+ARON            WERKHOVEN       194 THERESA CT            03102                                                                                       
+ALFREDA         ZIELONKO        965 SIMONE ST             03102                                                                                       
+COLLETTE        CAIAZZO         172 ELMHURST AVE          03103                                                                                       
+MONTE           DEROUSSE        766 ANTHONY ST            03103                                                                                       
+DEBBRA          EBBERS          645 WOLCOTT ST            03103                                                                                       
+LASONYA         EVASCO          940 UNION ST              03103                                                                                       
+EMERSON         GILMORE         531 LAVISTA ST            03103                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+MARK            GOOLSBY         963 WESTON RD             03103                                                                                       
+ADAN            HAGGLUND        895 NASHUA ST             03103                                                                                       
+ALLA            JAROSZ          372 ROYCRAFT RD           03103                                                                                       
+BORIS           LAMER           509 OAKWOOD AVE           03103                                                                                       
+BENITA          NIESENT         815 DEWEY ST              03103                                                                                       
+ANTIONE         ODOMES          647 ODE WAY               03103                                                                                       
+WALKER          OLLER           358 KRAKOW AVE            03103                                                                                       
+DIGNA           PRAWDZIK        444 VIEW ST               03103                                                                                       
+CHERRYL         PRUIETT         930 UNION ST              03103                                                                                       
+DANIEL          RODWELL         448 CASS ST               03103                                                                                       
+KELVIN          ROMESBURG       811 JEANINE ST            03103                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KEITH           RUPPEL          241 WOODMAN AVE           03103                                                                                       
+GEORGEANN       SIFERS          323 WOLCOTT ST            03103                                                                                       
+AURORA          TAUL            578 WILSON ST             03103                                                                                       
+FLETA           AMUNDSON        635 ROGERS ST             03104                                                                                       
+GERALD          BOBLAK          477 PORTER ST             03104                                                                                       
+LENITA          BZHYAN          295 WOODGATE CT           03104                                                                                       
+ERIN            CABILES         151 BRANCH ST             03104                                                                                       
+KITTIE          CHINO           605 TITUS AVE             03104                                                                                       
+MATTHEW         CIULLO          955 PINE ST               03104                                                                                       
+NATALIA         COUILLARD       276 MYSTIC ST             03104                                                                                       
+CLARE           DEMONTIGNY      186 WOODGATE CT           03104                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+COLUMBUS        EERKES          673 MAURICE ST            03104                                                                                       
+RAFAEL          HAMMETTE        375 HOME AVE              03104                                                                                       
+EDUARDO         ILLES           536 SPRUCE ST             03104                                                                                       
+DAMON           JAKUBEK         486 ASHLEY DR             03104                                                                                       
+PORFIRIO        KAZMER          105 MAPLE ST              03104                                                                                       
+FLOYD           LEGHORN         745 SEAMES DR             03104                                                                                       
+DARREL          MOZDZIERZ       381 VANDORA DR            03104                                                                                       
+IMELDA          PRESUME         925 ELLEN CT              03104                                                                                       
+BRONWYN         RANSIER         381 NORRIS ST             03104                                                                                       
+SAUL            REEBER          159 LINGARD ST            03104                                                                                       
+ELROY           RODRIQUZ        817 SOMMERVILLE ST        03104                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CELESTINA       SCHMID          165 DONAHUE DR            03104                                                                                       
+LORRINE         SLOANE          450 ROSEMONT AVE          03104                                                                                       
+KYLA            SPARTIN         334 WITT AVE              03104                                                                                       
+RUEBEN          STARCHMAN       271 CYPRESS ST            03104                                                                                       
+CHRISSY         TARVIS          766 SANDYS WAY            03104                                                                                       
+SUNSHINE        TESSNER         447 SHERWOOD DR           03104                                                                                       
+ERIN            VORSE           545 MERRIMACK ST          03104                                                                                       
+NIKOLE          WEIGLEB         186 THOMAS ST             03104                                                                                       
+NORMAND         WIMPEY          811 FLOYD AVE             03104                                                                                       
+GAVIN           BEGAN           490 SILVER ST             03105                                                                                       
+ALETHIA         BIRK            884 SANDYS WAY            03105                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+AUSTIN          CLAYBOURN       467 FOX ST                03105                                                                                       
+RAQUEL          COSME           887 CARON ST              03105                                                                                       
+HEATHER         CREGAR          170 PURCHASE ST           03105                                                                                       
+VAL             DEHASS          302 RIVERDALE AVE         03105                                                                                       
+MONNIE          FLYNT           148 POND DR               03105                                                                                       
+DEANGELO        FRAIRE          904 CROSS ST              03105                                                                                       
+BROOKS          HOWLIN          601 WOODMAN ST            03105                                                                                       
+TINY            JUERGENS        595 BELMONT ST            03105                                                                                       
+MITCHELL        KER             771 MITCHELL ST           03105                                                                                       
+LAURA           LASCANO         357 HAYWARD ST            03105                                                                                       
+MATHA           LASELLE         561 COTTAGE AVE           03105                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+JOESPH          NATANI          978 CLOUGH AVE            03105                                                                                       
+BARRY           NOWLAND         751 GRAY ST               03105                                                                                       
+DEIDRE          OERTLE          938 HARVARD ST            03105                                                                                       
+DIANNE          PARTIBLE        866 WOODMAN AVE           03105                                                                                       
+MERRI           PEBWORTH        723 ELWOOD AVE            03105                                                                                       
+QUYEN           RULLAN          819 WESTLAND AVE          03105                                                                                       
+DARRELL         SCARPINO        809 MERRILL ST            03105                                                                                       
+KALA            SCHARPMAN       140 CYPRESS ST            03105                                                                                       
+CLIFFORD        SCHWIEBERT      849 GANTRY ST             03105                                                                                       
+ALDO            YANNONE         759 EDOUARD ST            03105                                                                                       
+KOURTNEY        ALLIMAN         925 TARRYTOWN RD          03107                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+JULIET          AMESCUA         663 ELMWOOD AVE           03107                                                                                       
+HERMILA         BASCLE          596 OAKWOOD AVE           03107                                                                                       
+CHRISTIAN       BESECKER        581 LAVISTA ST            03107                                                                                       
+HILLARY         BRIGNOLO        694 CILLEY RD             03107                                                                                       
+ART             BROADNAX        699 TAYLOR ST             03107                                                                                       
+JUNIOR          CALDEIRA        130 TUTTLE ST             03107                                                                                       
+CLAUDE          COLLEDGE        590 ELLEN CT              03107                                                                                       
+JOSPEH          DESAK           422 CELESTE ST            03107                                                                                       
+JOHNIE          DYRESON         156 MIDLAND ST            03107                                                                                       
+KARON           GIRARDOT        216 HICKORY ST            03107                                                                                       
+VANITA          GROWDEN         901 LEON AVE              03107                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KASEY           GRUSTAS         101 PERKINS AVE           03107                                                                                       
+KENNA           HORAK           903 ANTHONY ST            03107                                                                                       
+RICHIE          HOUSE           653 RIVERDALE AVE         03107                                                                                       
+SANDIE          LINDHOLM        454 TROLLEY ST            03107                                                                                       
+SHARLA          LOOPER          952 OAKDALE AVE           03107                                                                                       
+THADDEUS        MAHOLMES        953 PURDUE ST             03107                                                                                       
+ENEIDA          MENEUS          913 SENTINEL CT           03107                                                                                       
+JANINE          MINIX           587 LEBEL AVE             03107                                                                                       
+EDUARDO         OBNEGON         225 MACK AVE              03107                                                                                       
+CHERRIE         ONSTEAD         765 BRENT CT              03107                                                                                       
+BOYD            SHONT           130 BELL ST               03107                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+GEORGIANA       TACY            589 JUSTIN PL             03107                                                                                       
+LEIDA           TIENDA          439 ROYCRAFT RD           03107                                                                                       
+NATHALIE        TRAUTMAN        757 MAPLE ST              03107                                                                                       
+ALBERTINE       VILLALUZ        423 LINCOLN ST            03107                                                                                       
+ERNA            WHEDON          117 FREMONT ST            03107                                                                                       
+ARIEL           BAIER           748 KILBY ST              03108                                                                                       
+JEROLD          BIDDICK         751 GROVE ST              03108                                                                                       
+BOBBIE          BROSCHINSKY     469 LAXSON AVE            03108                                                                                       
+MICHAEL         CARMOLLI        680 CLIFF ST              03108                                                                                       
+JARRED          CERQUEIRA       478 JOBIN DR              03108                                                                                       
+JC              EGWUOHUA        674 GARLAND AVE           03108                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+TYSON           FLATO           881 CASS ST               03108                                                                                       
+UN              GRANADA         533 FOSTER AVE            03108                                                                                       
+KRIS            HAFLEY          588 WITT AVE              03108                                                                                       
+SHAKIRA         HAMBURG         852 KINGS CT              03108                                                                                       
+NED             HELBLING        851 CHARTRAND ST          03108                                                                                       
+LAUNA           KEAR            875 JOHNSON ST            03108                                                                                       
+TRINIDAD        KOTTWITZ        473 BLACKSTONE ST         03108                                                                                       
+SORAYA          LEAN            925 LINGARD ST            03108                                                                                       
+BRIANNA         LIEBERT         666 MEMORIAL DR           03108                                                                                       
+REGGIE          MERINE          380 LEEWOOD ST            03108                                                                                       
+RIGOBERTO       MOLLET          789 TILDEN DR             03108                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+DARRIN          OKULA           967 CEDAR ST              03108                                                                                       
+AMOS            OLEN            849 ELLIOT WAY            03108                                                                                       
+SAMMY           SALM            349 LANCASTER AVE         03108                                                                                       
+AL              SWANT           627 KEYSTONE RD           03108                                                                                       
+DEWAYNE         THORNOCK        241 TRAFFORD ST           03108                                                                                       
+WILEY           TREMEL          524 DONNA AVE             03108                                                                                       
+DANILO          VANDEUSEN       659 HAZELTON CT           03108                                                                                       
+AARON           ZERRING         352 MAYNARD AVE           03108                                                                                       
+MARCO           ARICHABALA      466 BATCHELDER AVE        03109                                                                                       
+JUAN            BARROWS         835 SARGENT RD            03109                                                                                       
+DARELL          BEAMAN          853 SILVER ST             03109                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+LAYNE           CHAVOUS         231 FREMONT ST            03109                                                                                       
+ANTONIETTA      DEHAY           830 HOWE ST               03109                                                                                       
+ADRIAN          ENTWISTLE       726 ELMWOOD AVE           03109                                                                                       
+PARKER          FORMICHELLI     808 KILBY ST              03109                                                                                       
+IVORY           GHOSN           275 ODE WAY               03109                                                                                       
+PERRY           HAVENS          126 KNOWLTON ST           03109                                                                                       
+VINCENT         HOLDER          512 ENFIELD ST            03109                                                                                       
+CHANG           JELINEK         382 ARMAND AVE            03109                                                                                       
+JEFFRY          JURGENSON       101 VAL ST                03109                                                                                       
+REYNA           KACKLEY         282 MEMORIAL DR           03109                                                                                       
+IVAN            KESS            562 LANCASTER AVE         03109                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+FLORENE         KLINNER         951 CROWLEY ST            03109                                                                                       
+SPENCER         LECHLITER       399 PLUMMER ST            03109                                                                                       
+MELISSA         MANDAHL         861 NORRIS ST             03109                                                                                       
+EMANUEL         NOTTE           757 WATSON ST             03109                                                                                       
+MOSE            PHOMMAJACK      673 JONES ST              03109                                                                                       
+FELIX           SAMA            119 EDOUARD ST            03109                                                                                       
+TERINA          SCHAAD          945 HILLCREST AVE         03109                                                                                       
+BELINDA         SEPER           906 WESTLAND AVE          03109                                                                                       
+SHELTON         SIEKER          454 FERNAND ST            03109                                                                                       
+BRETT           SONDRUP         599 ALMEDA ST             03109                                                                                       
+DARIA           YARMAN          991 EDOUARD ST            03109                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CLINT           ABERSON         811 GOLD ST               03111                                                                                       
+MYRNA           BOHLKEN         280 STERLING AVE          03111                                                                                       
+BRADLY          BONIFIELD       811 PRESIDENT RD          03111                                                                                       
+ANGELE          BRANDNER        136 KRAKOW AVE            03111                                                                                       
+FRITZ           CHHEANG         847 HOSLEY ST             03111                                                                                       
+RUSSEL          DECATO          347 ALGER ST              03111                                                                                       
+CHERYL          DESANTOS        765 POND DR               03111                                                                                       
+DEWAYNE         EAGLESTON       710 JANET CT              03111                                                                                       
+JULISSA         ESTRIN          281 BROADHEAD AVE         03111                                                                                       
+JONATHON        GAUTIER         408 PULLMAN ST            03111                                                                                       
+JULENE          GOODHEART       881 WESTMINSTER ST        03111                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CAROLA          HLASTALA        215 LAUREL ST             03111                                                                                       
+FREEMAN         JORINSCAY       584 RAMSAY ST             03111                                                                                       
+CHUCK           LAHMERS         460 TYLER AVE             03111                                                                                       
+RODGER          LANGANKE        340 MILTON ST             03111                                                                                       
+LUTHER          LARK            205 GROVE ST              03111                                                                                       
+NA              LIGGANS         610 BOISVERT ST           03111                                                                                       
+CASANDRA        LOOSEY          896 PORTER ST             03111                                                                                       
+MAURINE         LOVE            825 ROSEMONT AVE          03111                                                                                       
+MAYE            MIKULICH        882 WESTWOOD DR           03111                                                                                       
+EFRAIN          PAPALLO         826 JOHNSON ST            03111                                                                                       
+GENIE           PICOU           777 PARENTEAU ST          03111                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+TRISHA          PUEBLA          113 SPRINGWOOD DR         03111                                                                                       
+OWEN            REMPE           422 SPRINGDALE RD         03111                                                                                       
+CIERA           SALIS           690 MANNING ST            03111                                                                                       
+MERRILL         SENEGAL         128 CELESTE ST            03111                                                                                       
+JORDON          SIRIN           315 CRESCENT RD           03111                                                                                       
+HARRIS          STOLIKER        798 ROSE AVE              03111                                                                                       
+CRISTOPHER      SUSTAR          751 VALLEY ST             03111                                                                                       
+LAREE           TALLIE          965 HILLCREST AVE         03111                                                                                       
+DEVIN           TRAYCHEFF       588 KARIN ST              03111                                                                                       
+GEARLDINE       VONSOOSTEN      866 ENFIELD ST            03111                                                                                       
+
+219 rows selected.
+
+SQL> spool off

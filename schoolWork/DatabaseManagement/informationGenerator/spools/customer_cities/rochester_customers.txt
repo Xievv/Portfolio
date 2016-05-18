@@ -1,0 +1,85 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'ROCHESTER'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CESAR           APADACA         119 EDGEWOOD ST           03839                                                                                       
+GLENN           BENSLEY         796 TITUS AVE             03839                                                                                       
+LUCINDA         BERDAHL         829 CHERRY AVE            03839                                                                                       
+GAIL            BURDIER         719 WILSON ST             03839                                                                                       
+CHRISTOPHER     COFFIELD        656 GARFIELD ST           03839                                                                                       
+AHMED           DEMYAN          348 SPRINGVIEW AVE        03839                                                                                       
+PHILLIP         HUOT            223 KARIN ST              03839                                                                                       
+EUFEMIA         KEULER          832 CYPRESS ST            03839                                                                                       
+RUPERT          KUCEL           913 AUBURN ST             03839                                                                                       
+RENATO          MAGOUN          478 HUDSON ST             03839                                                                                       
+AVERY           MATSON          391 HILLCREST AVE         03839                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+STEPHANIE       MCKIN           592 CLAIRE ST             03839                                                                                       
+ONEIDA          PAILTHORPE      713 CAMBRIDGE CT          03839                                                                                       
+KINDRA          PARSHOTAM       195 WESTLAND AVE          03839                                                                                       
+MOHAMMAD        REES            882 MIAMI CT              03839                                                                                       
+LYNDON          TJARKS          668 JOHNSON ST            03839                                                                                       
+FUMIKO          WALLAERT        395 CLOUGH AVE            03839                                                                                       
+PALMER          WINDAM          678 ROCKWELL ST           03839                                                                                       
+GRAIG           ZIEK            905 JOHNSON ST            03839                                                                                       
+CLEMMIE         ABUEL           588 HOSPITAL AVE          03866                                                                                       
+EDWARDO         AMADEO          594 CHERRY AVE            03866                                                                                       
+ERICK           BROSTROM        178 CAMERON ST            03866                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+DARON           LOCKHART        302 HARVARD ST            03866                                                                                       
+CIARA           MARSLAND        249 MANCHESTER ST         03866                                                                                       
+ROD             MEHARG          948 WESTLAND AVE          03866                                                                                       
+TAMESHA         OBHOF           586 HEMOND ST             03866                                                                                       
+JANUARY         PEECHA          472 HILLCREST AVE         03866                                                                                       
+LEONARDO        REWITZER        465 BRUNELLE AVE          03866                                                                                       
+IRENA           SAFA            998 ELM ST                03866                                                                                       
+NESTOR          SELMON          168 GREEN ST              03866                                                                                       
+SEBASTIAN       TREGLIA         312 WOODMAN ST            03866                                                                                       
+CARLETTA        TWIGGS          439 DUNBAR ST             03866                                                                                       
+PEARLY          VANDERLINDE     565 ELLIOT WAY            03866                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KENDRICK        CHAMBERS        823 WILSON ST             03867                                                                                       
+ELLAMAE         DELOSSANTOS     269 HAMBLET ST            03867                                                                                       
+QUINCY          LEPS            169 BROOKLYN AVE          03867                                                                                       
+LINA            MARDINI         700 MARTEL DR             03867                                                                                       
+ANTWAN          MCCOOK          178 KENNEY ST             03867                                                                                       
+OSCAR           PHELPS          318 BELMONT ST            03867                                                                                       
+MARTI           RUFFIN          737 HAYWARD ST            03867                                                                                       
+COREY           SORTORE         929 TYLER AVE             03867                                                                                       
+FRANK           SPAAR           132 FOSTER AVE            03867                                                                                       
+PASQUALE        SPORT           109 BENTON ST             03867                                                                                       
+TROY            STOFFLET        633 SANDYS WAY            03867                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ISAIAS          ZELLEFROW       940 SIMONE ST             03867                                                                                       
+PETE            CARNETT         143 BENTON ST             03868                                                                                       
+RUBEN           CURE            745 LINGARD ST            03868                                                                                       
+STEFFANIE       HAKEL           920 OLMSTEAD AVE          03868                                                                                       
+ARLEN           HUFFNER         221 CHASE AVE             03868                                                                                       
+ROY             LAHNE           892 PUBLIC ST             03868                                                                                       
+PAZ             LECATES         650 CLIFFORD AVE          03868                                                                                       
+KIYOKO          LONGACRE        873 FLOYD AVE             03868                                                                                       
+DENNY           MASCORRO        617 BROWN AVE             03868                                                                                       
+MONIKA          PURINGTON       681 GRAY ST               03868                                                                                       
+DEENA           SNIFFIN         930 LAXSON AVE            03868                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+TIEN            YEARY           840 FERNDALE ST           03868                                                                                       
+
+56 rows selected.
+
+SQL> spool off

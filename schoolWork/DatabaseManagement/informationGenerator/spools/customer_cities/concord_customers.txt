@@ -1,0 +1,123 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'CONCORD'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+BILL            APPLEWHAITE     653 MASSABESIC ST         03301                                                                                       
+EZRA            BERNOTAS        294 MAPLE ST              03301                                                                                       
+MAYNARD         BUGGS           188 GRAY CT               03301                                                                                       
+ARNOLDO         CERRITELLI      846 MCILVIN ST            03301                                                                                       
+COLTON          EDMONSTON       503 EXETER AVE            03301                                                                                       
+CASEY           ERLING          684 JOHNSON ST            03301                                                                                       
+ANDREW          HALABY          162 WITT AVE              03301                                                                                       
+TAD             HAMOR           605 KENNEDY ST            03301                                                                                       
+EMIL            HUDKINS         406 CRESCENT RD           03301                                                                                       
+HARLEY          JEKOT           272 MOREY ST              03301                                                                                       
+LINH            KRISTIANSON     172 LAKE AVE              03301                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ABRAHAM         KUBITZ          335 MERRILL ST            03301                                                                                       
+JANNA           MICHELMAN       494 RANDALL ST            03301                                                                                       
+FREDERICK       MOLLENKOPF      767 KNOLLWOOD WAY         03301                                                                                       
+GILBERT         MORANTE         404 MAPLETON RD           03301                                                                                       
+SHAWNA          PAIRE           217 KENNEDY AVE           03301                                                                                       
+SCOT            SCHECHTMAN      266 PEPPERIDGE DR         03301                                                                                       
+BART            SYSAK           361 CLAIRE ST             03301                                                                                       
+BRITNEY         WAYMIRE         385 SPRINGWOOD DR         03301                                                                                       
+ELISHA          WENNER          216 CAMERON ST            03301                                                                                       
+MARIEL          WINHAM          182 NORFOLK ST            03301                                                                                       
+LIZETH          WINTHROP        380 BURNETT AVE           03301                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+MILTON          BROSCHINSKY     162 TRAFFORD ST           03302                                                                                       
+DAVIS           CARDI           735 JOHNSON ST            03302                                                                                       
+ANTONETTA       DENNEHY         642 WOODGATE CT           03302                                                                                       
+KOREY           HAUSE           997 WOODMAN AVE           03302                                                                                       
+ZACHARIAH       HERNANDER       493 WOLCOTT ST            03302                                                                                       
+JOSEPH          HOGSED          171 FLOYD AVE             03302                                                                                       
+MICHELLE        HOSSAIN         571 SLADE AVE             03302                                                                                       
+ROSELEE         JOFFRION        955 KENBERMA ST           03302                                                                                       
+RUSSELL         KAHAWAI         869 TAYLOR ST             03302                                                                                       
+JOE             LARKIN          948 HAZELTON CT           03302                                                                                       
+SHANIKA         MARSZALEK       746 WILDWOOD CT           03302                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+LONA            MILUSH          817 MAYNARD AVE           03302                                                                                       
+ALIDA           PHIMPRADAPSY    745 THOMAS ST             03302                                                                                       
+HEIDE           REIO            602 BELL ST               03302                                                                                       
+GLENN           SARMIENTO       290 BLACKSTONE ST         03302                                                                                       
+EDMUNDO         YANAI           332 FERNAND ST            03302                                                                                       
+MARCELO         ABREO           436 DONAHUE DR            03303                                                                                       
+PABLO           ADAMCIK         492 BRAD CT               03303                                                                                       
+FRANK           BAILONY         393 FLOYD AVE             03303                                                                                       
+GRAIG           CHADWICK        809 ARMAND AVE            03303                                                                                       
+ANNETTE         DEITZ           164 ROSEDALE AVE          03303                                                                                       
+JOELLEN         DEPORTER        986 LANCASTER AVE         03303                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+BENTON          DUCAYNE         396 CYPRESS ST            03303                                                                                       
+GAIL            EILER           168 SANDYS WAY            03303                                                                                       
+CORNELIUS       FINGERMAN       329 LEON AVE              03303                                                                                       
+EDGAR           FOHN            495 CALEF RD              03303                                                                                       
+ERIN            GALIK           168 BELAIR ST             03303                                                                                       
+EDGARDO         GARTHWAITE      145 TRAFFORD ST           03303                                                                                       
+MARY            KURTER          262 GARFIELD ST           03303                                                                                       
+ESTER           LARNER          525 PEPPERIDGE DR         03303                                                                                       
+MARQUIS         MAW             955 ELMHURST AVE          03303                                                                                       
+CYRIL           MELUSO          901 WELCH AVE             03303                                                                                       
+KERMIT          NY              709 ALDER CT              03303                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+WESLEY          RHEES           951 ELMHURST AVE          03303                                                                                       
+JEWEL           ROUSELL         445 OLMSTEAD AVE          03303                                                                                       
+BETTY           SAMBROOK        163 KINGS CT              03303                                                                                       
+NATHANIEL       SCHLEMMER       825 FALLS AVE             03303                                                                                       
+ADA             SCHWINDT        895 LENOX AVE             03303                                                                                       
+CLARK           SIEGEL          295 FOX ST                03303                                                                                       
+SANDY           SYLVIA          936 ARMAND AVE            03303                                                                                       
+JORDON          THAKE           742 GOSSELIN RD           03303                                                                                       
+FLETCHER        ARCIBA          478 REYNOLDS AVE          03305                                                                                       
+JACQUELYNE      BARTAMIAN       703 DIXWELL ST            03305                                                                                       
+MARYANNA        BOBEK           569 GARDEN ST             03305                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+IGNACIA         BUNZEY          290 WOODLAWN DR           03305                                                                                       
+SHON            DEROOS          556 TROLLEY CT            03305                                                                                       
+ROCHELL         FENSKE          367 MARTIN ST             03305                                                                                       
+GIOVANNI        GALLENSTEIN     424 GREEN ST              03305                                                                                       
+KEVEN           HARTT           270 HOYT ST               03305                                                                                       
+TRACEY          HINT            867 PULLMAN ST            03305                                                                                       
+TERRENCE        HONGISTO        257 WOODLAWN DR           03305                                                                                       
+RON             HUMANN          374 CILLEY RD             03305                                                                                       
+ELLY            IMAI            517 GRAY ST               03305                                                                                       
+FIONA           ISEBRAND        879 WOODLAWN DR           03305                                                                                       
+ANNABELLE       JERMAN          300 MAPLE ST              03305                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+RICHELLE        KLEBANOW        617 GREENLEAF ST          03305                                                                                       
+LOUIE           LOPE            104 MANCHESTER ST         03305                                                                                       
+DETRA           MATHERNE        241 TAMARACK CT           03305                                                                                       
+YOUNG           MINTZER         991 VANDORA DR            03305                                                                                       
+LIZ             PACENTA         334 LAKE AVE              03305                                                                                       
+MARVEL          POUNDSTONE      794 CENTRAL ST            03305                                                                                       
+GERALDO         RETZLOFF        883 GARLAND AVE           03305                                                                                       
+MARJORY         SALANO          570 HEMOND ST             03305                                                                                       
+DEVIN           TETREAULT       700 LEON AVE              03305                                                                                       
+GRANVILLE       VIEL            863 BRAD CT               03305                                                                                       
+GERARD          YERIAN          154 CYPRESS ST            03305                                                                                       
+
+88 rows selected.
+
+SQL> spool off

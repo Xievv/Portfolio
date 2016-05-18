@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore</title>
+  <script src="loadxmldoc.js">
+  </script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Bookstore</h1>
+    <h2>List of Books</h2>
+    <div id="titles"></div>
+    <p>Enter book number:</p>
+    
+    <input type="text" name="book_title_number" id="book_title_number">
+    <input type="button" id="show_books" value="Show Book Information" onclick="book_info(document.getElementById('book_title_number').value)">
+    
+    <p id="book_title"></p>
+    <p id="book_category"></p>
+    <p id="author"></p>
+    <p id="year"></p>
+    <p id="price"></p>
+  </div>
+
+  <script>
+
+    xmlDoc=loadXMLDoc("books.xml");                // Loads 'books.xml'
+    var ol_node = document.createElement("ol");    // Creates an html 'ol' element
+    titles = xmlDoc.getElementsByTagName("title"); // Places us at title nodes
+
+    /* Loops through our titles, extracts the title text and appends them to ol_node */
+    for(i=0;i<titles.length;i++) {
+      var li_node = document.createElement("li");
+      var li_text = document.createTextNode(titles[i].childNodes[0].nodeValue);
+      li_node.appendChild(li_text);
+      ol_node.appendChild(li_node);
+    }
+
+    var container = document.getElementById("titles"); // Grab div labelled "titles"
+    container.appendChild(ol_node);                    // Places our ol_node variable into titles div
+
+    function book_info(book_number) {
+
+      var choice = book_number * 2 - 1 // multiple by 2 and rolling back by 1 puts us on the correct position
+      book_node = xmlDoc.documentElement.childNodes[choice] // Starting point for our node traversing, using the user selected book number
+
+      /***************************************************************
+       var title, category, author, year, price are initialized as "" to prevent 
+       'undefined' from being a value since we are appending to them 
+        later. They will be used to store that data from the xml 
+        document.
+      ***************************************************************/
+      var title = "";
+      var category = book_node.getAttribute('category');
+      var author = "";
+      var year = "";
+      var price = "";
+
+      var counter = 0; // Ensures commas get put in for multiple authors
+
+      /***************************************************************
+       This for loop will iterate through the nodes that are an odd
+       numbers, since odd numbers produce the data we need.  It will
+       then use conditionals to check if the node is a title, author,
+       year, or price and distribute the information into the correct
+       variable.
+       ***************************************************************/
+      for(i=0;i<book_node.childNodes.length;i++){
+
+        if(i % 2 != 0){
+          var node_info = book_node.childNodes[i].childNodes[0].nodeValue;
+
+          if (book_node.childNodes[i].nodeName == "title" && node_info != "undefined"){
+            title += node_info;
+          }
+          else if (book_node.childNodes[i].nodeName == "author" && node_info != "undefined") {
+            /* The following conditional is used to insert commas correctly */
+            if (counter == 0){
+              author += node_info;
+              counter++;
+            }
+            else {
+              author += ", " + node_info;
+            }
+          }
+          else if (book_node.childNodes[i].nodeName == "year" && node_info != "undefined") {
+            year += node_info;
+          }
+          else if (book_node.childNodes[i].nodeName == "price" && node_info != "undefined") {
+            price += node_info;
+          }
+        }
+      }
+      /* Finalize our variables by throwing them into the premade html */
+      document.getElementById("book_title").innerHTML="<b>Title:</b> " + title;
+      /* Weird stuff happening in category ensures that the first character is capitalized, since the xml is in lowercase for attributes */
+      document.getElementById("book_category").innerHTML="<b>Category:</b> " + category[0].toUpperCase() + category.substr(1, category.length); 
+      document.getElementById("author").innerHTML= "<b>Author:</b> "+ author;
+      document.getElementById("year").innerHTML= "<b>Year:</b> "+ year;
+      document.getElementById("price").innerHTML= "<b>Price:</b> $"+ price;
+    }
+  </script>
+</body>
+</html>

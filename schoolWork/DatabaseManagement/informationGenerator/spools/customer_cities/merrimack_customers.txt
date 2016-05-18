@@ -1,0 +1,67 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'MERRIMACK'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+JORGE           ANNAN           449 WELCH AVE             03054                                                                                       
+DOUG            BABINSKI        303 LAUREL ST             03054                                                                                       
+MELANY          BALLINA         418 WESTON RD             03054                                                                                       
+MARION          BENZSCHAWEL     621 TARRYTOWN RD          03054                                                                                       
+STACEE          BLACKSHER       675 TROLLEY CT            03054                                                                                       
+TRENTON         BOHNSACK        405 MAPLETON RD           03054                                                                                       
+ARTURO          CASTELHANO      938 MEMORIAL DR           03054                                                                                       
+HUNTER          CEASER          779 REYNOLDS AVE          03054                                                                                       
+ROSY            COMPOS          237 KILBY ST              03054                                                                                       
+KERRY           COSSELL         585 PUBLIC ST             03054                                                                                       
+MARLEN          CUCCHIARO       615 HAYWARD ST            03054                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+LUIGI           DAHM            872 BEECH ST              03054                                                                                       
+SHILOH          DALLMAN         342 JANET CT              03054                                                                                       
+AURELIO         EYRICH          302 MERRILL ST            03054                                                                                       
+ALLYN           FEHRMAN         455 FERNAND ST            03054                                                                                       
+JASPER          GARNER          338 FERNAND ST            03054                                                                                       
+JOAQUIN         GILLIAND        711 SIMONE ST             03054                                                                                       
+CRUZ            GOODERMOTE      436 TROLLEY ST            03054                                                                                       
+SIMON           GRODI           692 BELAIR ST             03054                                                                                       
+STERLING        HEACOCK         361 ROY AVE               03054                                                                                       
+CODY            HEINRICHER      726 SHERWOOD DR           03054                                                                                       
+AN              JULIEN          903 NELSON ST             03054                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+MELODI          KOSTEL          856 WESTLAND AVE          03054                                                                                       
+CLAIR           KROG            996 JEWETT ST             03054                                                                                       
+IRVIN           LOBELLO         555 VINTON ST             03054                                                                                       
+SANTA           MANZER          415 HARVARD ST            03054                                                                                       
+ALBERT          MCCRELESS       735 EDNA ST               03054                                                                                       
+HIROKO          MEIERHOFER      163 SHEFFIELD RD          03054                                                                                       
+SOLANGE         MESPELT         564 WESTMINSTER ST        03054                                                                                       
+DENNY           MYRIE           895 HOWE ST               03054                                                                                       
+YANG            NILL            413 ROY AVE               03054                                                                                       
+COLBY           PASKEL          976 KARA ST               03054                                                                                       
+OMEGA           PASTORINO       757 HAYWARD ST            03054                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+RYAN            READ            986 OLMSTEAD AVE          03054                                                                                       
+JODY            RIVINIUS        895 MARTEL DR             03054                                                                                       
+MELONIE         RUISI           791 HAZELTON CT           03054                                                                                       
+BRYANNA         SHERIFF         604 JOHNSON ST            03054                                                                                       
+APRIL           SOCHA           247 CLIFFORD AVE          03054                                                                                       
+TREVOR          STATEN          591 BAKER ST              03054                                                                                       
+CONCHITA        STATER          149 RICHARD ST            03054                                                                                       
+ELBERT          STUBSON         717 BELAIR ST             03054                                                                                       
+MARLA           TUMAN           274 BATCHELDER AVE        03054                                                                                       
+SHON            WINKLEMAN       577 PINE ST               03054                                                                                       
+LESLEY          WINSTEAD        875 PLAINFIELD ST         03054                                                                                       
+
+44 rows selected.
+
+SQL> spool off

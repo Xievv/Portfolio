@@ -1,0 +1,105 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'DOVER'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+RICKY           ADDO            148 WARSAW AVE            03820                                                                                       
+CARYL           BILLMAN         794 COTTER CT             03820                                                                                       
+FREDDIE         COOTS           173 HALL ST               03820                                                                                       
+RUDY            DETHLEFS        302 FERNAND ST            03820                                                                                       
+LARUE           ECCLES          181 PRESCOTT ST           03820                                                                                       
+GERRY           FINNEY          366 HILLCREST AVE         03820                                                                                       
+MOSES           HORTEIN         559 WILLOW ST             03820                                                                                       
+DELPHA          KUSKY           861 GARFIELD ST           03820                                                                                       
+ROLLAND         LEDWELL         840 HUDSON ST             03820                                                                                       
+DALTON          MACAHILAS       340 GOLD ST               03820                                                                                       
+SABINE          MARRUJO         780 ELMHURST AVE          03820                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+WEI             MOHOMED         546 FALLS AVE             03820                                                                                       
+LUISE           MOLTZ           141 DIX ST                03820                                                                                       
+JOSELYN         PABST           482 MYSTIC ST             03820                                                                                       
+NENA            PRATI           211 COTTAGE RD            03820                                                                                       
+QUINTON         RACE            755 HAYWARD ST            03820                                                                                       
+WILLETTE        RACZKA          317 FERNAND ST            03820                                                                                       
+RAVEN           STEVERSON       611 WOLCOTT ST            03820                                                                                       
+KANDY           TARQUINIO       114 TUTTLE ST             03820                                                                                       
+KASEY           VERLEY          822 ELIZABETH AVE         03820                                                                                       
+BERNADETTE      YOUSSEFI        240 HARVEY RD             03820                                                                                       
+PARKER          ZWOLINSKI       515 GABRIELLE ST          03820                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+AUDRA           ABDULAZIZ       199 HALL ST               03821                                                                                       
+REID            ALMA            578 POND DR               03821                                                                                       
+HILDEGARD       ARENBURG        396 LILAC CT              03821                                                                                       
+EULA            BARERA          741 PUBLIC ST             03821                                                                                       
+PEARLIE         BIRNELL         908 GANTRY ST             03821                                                                                       
+JOSHUA          BRUTON          539 SPRINGWOOD DR         03821                                                                                       
+RIVA            COSSIO          504 MITCHELL ST           03821                                                                                       
+ELLIOT          DORWARD         521 TILDEN DR             03821                                                                                       
+EARL            ENTERLINE       864 ELWOOD AVE            03821                                                                                       
+LAWANDA         GUYNUP          568 HARRINGTON AVE        03821                                                                                       
+LELA            HANISCO         335 KINGS CT              03821                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+GAYLA           HODGEMAN        348 LEON AVE              03821                                                                                       
+MAXWELL         IHA             499 WESTLAND AVE          03821                                                                                       
+JANETTE         KIECKER         406 LAKE AVE              03821                                                                                       
+NIGEL           KUROWSKI        847 SILVER ST             03821                                                                                       
+ZACK            MONTAS          773 TAYLOR ST             03821                                                                                       
+GRADY           NEAGLE          603 GRAY ST               03821                                                                                       
+GUY             NICKLIEN        880 ROYSAN ST             03821                                                                                       
+VERLENE         NOFZIGER        468 LEON AVE              03821                                                                                       
+DEVON           PETRAMALE       118 BELLEVUE ST           03821                                                                                       
+FATIMA          RAMUNDO         649 ELMHURST AVE          03821                                                                                       
+ALEEN           REOS            379 BELL ST               03821                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CANDIDA         RZEPKA          659 ELMWOOD AVE           03821                                                                                       
+HERIBERTO       SORDIA          582 EDGEWOOD ST           03821                                                                                       
+RILEY           TAYLAN          614 EDNA ST               03821                                                                                       
+TAMIKO          TILUS           285 STEVENS ST            03821                                                                                       
+JOHNETTA        TOTA            528 HALL ST               03821                                                                                       
+SHANEL          VANDYCK         512 KARIN ST              03821                                                                                       
+VENESSA         WALDMANN        594 MARTIN ST             03821                                                                                       
+ELIAS           ZETTLER         227 RUGGLES ST            03821                                                                                       
+PHILOMENA       ZINS            505 WYOMING AVE           03821                                                                                       
+BRANDY          BEAIRD          246 TRAFFORD ST           03822                                                                                       
+XAVIER          CONDIE          533 WOODMAN ST            03822                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+HILDA           DEVOTIE         506 CARON ST              03822                                                                                       
+INA             ECKLE           630 HARVARD ST            03822                                                                                       
+WILBER          FEGER           712 CLAREMONT AVE         03822                                                                                       
+BENEDICT        GEORGE          897 DORCHESTER ST         03822                                                                                       
+EDGARDO         INHULSEN        221 CLAY ST               03822                                                                                       
+JAME            KLINGEN         358 HUDSON ST             03822                                                                                       
+ESTEBAN         MCCORD          712 LUCILLE ST            03822                                                                                       
+LUCIE           OSMERA          928 HOME AVE              03822                                                                                       
+ALETHEA         OULLETTE        135 HARRINGTON AVE        03822                                                                                       
+JASMINE         PETRAUSKAS      157 FOSTER AVE            03822                                                                                       
+LENARD          SHADOAN         976 LOIS ST               03822                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+CHIEKO          SPAMAN          488 FERNDALE ST           03822                                                                                       
+STEVIE          STDENIS         424 PURCHASE ST           03822                                                                                       
+PALMER          SWILLE          670 HAYWARD ST            03822                                                                                       
+CLAY            TAYAN           656 BELMONT ST            03822                                                                                       
+LATONIA         ULLMANN         994 WINTHROP ST           03822                                                                                       
+DONG            WEINGARD        972 JUSTIN PL             03822                                                                                       
+ETHELENE        WIMBROW         193 HOWE ST               03822                                                                                       
+
+73 rows selected.
+
+SQL> spool off

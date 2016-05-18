@@ -1,0 +1,1192 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, gender, ethnicity, marriage_status
+  2  FROM customer_demographics
+  3  INNER JOIN customer_data
+  4  ON customer_demographics.customer_id = customer_data.customer_id
+  5  ORDER BY gender, ethnicity;
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CHIEKO          SPAMAN          FEMALE ASIAN     NO                                                                                                   
+EDNA            BAISEY          FEMALE ASIAN     NO                                                                                                   
+JOELLA          MOLESWORTH      FEMALE ASIAN     NO                                                                                                   
+SHAWNA          PAIRE           FEMALE ASIAN     NO                                                                                                   
+LAREE           TALLIE          FEMALE ASIAN     YES                                                                                                  
+GEORGIANA       TACY            FEMALE ASIAN     NO                                                                                                   
+UN              GRANADA         FEMALE ASIAN     NO                                                                                                   
+ROCHELL         FENSKE          FEMALE BLACK     NO                                                                                                   
+TERINA          SCHAAD          FEMALE BLACK     NO                                                                                                   
+FIDELA          MEETER          FEMALE BLACK     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+VAN             WALLWORK        FEMALE WHITE     NO                                                                                                   
+LONA            MILUSH          FEMALE WHITE     NO                                                                                                   
+LYNDA           BARGEN          FEMALE WHITE     YES                                                                                                  
+JANESSA         WILTS           FEMALE WHITE     NO                                                                                                   
+EWA             EISENSTADT      FEMALE WHITE     NO                                                                                                   
+ORPHA           COLLON          FEMALE WHITE     YES                                                                                                  
+MAVIS           BARTYLLA        FEMALE WHITE     YES                                                                                                  
+ENEIDA          MENEUS          FEMALE WHITE     YES                                                                                                  
+COREY           SORTORE         FEMALE WHITE     NO                                                                                                   
+CAMILLE         TORRA           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+MONIKA          LAYEL           FEMALE WHITE     YES                                                                                                  
+STEFFANIE       HAKEL           FEMALE WHITE     NO                                                                                                   
+DELILA          DELOGE          FEMALE WHITE     YES                                                                                                  
+CHERYL          DESANTOS        FEMALE WHITE     NO                                                                                                   
+CARYL           BILLMAN         FEMALE WHITE     NO                                                                                                   
+ALEEN           REOS            FEMALE WHITE     NO                                                                                                   
+BETTY           BARTLONE        FEMALE WHITE     YES                                                                                                  
+TRINH           PROSPERIE       FEMALE WHITE     NO                                                                                                   
+KRISTIN         STAVER          FEMALE WHITE     NO                                                                                                   
+JEANICE         RANSDELL        FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ADRIANNE        TEEGARDEN       FEMALE WHITE     NO                                                                                                   
+LACRESHA        DOMINICI        FEMALE WHITE     NO                                                                                                   
+JULIET          AMESCUA         FEMALE WHITE     NO                                                                                                   
+SHIELA          MINNATEE        FEMALE WHITE     NO                                                                                                   
+DOLLIE          CARLILE         FEMALE WHITE     NO                                                                                                   
+OTHA            PUSKARICH       FEMALE WHITE     NO                                                                                                   
+DENICE          VEVE            FEMALE WHITE     NO                                                                                                   
+SHILOH          DALLMAN         FEMALE WHITE     NO                                                                                                   
+SINA            AGONOY          FEMALE WHITE     YES                                                                                                  
+CLAIR           KROG            FEMALE WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+AIDE            HATLEE          FEMALE WHITE     NO                                                                                                   
+MERRI           PEBWORTH        FEMALE WHITE     NO                                                                                                   
+HELAINE         JUI             FEMALE WHITE     NO                                                                                                   
+BOBBYE          ERCEK           FEMALE WHITE     YES                                                                                                  
+CHRISTIANA      HOTTON          FEMALE WHITE     NO                                                                                                   
+PEARLY          VANDERLINDE     FEMALE WHITE     NO                                                                                                   
+EULA            BARERA          FEMALE WHITE     YES                                                                                                  
+GRAZYNA         LACAILLE        FEMALE WHITE     NO                                                                                                   
+AMIRA           DOAKES          FEMALE WHITE     NO                                                                                                   
+WEI             MOHOMED         FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+GAYLA           HODGEMAN        FEMALE WHITE     NO                                                                                                   
+GERALD          BOBLAK          FEMALE WHITE     NO                                                                                                   
+MARGENE         BERENDS         FEMALE WHITE     NO                                                                                                   
+JEANNETTA       STAVRIDES       FEMALE WHITE     NO                                                                                                   
+KYLEE           DEEDRICK        FEMALE WHITE     NO                                                                                                   
+ADA             SCHWINDT        FEMALE WHITE     NO                                                                                                   
+MARLEN          CUCCHIARO       FEMALE WHITE     NO                                                                                                   
+FREDRICKA       OLEJARZ         FEMALE WHITE     NO                                                                                                   
+ROSLYN          HAFFLING        FEMALE WHITE     NO                                                                                                   
+GWENDOLYN       WETZ            FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CIERA           SALIS           FEMALE WHITE     NO                                                                                                   
+DEENA           SNIFFIN         FEMALE WHITE     YES                                                                                                  
+CHERYLE         CHEVES          FEMALE WHITE     YES                                                                                                  
+ROSY            COMPOS          FEMALE WHITE     NO                                                                                                   
+JOHNETTA        TOTA            FEMALE WHITE     NO                                                                                                   
+ONEIDA          PAILTHORPE      FEMALE WHITE     NO                                                                                                   
+ARMIDA          NERI            FEMALE WHITE     NO                                                                                                   
+GLORIA          VASBINDER       FEMALE WHITE     YES                                                                                                  
+NATALIA         COUILLARD       FEMALE WHITE     NO                                                                                                   
+SANTA           MANZER          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LEIDA           TIENDA          FEMALE WHITE     NO                                                                                                   
+SUNSHINE        TESSNER         FEMALE WHITE     NO                                                                                                   
+BENITA          NIESENT         FEMALE WHITE     NO                                                                                                   
+CAROLANN        MCCARRY         FEMALE WHITE     YES                                                                                                  
+HILDEGARD       ARENBURG        FEMALE WHITE     NO                                                                                                   
+JACKELYN        BIA             FEMALE WHITE     NO                                                                                                   
+SABINE          MARRUJO         FEMALE WHITE     NO                                                                                                   
+ESTER           LARNER          FEMALE WHITE     NO                                                                                                   
+MAURINE         LOVE            FEMALE WHITE     NO                                                                                                   
+NAIDA           HODEL           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JOE             LARKIN          FEMALE WHITE     NO                                                                                                   
+YANG            MAZZARIELLO     FEMALE WHITE     NO                                                                                                   
+ELSY            HEMRY           FEMALE WHITE     NO                                                                                                   
+FATIMAH         STOVIAK         FEMALE WHITE     NO                                                                                                   
+EUFEMIA         KEULER          FEMALE WHITE     NO                                                                                                   
+AYESHA          SCHUETT         FEMALE WHITE     YES                                                                                                  
+CHERRYL         PRUIETT         FEMALE WHITE     NO                                                                                                   
+SANDIE          LINDHOLM        FEMALE WHITE     NO                                                                                                   
+TERRA           HOUGAS          FEMALE WHITE     NO                                                                                                   
+BRONWYN         RANSIER         FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+VANITA          GROWDEN         FEMALE WHITE     NO                                                                                                   
+AUDRA           ABDULAZIZ       FEMALE WHITE     NO                                                                                                   
+LAWANDA         GUYNUP          FEMALE WHITE     NO                                                                                                   
+NADENE          CZAPLA          FEMALE WHITE     NO                                                                                                   
+WINONA          SHUMSKY         FEMALE WHITE     NO                                                                                                   
+CHARLOTT        MCCOSKEY        FEMALE WHITE     NO                                                                                                   
+VERNA           ALEXANDERS      FEMALE WHITE     NO                                                                                                   
+BRITTANY        RURY            FEMALE WHITE     NO                                                                                                   
+ANNETTE         DEITZ           FEMALE WHITE     NO                                                                                                   
+KASEY           VERLEY          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+MATHA           LASELLE         FEMALE WHITE     NO                                                                                                   
+ELLAMAE         DELOSSANTOS     FEMALE WHITE     NO                                                                                                   
+CLARE           DEMONTIGNY      FEMALE WHITE     NO                                                                                                   
+BERNITA         STUDLER         FEMALE WHITE     YES                                                                                                  
+WALTER          SHUTTY          FEMALE WHITE     NO                                                                                                   
+MELANY          BALLINA         FEMALE WHITE     NO                                                                                                   
+JANNA           MICHELMAN       FEMALE WHITE     NO                                                                                                   
+KYLA            SPARTIN         FEMALE WHITE     NO                                                                                                   
+ALLYN           FEHRMAN         FEMALE WHITE     NO                                                                                                   
+BETTYE          BISACCIA        FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+BELINDA         SEPER           FEMALE WHITE     NO                                                                                                   
+TERRELL         VANDERSCHEL     FEMALE WHITE     NO                                                                                                   
+ELIA            PREISS          FEMALE WHITE     NO                                                                                                   
+JENNEFER        BARNETT         FEMALE WHITE     NO                                                                                                   
+ROSARIA         GAWLAK          FEMALE WHITE     NO                                                                                                   
+KATERINE        MCENROE         FEMALE WHITE     NO                                                                                                   
+LUCINDA         BERDAHL         FEMALE WHITE     NO                                                                                                   
+DONETTE         PRUDHOMME       FEMALE WHITE     NO                                                                                                   
+KOURTNEY        ALLIMAN         FEMALE WHITE     YES                                                                                                  
+DANIELL         MCDEARMONT      FEMALE WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CANDIDA         RZEPKA          FEMALE WHITE     YES                                                                                                  
+IN              HEHIR           FEMALE WHITE     YES                                                                                                  
+FATIMA          RAMUNDO         FEMALE WHITE     YES                                                                                                  
+KARA            BAISEY          FEMALE WHITE     NO                                                                                                   
+JONNA           BOUGHNER        FEMALE WHITE     NO                                                                                                   
+MALKA           BRAYLEY         FEMALE WHITE     NO                                                                                                   
+GABRIELE        DUNNAVANT       FEMALE WHITE     NO                                                                                                   
+YEN             EISENBRANDT     FEMALE WHITE     NO                                                                                                   
+EVELIN          WONNACOTT       FEMALE WHITE     NO                                                                                                   
+EMELIA          ESANNASON       FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JULIANE         BORNS           FEMALE WHITE     NO                                                                                                   
+ERIN            VORSE           FEMALE WHITE     YES                                                                                                  
+LATONYA         TOMKOWICZ       FEMALE WHITE     NO                                                                                                   
+CELINDA         EVINS           FEMALE WHITE     NO                                                                                                   
+LIZ             PACENTA         FEMALE WHITE     NO                                                                                                   
+SHERLENE        HATZENBUHLER    FEMALE WHITE     NO                                                                                                   
+MAYE            MIKULICH        FEMALE WHITE     NO                                                                                                   
+CAMMIE          AZZANO          FEMALE WHITE     NO                                                                                                   
+OLIVE           GORRI           FEMALE WHITE     NO                                                                                                   
+LINA            MARDINI         FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+DEIDRE          OERTLE          FEMALE WHITE     NO                                                                                                   
+KYLA            GREGORY         FEMALE WHITE     NO                                                                                                   
+BRANDY          BEAIRD          FEMALE WHITE     NO                                                                                                   
+FIONA           ISEBRAND        FEMALE WHITE     NO                                                                                                   
+JOELLE          LINS            FEMALE WHITE     YES                                                                                                  
+SLYVIA          UBILES          FEMALE WHITE     NO                                                                                                   
+IGNACIA         BUNZEY          FEMALE WHITE     NO                                                                                                   
+TIEN            YEARY           FEMALE WHITE     NO                                                                                                   
+MICKIE          FALSETTI        FEMALE WHITE     YES                                                                                                  
+DARCY           PEROZO          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LARUE           ECCLES          FEMALE WHITE     NO                                                                                                   
+MATHILDA        LAME            FEMALE WHITE     YES                                                                                                  
+ANGELE          BRANDNER        FEMALE WHITE     NO                                                                                                   
+EARLINE         GARVERICK       FEMALE WHITE     YES                                                                                                  
+KITTIE          CHINO           FEMALE WHITE     NO                                                                                                   
+DANNA           KEPLEY          FEMALE WHITE     YES                                                                                                  
+AUDREY          PESHEK          FEMALE WHITE     NO                                                                                                   
+BETTY           WHALER          FEMALE WHITE     NO                                                                                                   
+KINDRA          PARSHOTAM       FEMALE WHITE     NO                                                                                                   
+GALINA          DYMEK           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+OSCAR           PHELPS          FEMALE WHITE     NO                                                                                                   
+ECHO            HECKER          FEMALE WHITE     NO                                                                                                   
+MARISELA        RUDNEY          FEMALE WHITE     NO                                                                                                   
+JERALDINE       HINDERAKER      FEMALE WHITE     NO                                                                                                   
+MAGDALENE       FLAMIO          FEMALE WHITE     NO                                                                                                   
+MELVA           ZOMORODI        FEMALE WHITE     NO                                                                                                   
+HILDA           DEVOTIE         FEMALE WHITE     NO                                                                                                   
+RAISA           JANECZEK        FEMALE WHITE     NO                                                                                                   
+SHAQUITA        JOHNSTON        FEMALE WHITE     NO                                                                                                   
+HERTA           FESTERMAN       FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RHONDA          KADING          FEMALE WHITE     NO                                                                                                   
+GENNY           MOQUIN          FEMALE WHITE     NO                                                                                                   
+CLEO            AHLFIELD        FEMALE WHITE     YES                                                                                                  
+LAYNE           CHAVOUS         FEMALE WHITE     NO                                                                                                   
+BRIANNA         LIEBERT         FEMALE WHITE     NO                                                                                                   
+ISABELL         JEMMINGS        FEMALE WHITE     NO                                                                                                   
+GEARLDINE       VONSOOSTEN      FEMALE WHITE     YES                                                                                                  
+SENAIDA         TRONSTAD        FEMALE WHITE     NO                                                                                                   
+ALLA            JAROSZ          FEMALE WHITE     NO                                                                                                   
+EDEN            TARRY           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ALVINA          NYBO            FEMALE WHITE     NO                                                                                                   
+DREMA           CAMPI           FEMALE WHITE     NO                                                                                                   
+WENDI           EVERLEY         FEMALE WHITE     NO                                                                                                   
+REYNA           KACKLEY         FEMALE WHITE     YES                                                                                                  
+LUISE           MOLTZ           FEMALE WHITE     NO                                                                                                   
+NOVA            COGGAN          FEMALE WHITE     NO                                                                                                   
+KALA            SCHARPMAN       FEMALE WHITE     NO                                                                                                   
+KEENA           BODENSTEIN      FEMALE WHITE     NO                                                                                                   
+LUPE            ANESI           FEMALE WHITE     NO                                                                                                   
+HEIDE           REIO            FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+NENA            PRATI           FEMALE WHITE     NO                                                                                                   
+APOLONIA        MONDOK          FEMALE WHITE     YES                                                                                                  
+DELTA           RUGER           FEMALE WHITE     NO                                                                                                   
+THOMASINE       WOMBACHER       FEMALE WHITE     NO                                                                                                   
+LAURA           LASCANO         FEMALE WHITE     NO                                                                                                   
+SAMMY           SALM            FEMALE WHITE     NO                                                                                                   
+DANIELA         SWIFT           FEMALE WHITE     NO                                                                                                   
+KARON           GIRARDOT        FEMALE WHITE     NO                                                                                                   
+TEMEKA          CROFT           FEMALE WHITE     NO                                                                                                   
+MARK            ORRICK          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JOLEEN          KOSLOSKY        FEMALE WHITE     YES                                                                                                  
+JUDE            SECORA          FEMALE WHITE     NO                                                                                                   
+ALETHIA         BIRK            FEMALE WHITE     NO                                                                                                   
+SERENA          HAKANSON        FEMALE WHITE     NO                                                                                                   
+LUCIE           OSMERA          FEMALE WHITE     YES                                                                                                  
+SHANEL          VANDYCK         FEMALE WHITE     NO                                                                                                   
+LASONYA         EVASCO          FEMALE WHITE     NO                                                                                                   
+BLYTHE          NORDAN          FEMALE WHITE     YES                                                                                                  
+BERNADETTE      YOUSSEFI        FEMALE WHITE     NO                                                                                                   
+KYM             HARRADON        FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ROSE            BRUGGMAN        FEMALE WHITE     NO                                                                                                   
+LORRINE         SLOANE          FEMALE WHITE     YES                                                                                                  
+ROSELEE         JOFFRION        FEMALE WHITE     NO                                                                                                   
+COLLETTE        CAIAZZO         FEMALE WHITE     YES                                                                                                  
+RICHELLE        KLEBANOW        FEMALE WHITE     NO                                                                                                   
+JAME            KLINGEN         FEMALE WHITE     YES                                                                                                  
+NOREEN          HELSTAD         FEMALE WHITE     NO                                                                                                   
+PENELOPE        NORKO           FEMALE WHITE     NO                                                                                                   
+JANINE          MINIX           FEMALE WHITE     YES                                                                                                  
+MARLA           TUMAN           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ALESIA          BEAUDETTE       FEMALE WHITE     NO                                                                                                   
+DARCIE          BHANDARI        FEMALE WHITE     NO                                                                                                   
+AUNDREA         MROCZKOWSKI     FEMALE WHITE     YES                                                                                                  
+MYRTIS          MIDDLEBROOKS    FEMALE WHITE     NO                                                                                                   
+DIANNE          PARTIBLE        FEMALE WHITE     NO                                                                                                   
+LENITA          BZHYAN          FEMALE WHITE     NO                                                                                                   
+AMPARO          PICKETT         FEMALE WHITE     YES                                                                                                  
+CHANTE          CRAIGER         FEMALE WHITE     NO                                                                                                   
+SHAWNTA         BOTELHO         FEMALE WHITE     NO                                                                                                   
+MICKIE          DEGRAFFENREID   FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+BRITNEY         WAYMIRE         FEMALE WHITE     NO                                                                                                   
+ANALISA         POLLART         FEMALE WHITE     YES                                                                                                  
+RAQUEL          COSME           FEMALE WHITE     NO                                                                                                   
+RENETTA         CORNMAN         FEMALE WHITE     NO                                                                                                   
+SHAUNTE         VINALL          FEMALE WHITE     YES                                                                                                  
+JASMINE         PETRAUSKAS      FEMALE WHITE     YES                                                                                                  
+CIARA           MARSLAND        FEMALE WHITE     YES                                                                                                  
+JOELLEN         DEPORTER        FEMALE WHITE     NO                                                                                                   
+LINH            TARTAGLIA       FEMALE WHITE     NO                                                                                                   
+CHARLES         BUYES           FEMALE WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+QUYEN           RULLAN          FEMALE WHITE     NO                                                                                                   
+TORRI           PLAMER          FEMALE WHITE     NO                                                                                                   
+KENNA           HORAK           FEMALE WHITE     YES                                                                                                  
+MONNIE          FLYNT           FEMALE WHITE     NO                                                                                                   
+VERLENE         NOFZIGER        FEMALE WHITE     YES                                                                                                  
+ETHELENE        WIMBROW         FEMALE WHITE     NO                                                                                                   
+PEARLIE         BIRNELL         FEMALE WHITE     NO                                                                                                   
+JEANELLE        LAIBLE          FEMALE WHITE     NO                                                                                                   
+CATHEY          PICHE           FEMALE WHITE     YES                                                                                                  
+MARIEL          WINHAM          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+DARIA           YARMAN          FEMALE WHITE     NO                                                                                                   
+ZANDRA          PETIT           FEMALE WHITE     NO                                                                                                   
+LAUNA           KEAR            FEMALE WHITE     NO                                                                                                   
+JACQUELYNE      BARTAMIAN       FEMALE WHITE     NO                                                                                                   
+GEORGEANN       SIFERS          FEMALE WHITE     NO                                                                                                   
+NGA             KRAUT           FEMALE WHITE     NO                                                                                                   
+RENEA           SCHROPE         FEMALE WHITE     NO                                                                                                   
+OMEGA           PASTORINO       FEMALE WHITE     NO                                                                                                   
+ALLYSON         BARANSKI        FEMALE WHITE     NO                                                                                                   
+ALEX            SEARING         FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+DELPHA          KUSKY           FEMALE WHITE     NO                                                                                                   
+MONIKA          PURINGTON       FEMALE WHITE     NO                                                                                                   
+CHAROLETTE      DEADMOND        FEMALE WHITE     NO                                                                                                   
+TAMESHA         OBHOF           FEMALE WHITE     NO                                                                                                   
+TAMIKO          TILUS           FEMALE WHITE     NO                                                                                                   
+TRISHA          PUEBLA          FEMALE WHITE     NO                                                                                                   
+SHAWN           BAYERL          FEMALE WHITE     NO                                                                                                   
+NAKIA           ALFONZO         FEMALE WHITE     NO                                                                                                   
+CAROLA          HLASTALA        FEMALE WHITE     NO                                                                                                   
+CARLETTA        TWIGGS          FEMALE WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LORIS           KNOKE           FEMALE WHITE     NO                                                                                                   
+JULENE          GOODHEART       FEMALE WHITE     NO                                                                                                   
+VENESSA         WALDMANN        FEMALE WHITE     NO                                                                                                   
+WILLETTE        RACZKA          FEMALE WHITE     YES                                                                                                  
+SHERRY          OSTERFELD       FEMALE WHITE     NO                                                                                                   
+ALICE           GAURON          FEMALE WHITE     NO                                                                                                   
+LORA            LACEWELL        FEMALE WHITE     NO                                                                                                   
+BETTY           SAMBROOK        FEMALE WHITE     NO                                                                                                   
+KIYOKO          LONGACRE        FEMALE WHITE     NO                                                                                                   
+SORAYA          LEAN            FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+FLORENE         KLINNER         FEMALE WHITE     NO                                                                                                   
+CRIS            MAIORANO        FEMALE WHITE     YES                                                                                                  
+CARLETTA        NERSESIAN       FEMALE WHITE     NO                                                                                                   
+VALORIE         CONNIFF         FEMALE WHITE     NO                                                                                                   
+EVETTE          SULLIVANT       FEMALE WHITE     NO                                                                                                   
+JANUARY         PEECHA          FEMALE WHITE     NO                                                                                                   
+PAZ             LECATES         FEMALE WHITE     NO                                                                                                   
+PA              INGRUM          FEMALE WHITE     NO                                                                                                   
+JAMILA          RUNYAN          FEMALE WHITE     YES                                                                                                  
+BELKIS          HASLETT         FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ERNA            WHEDON          FEMALE WHITE     NO                                                                                                   
+ALBERTINE       JAUREZ          FEMALE WHITE     NO                                                                                                   
+RAVEN           STEVERSON       FEMALE WHITE     NO                                                                                                   
+APOLONIA        FORISTER        FEMALE WHITE     NO                                                                                                   
+LINH            KRISTIANSON     FEMALE WHITE     NO                                                                                                   
+VERTIE          BLARE           FEMALE WHITE     YES                                                                                                  
+MELISSA         MANDAHL         FEMALE WHITE     NO                                                                                                   
+YANG            NILL            FEMALE WHITE     NO                                                                                                   
+HOLLIS          CHRISTIE        FEMALE WHITE     NO                                                                                                   
+MARJORY         SALANO          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+MYRNA           BOHLKEN         FEMALE WHITE     NO                                                                                                   
+MELODI          KOSTEL          FEMALE WHITE     NO                                                                                                   
+CHIN            HUYARD          FEMALE WHITE     YES                                                                                                  
+YURIKO          STOCKING        FEMALE WHITE     YES                                                                                                  
+FLETA           AMUNDSON        FEMALE WHITE     NO                                                                                                   
+BRITTNEY        RHYNARD         FEMALE WHITE     NO                                                                                                   
+ANNALEE         SUFFIELD        FEMALE WHITE     NO                                                                                                   
+NIKOLE          WEIGLEB         FEMALE WHITE     NO                                                                                                   
+ANDREW          HALABY          FEMALE WHITE     NO                                                                                                   
+JULIET          CANDY           FEMALE WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CHRISSY         TARVIS          FEMALE WHITE     YES                                                                                                  
+STEPHANIE       MCKIN           FEMALE WHITE     NO                                                                                                   
+JOSELYN         PABST           FEMALE WHITE     NO                                                                                                   
+MAGDALENE       DAVALOS         FEMALE WHITE     NO                                                                                                   
+NELIA           BANKSON         FEMALE WHITE     NO                                                                                                   
+MARRY           BOSHNACK        FEMALE WHITE     NO                                                                                                   
+IRENA           SAFA            FEMALE WHITE     NO                                                                                                   
+MOZELLE         MAJCHER         FEMALE WHITE     NO                                                                                                   
+WILLETTE        SALTOURIDES     FEMALE WHITE     NO                                                                                                   
+ALIDA           PHIMPRADAPSY    FEMALE WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+NATHALIE        TRAUTMAN        FEMALE WHITE     NO                                                                                                   
+ROSIA           DESLAURIER      FEMALE WHITE     YES                                                                                                  
+LELA            HANISCO         FEMALE WHITE     YES                                                                                                  
+HILLARY         BRIGNOLO        FEMALE WHITE     NO                                                                                                   
+SHARLA          LOOPER          FEMALE WHITE     YES                                                                                                  
+WESLEY          RHEES           FEMALE WHITE     NO                                                                                                   
+ANGLA           LAWTER          FEMALE WHITE     NO                                                                                                   
+SLYVIA          HOSKIN          FEMALE WHITE     NO                                                                                                   
+FRANCES         FAILS           FEMALE WHITE     NO                                                                                                   
+STACEE          BLACKSHER       FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+KANDY           TARQUINIO       FEMALE WHITE     NO                                                                                                   
+MICHELLE        HOSSAIN         FEMALE WHITE     NO                                                                                                   
+PHILOMENA       ZINS            FEMALE WHITE     NO                                                                                                   
+EDDIE           BEILINSON       FEMALE WHITE     NO                                                                                                   
+LATONIA         ULLMANN         FEMALE WHITE     NO                                                                                                   
+ANTONIETTA      DEHAY           FEMALE WHITE     NO                                                                                                   
+SOLANGE         MESPELT         FEMALE WHITE     NO                                                                                                   
+KAREN           TRAMELL         FEMALE WHITE     NO                                                                                                   
+JULISSA         ESTRIN          FEMALE WHITE     NO                                                                                                   
+DIGNA           PRAWDZIK        FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CELESTINA       SCHMID          FEMALE WHITE     NO                                                                                                   
+LEIGHA          DOMBKOWSKI      FEMALE WHITE     NO                                                                                                   
+CONCHITA        STATER          FEMALE WHITE     NO                                                                                                   
+GERALDINE       CARDIEL         FEMALE WHITE     NO                                                                                                   
+MONICA          ZACK            FEMALE WHITE     NO                                                                                                   
+ANTONETTA       DENNEHY         FEMALE WHITE     NO                                                                                                   
+ALFREDA         ZIELONKO        FEMALE WHITE     NO                                                                                                   
+ADRIA           LOUKS           FEMALE WHITE     YES                                                                                                  
+CLEMMIE         ABUEL           FEMALE WHITE     NO                                                                                                   
+CHASIDY         SUCCAR          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ANNABELLE       JERMAN          FEMALE WHITE     NO                                                                                                   
+BRYANNA         QUIRALTE        FEMALE WHITE     NO                                                                                                   
+JUAN            BARROWS         FEMALE WHITE     YES                                                                                                  
+CHERRIE         ONSTEAD         FEMALE WHITE     NO                                                                                                   
+EUGENIA         UNTERSEHER      FEMALE WHITE     NO                                                                                                   
+IMELDA          PRESUME         FEMALE WHITE     NO                                                                                                   
+ALLINE          DUGI            FEMALE WHITE     NO                                                                                                   
+IMA             SALZ            FEMALE WHITE     YES                                                                                                  
+ALBERTINE       VILLALUZ        FEMALE WHITE     NO                                                                                                   
+MELONIE         RUISI           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ANASTASIA       UNGARO          FEMALE WHITE     NO                                                                                                   
+KENYETTA        REATHERFORD     FEMALE WHITE     NO                                                                                                   
+SELINA          SHAH            FEMALE WHITE     YES                                                                                                  
+CHIQUITA        ABLIN           FEMALE WHITE     NO                                                                                                   
+DEBBRA          EBBERS          FEMALE WHITE     NO                                                                                                   
+NA              LIGGANS         FEMALE WHITE     NO                                                                                                   
+APRIL           SOCHA           FEMALE WHITE     NO                                                                                                   
+ALETHEA         OULLETTE        FEMALE WHITE     NO                                                                                                   
+DANIELA         BENEVIDES       FEMALE WHITE     NO                                                                                                   
+HEATHER         CREGAR          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JIMMY           FAGIN           FEMALE WHITE     NO                                                                                                   
+AUDREA          BOSQUES         FEMALE WHITE     NO                                                                                                   
+ELLY            IMAI            FEMALE WHITE     YES                                                                                                  
+AURORA          TAUL            FEMALE WHITE     NO                                                                                                   
+HERMILA         BASCLE          FEMALE WHITE     YES                                                                                                  
+TERA            SODAWASSER      FEMALE WHITE     NO                                                                                                   
+JOSEPHINA       BOESER          FEMALE WHITE     NO                                                                                                   
+NOBUKO          PROKUP          FEMALE WHITE     NO                                                                                                   
+CAREY           SANIATAN        FEMALE WHITE     NO                                                                                                   
+GENIE           PICOU           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ALYSON          RACKOW          FEMALE WHITE     NO                                                                                                   
+CYTHIA          GUGLIELMINA     FEMALE WHITE     NO                                                                                                   
+AUGUSTINA       WENGERT         FEMALE WHITE     YES                                                                                                  
+CATRICE         LUKANDER        FEMALE WHITE     NO                                                                                                   
+SHAKIRA         HAMBURG         FEMALE WHITE     NO                                                                                                   
+CHARA           GIBSON          FEMALE WHITE     NO                                                                                                   
+AN              JULIEN          FEMALE WHITE     NO                                                                                                   
+TINY            JUERGENS        FEMALE WHITE     NO                                                                                                   
+MELYNDA         QUATTRONE       FEMALE WHITE     YES                                                                                                  
+MARTI           RUFFIN          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CORAL           BENNETH         FEMALE WHITE     NO                                                                                                   
+CINDA           VIDRIO          FEMALE WHITE     YES                                                                                                  
+DORETHA         SIMLEY          FEMALE WHITE     NO                                                                                                   
+VIVIEN          PETROFF         FEMALE WHITE     NO                                                                                                   
+CASANDRA        LOOSEY          FEMALE WHITE     NO                                                                                                   
+TAMAR           WILCOXEN        FEMALE WHITE     NO                                                                                                   
+CLEMENTINA      DUNNELL         FEMALE WHITE     YES                                                                                                  
+BRETT           SONDRUP         FEMALE WHITE     NO                                                                                                   
+JONNA           HWEE            FEMALE WHITE     NO                                                                                                   
+JUANITA         MATTEO          FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LIZETH          WINTHROP        FEMALE WHITE     NO                                                                                                   
+MARYANNA        BOBEK           FEMALE WHITE     NO                                                                                                   
+RUDY            DETHLEFS        FEMALE WHITE     NO                                                                                                   
+SHANIKA         MARSZALEK       FEMALE WHITE     NO                                                                                                   
+JANETTE         KIECKER         FEMALE WHITE     NO                                                                                                   
+EMMIE           SABBATINI       FEMALE WHITE     NO                                                                                                   
+BRYANNA         SHERIFF         FEMALE WHITE     NO                                                                                                   
+NAOMI           ROMBOUGH        FEMALE WHITE     NO                                                                                                   
+DETRA           MATHERNE        FEMALE WHITE     NO                                                                                                   
+INA             ECKLE           FEMALE WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+HIROKO          MEIERHOFER      FEMALE WHITE     NO                                                                                                   
+FUMIKO          WALLAERT        FEMALE WHITE     NO                                                                                                   
+WENDIE          SMIGEL          FEMALE WHITE     NO                                                                                                   
+RIVA            COSSIO          FEMALE WHITE     NO                                                                                                   
+MARVEL          POUNDSTONE      FEMALE WHITE     NO                                                                                                   
+GERI            TRUDEN          FEMALE WHITE     NO                                                                                                   
+DINO            KOPLIN          MALE   ASIAN     NO                                                                                                   
+DOMINGO         PAYEUR          MALE   ASIAN     NO                                                                                                   
+IVAN            KESS            MALE   ASIAN     NO                                                                                                   
+BILL            APPLEWHAITE     MALE   ASIAN     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CRISTOPHER      SUSTAR          MALE   ASIAN     NO                                                                                                   
+DEVON           LOIACONA        MALE   ASIAN     NO                                                                                                   
+BUFORD          SYPOLT          MALE   ASIAN     YES                                                                                                  
+VAN             MADDOY          MALE   BLACK     NO                                                                                                   
+JULIUS          MACHOLD         MALE   BLACK     NO                                                                                                   
+DARREL          MOZDZIERZ       MALE   BLACK     NO                                                                                                   
+GREGORY         GRIGNON         MALE   BLACK     NO                                                                                                   
+GUADALUPE       CRAYTON         MALE   BLACK     NO                                                                                                   
+DEREK           WEIMER          MALE   BLACK     NO                                                                                                   
+BORIS           LAMER           MALE   BLACK     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+OWEN            REMPE           MALE   WHITE     NO                                                                                                   
+NOAH            STOLTENBURG     MALE   WHITE     NO                                                                                                   
+WILEY           TREMEL          MALE   WHITE     NO                                                                                                   
+KERRY           COSSELL         MALE   WHITE     NO                                                                                                   
+JERROD          PABON           MALE   WHITE     NO                                                                                                   
+ARLEN           HUFFNER         MALE   WHITE     NO                                                                                                   
+JACOB           TWOMEY          MALE   WHITE     NO                                                                                                   
+AUSTIN          CLAYBOURN       MALE   WHITE     NO                                                                                                   
+ERIN            GALIK           MALE   WHITE     YES                                                                                                  
+ISRAEL          CERRONI         MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RICHIE          HOUSE           MALE   WHITE     NO                                                                                                   
+RENATO          MAGOUN          MALE   WHITE     YES                                                                                                  
+EMIL            HUDKINS         MALE   WHITE     NO                                                                                                   
+PALMER          WINDAM          MALE   WHITE     YES                                                                                                  
+GILBERT         MORANTE         MALE   WHITE     NO                                                                                                   
+EDUARDO         OBNEGON         MALE   WHITE     NO                                                                                                   
+KOREY           HAUSE           MALE   WHITE     NO                                                                                                   
+CORNELIUS       FINGERMAN       MALE   WHITE     NO                                                                                                   
+FLOYD           LEGHORN         MALE   WHITE     NO                                                                                                   
+AMBROSE         PIECH           MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+EZRA            BERNOTAS        MALE   WHITE     YES                                                                                                  
+TRINIDAD        HEZIAK          MALE   WHITE     YES                                                                                                  
+JASPER          GARNER          MALE   WHITE     NO                                                                                                   
+PHILLIP         HUOT            MALE   WHITE     YES                                                                                                  
+NESTOR          SCHWADRON       MALE   WHITE     YES                                                                                                  
+MONTE           DEROUSSE        MALE   WHITE     NO                                                                                                   
+ELIAS           ZETTLER         MALE   WHITE     NO                                                                                                   
+CYRIL           MELUSO          MALE   WHITE     YES                                                                                                  
+ENOCH           GRAMZA          MALE   WHITE     YES                                                                                                  
+SHON            WINKLEMAN       MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LUTHER          LARK            MALE   WHITE     NO                                                                                                   
+TYRON           KOTTKE          MALE   WHITE     NO                                                                                                   
+OSVALDO         MADALINSKI      MALE   WHITE     NO                                                                                                   
+DENNY           MASCORRO        MALE   WHITE     NO                                                                                                   
+JEFFRY          JURGENSON       MALE   WHITE     NO                                                                                                   
+KIM             TENPENNY        MALE   WHITE     NO                                                                                                   
+MARLON          HASELHUHN       MALE   WHITE     YES                                                                                                  
+DONNELL         SPREEN          MALE   WHITE     NO                                                                                                   
+GRADY           DEJONGE         MALE   WHITE     NO                                                                                                   
+BOYD            SHONT           MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LUIGI           DAHM            MALE   WHITE     NO                                                                                                   
+MARQUIS         MAW             MALE   WHITE     NO                                                                                                   
+DANILO          VANDEUSEN       MALE   WHITE     NO                                                                                                   
+VINCENZO        TOMSON          MALE   WHITE     YES                                                                                                  
+RICHARD         KABINA          MALE   WHITE     NO                                                                                                   
+BERRY           ATES            MALE   WHITE     NO                                                                                                   
+DENNIS          DELAND          MALE   WHITE     NO                                                                                                   
+HOBERT          GOETTSCH        MALE   WHITE     NO                                                                                                   
+GREGORIO        YAMAUCHI        MALE   WHITE     NO                                                                                                   
+AARON           ZERRING         MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+KORY            TASCH           MALE   WHITE     NO                                                                                                   
+EDMUNDO         LAMBECK         MALE   WHITE     NO                                                                                                   
+NORMAND         WIMPEY          MALE   WHITE     NO                                                                                                   
+CODY            HEINRICHER      MALE   WHITE     NO                                                                                                   
+GAIL            EILER           MALE   WHITE     NO                                                                                                   
+TAD             HAMOR           MALE   WHITE     NO                                                                                                   
+BENEDICT        GEORGE          MALE   WHITE     NO                                                                                                   
+JUNIOR          CALDEIRA        MALE   WHITE     YES                                                                                                  
+ARIEL           BAIER           MALE   WHITE     NO                                                                                                   
+BROCK           LOOFT           MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CRUZ            GOODERMOTE      MALE   WHITE     YES                                                                                                  
+ALBERTO         SENTI           MALE   WHITE     NO                                                                                                   
+FELIX           SAMA            MALE   WHITE     NO                                                                                                   
+BART            SYSAK           MALE   WHITE     YES                                                                                                  
+WOODROW         BORROEL         MALE   WHITE     NO                                                                                                   
+HOLLIS          VANWASSENHOVE   MALE   WHITE     NO                                                                                                   
+ANDREAS         BLAKEWAY        MALE   WHITE     NO                                                                                                   
+DUSTIN          KOEPPEN         MALE   WHITE     NO                                                                                                   
+PATRICIA        DUMENY          MALE   WHITE     NO                                                                                                   
+GIOVANNI        GALLENSTEIN     MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RAUL            MARISCAL        MALE   WHITE     NO                                                                                                   
+KENNETH         WOJNER          MALE   WHITE     YES                                                                                                  
+NATHANIEL       SCHLEMMER       MALE   WHITE     NO                                                                                                   
+BRUCE           FECHTIG         MALE   WHITE     NO                                                                                                   
+EMERSON         GILMORE         MALE   WHITE     NO                                                                                                   
+PERRY           HAVENS          MALE   WHITE     YES                                                                                                  
+LACY            THUNBERG        MALE   WHITE     NO                                                                                                   
+JORDON          SIRIN           MALE   WHITE     NO                                                                                                   
+RUEBEN          STARCHMAN       MALE   WHITE     NO                                                                                                   
+ZACK            MONTAS          MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+KRIS            HAFLEY          MALE   WHITE     NO                                                                                                   
+FRANK           BAILONY         MALE   WHITE     NO                                                                                                   
+ADRIAN          ENTWISTLE       MALE   WHITE     NO                                                                                                   
+KASEY           GRUSTAS         MALE   WHITE     NO                                                                                                   
+ELLIOT          BEAMES          MALE   WHITE     NO                                                                                                   
+BROOKS          HOWLIN          MALE   WHITE     NO                                                                                                   
+DONTE           AVELLANO        MALE   WHITE     NO                                                                                                   
+RAFAEL          HAMMETTE        MALE   WHITE     NO                                                                                                   
+AMOS            OLEN            MALE   WHITE     NO                                                                                                   
+CHANG           JELINEK         MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+PERCY           POSTLETHWAIT    MALE   WHITE     NO                                                                                                   
+ZACHARIAH       HERNANDER       MALE   WHITE     NO                                                                                                   
+RUSSEL          BETTY           MALE   WHITE     NO                                                                                                   
+PARKER          ZWOLINSKI       MALE   WHITE     NO                                                                                                   
+TERRENCE        HONGISTO        MALE   WHITE     NO                                                                                                   
+JARRED          CERQUEIRA       MALE   WHITE     NO                                                                                                   
+DEE             PULS            MALE   WHITE     NO                                                                                                   
+AURELIO         EYRICH          MALE   WHITE     NO                                                                                                   
+CLINT           ABERSON         MALE   WHITE     NO                                                                                                   
+JORGE           ANNAN           MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RYAN            ELLIOT          MALE   WHITE     YES                                                                                                  
+ERROL           SMIGEL          MALE   WHITE     NO                                                                                                   
+EDGAR           FOHN            MALE   WHITE     NO                                                                                                   
+ELBERT          STUBSON         MALE   WHITE     NO                                                                                                   
+EVAN            MAZION          MALE   WHITE     NO                                                                                                   
+RILEY           TAYLAN          MALE   WHITE     NO                                                                                                   
+COLEMAN         DAYLEY          MALE   WHITE     YES                                                                                                  
+SAUL            REEBER          MALE   WHITE     NO                                                                                                   
+PASQUALE        LENAHAN         MALE   WHITE     NO                                                                                                   
+FREEMAN         JORINSCAY       MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+VINCENT         HOLDER          MALE   WHITE     YES                                                                                                  
+JC              EGWUOHUA        MALE   WHITE     YES                                                                                                  
+JUDSON          BUTTITTA        MALE   WHITE     NO                                                                                                   
+MAXWELL         IHA             MALE   WHITE     NO                                                                                                   
+HARRIS          STOLIKER        MALE   WHITE     NO                                                                                                   
+FRANCIS         FERRIE          MALE   WHITE     NO                                                                                                   
+MARION          BENZSCHAWEL     MALE   WHITE     NO                                                                                                   
+NOBLE           CONFREY         MALE   WHITE     NO                                                                                                   
+EDGARDO         INHULSEN        MALE   WHITE     NO                                                                                                   
+LANDON          PERTUIT         MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JONATHON        GAUTIER         MALE   WHITE     YES                                                                                                  
+ABRAHAM         KUBITZ          MALE   WHITE     NO                                                                                                   
+GAVIN           FLAND           MALE   WHITE     NO                                                                                                   
+GLENN           SARMIENTO       MALE   WHITE     NO                                                                                                   
+MARCELO         MCWHERTER       MALE   WHITE     NO                                                                                                   
+EDUARDO         ILLES           MALE   WHITE     NO                                                                                                   
+PORFIRIO        KAZMER          MALE   WHITE     NO                                                                                                   
+SANDY           SYLVIA          MALE   WHITE     NO                                                                                                   
+KEITH           RUPPEL          MALE   WHITE     NO                                                                                                   
+GIL             TROXIL          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+LONNIE          STARRICK        MALE   WHITE     YES                                                                                                  
+TROY            STOFFLET        MALE   WHITE     NO                                                                                                   
+SILAS           DAPONTE         MALE   WHITE     NO                                                                                                   
+DOUGLASS        CEREGHINO       MALE   WHITE     NO                                                                                                   
+ALDO            YANNONE         MALE   WHITE     NO                                                                                                   
+TREVOR          STATEN          MALE   WHITE     NO                                                                                                   
+WILBURN         GOODEMOTE       MALE   WHITE     NO                                                                                                   
+GLENN           BENSLEY         MALE   WHITE     YES                                                                                                  
+CLARK           SIEGEL          MALE   WHITE     NO                                                                                                   
+GERRY           FINNEY          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RUSSEL          DECATO          MALE   WHITE     NO                                                                                                   
+HANK            BARNER          MALE   WHITE     NO                                                                                                   
+KENDRICK        CHAMBERS        MALE   WHITE     NO                                                                                                   
+CLIFFORD        SCHWIEBERT      MALE   WHITE     NO                                                                                                   
+OLIVER          FARLEE          MALE   WHITE     NO                                                                                                   
+MARCO           ARICHABALA      MALE   WHITE     NO                                                                                                   
+JOHNIE          DYRESON         MALE   WHITE     NO                                                                                                   
+SIMON           GRODI           MALE   WHITE     NO                                                                                                   
+JULIUS          PARLER          MALE   WHITE     YES                                                                                                  
+MARCELO         ABREO           MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ESTEBAN         MCCORD          MALE   WHITE     NO                                                                                                   
+DEWAYNE         EAGLESTON       MALE   WHITE     YES                                                                                                  
+SIMON           CHARTIER        MALE   WHITE     NO                                                                                                   
+CLINT           MOLYNEAUX       MALE   WHITE     YES                                                                                                  
+SHON            DEROOS          MALE   WHITE     NO                                                                                                   
+MOHAMMAD        REES            MALE   WHITE     NO                                                                                                   
+NED             HELBLING        MALE   WHITE     NO                                                                                                   
+JOSHUA          BRUTON          MALE   WHITE     NO                                                                                                   
+FRITZ           CHHEANG         MALE   WHITE     NO                                                                                                   
+ROD             TELLIS          MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RON             HUMANN          MALE   WHITE     NO                                                                                                   
+FLETCHER        ARCIBA          MALE   WHITE     YES                                                                                                  
+TRACY           ISAGAWA         MALE   WHITE     NO                                                                                                   
+MAYNARD         BUGGS           MALE   WHITE     YES                                                                                                  
+BRENDAN         RAPACKI         MALE   WHITE     NO                                                                                                   
+NIGEL           KUROWSKI        MALE   WHITE     NO                                                                                                   
+EARL            ENTERLINE       MALE   WHITE     NO                                                                                                   
+XAVIER          CONDIE          MALE   WHITE     NO                                                                                                   
+MOHAMMAD        RAMJAN          MALE   WHITE     NO                                                                                                   
+BRAD            CASTELLOW       MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+QUENTIN         ROOP            MALE   WHITE     NO                                                                                                   
+FREDERICK       MOLLENKOPF      MALE   WHITE     NO                                                                                                   
+PETE            CARNETT         MALE   WHITE     NO                                                                                                   
+JAMIE           KUBAS           MALE   WHITE     NO                                                                                                   
+DANIEL          RODWELL         MALE   WHITE     NO                                                                                                   
+CHUCK           LAHMERS         MALE   WHITE     NO                                                                                                   
+ROD             LERPER          MALE   WHITE     NO                                                                                                   
+WALKER          OLLER           MALE   WHITE     NO                                                                                                   
+EDWARDO         OKUTSU          MALE   WHITE     NO                                                                                                   
+PASQUALE        SPORT           MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+OMER            HYSINGER        MALE   WHITE     NO                                                                                                   
+DALTON          MACAHILAS       MALE   WHITE     NO                                                                                                   
+BENITO          DETOMMASO       MALE   WHITE     NO                                                                                                   
+KIRBY           MICHARD         MALE   WHITE     YES                                                                                                  
+KENNETH         LUSHER          MALE   WHITE     NO                                                                                                   
+NEWTON          RINDONE         MALE   WHITE     NO                                                                                                   
+MARCO           TSUDA           MALE   WHITE     YES                                                                                                  
+JAKE            FEDEZKO         MALE   WHITE     NO                                                                                                   
+GIUSEPPE        DENMARK         MALE   WHITE     NO                                                                                                   
+WALLY           SCHWENTKER      MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+FREDRIC         SCHLOEMER       MALE   WHITE     NO                                                                                                   
+DARELL          BEAMAN          MALE   WHITE     NO                                                                                                   
+ERIN            CABILES         MALE   WHITE     YES                                                                                                  
+JOSEPH          HOGSED          MALE   WHITE     NO                                                                                                   
+CHRISTIAN       BESECKER        MALE   WHITE     NO                                                                                                   
+GAIL            BURDIER         MALE   WHITE     YES                                                                                                  
+RICHIE          STRING          MALE   WHITE     NO                                                                                                   
+BOOKER          MADRIGAL        MALE   WHITE     NO                                                                                                   
+LAMAR           TONDREAU        MALE   WHITE     NO                                                                                                   
+ROMEO           FANTROY         MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+EDWARDO         AMADEO          MALE   WHITE     NO                                                                                                   
+RICH            TESTERMAN       MALE   WHITE     NO                                                                                                   
+BRUCE           SNEARY          MALE   WHITE     NO                                                                                                   
+GRAIG           CHADWICK        MALE   WHITE     NO                                                                                                   
+MARC            SLEETER         MALE   WHITE     NO                                                                                                   
+MICHAEL         CARMOLLI        MALE   WHITE     NO                                                                                                   
+EDDIE           SCHIVELEY       MALE   WHITE     NO                                                                                                   
+ARTURO          CASTELHANO      MALE   WHITE     NO                                                                                                   
+CAMERON         RIEGLE          MALE   WHITE     NO                                                                                                   
+CONNIE          SIGARS          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+BENTON          DUCAYNE         MALE   WHITE     NO                                                                                                   
+CLAY            TAYAN           MALE   WHITE     NO                                                                                                   
+TANNER          DETULLIO        MALE   WHITE     NO                                                                                                   
+RUSSELL         KAHAWAI         MALE   WHITE     YES                                                                                                  
+DEVIN           TRAYCHEFF       MALE   WHITE     NO                                                                                                   
+GUY             NICKLIEN        MALE   WHITE     NO                                                                                                   
+COLBY           MEHRER          MALE   WHITE     NO                                                                                                   
+GERALDO         RETZLOFF        MALE   WHITE     NO                                                                                                   
+FREDRIC         FAIRALL         MALE   WHITE     YES                                                                                                  
+ANTWAN          MCCOOK          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+MILAN           BECK            MALE   WHITE     NO                                                                                                   
+COLUMBUS        EERKES          MALE   WHITE     NO                                                                                                   
+EDMUNDO         CHOMKA          MALE   WHITE     NO                                                                                                   
+DARRIN          OKULA           MALE   WHITE     NO                                                                                                   
+NESTOR          SELMON          MALE   WHITE     NO                                                                                                   
+CRAIG           HONOR           MALE   WHITE     NO                                                                                                   
+MARY            KURTER          MALE   WHITE     NO                                                                                                   
+PERRY           WESTWATER       MALE   WHITE     YES                                                                                                  
+DEVIN           TETREAULT       MALE   WHITE     NO                                                                                                   
+DAMON           JAKUBEK         MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+DONN            TROENDLE        MALE   WHITE     YES                                                                                                  
+NOEL            GELLIS          MALE   WHITE     NO                                                                                                   
+EDMUNDO         YANAI           MALE   WHITE     NO                                                                                                   
+ART             BROADNAX        MALE   WHITE     NO                                                                                                   
+WARREN          SHEERIN         MALE   WHITE     NO                                                                                                   
+LOUIE           LOPE            MALE   WHITE     NO                                                                                                   
+KEVEN           HARTT           MALE   WHITE     NO                                                                                                   
+ARON            WERKHOVEN       MALE   WHITE     NO                                                                                                   
+KRAIG           JOACHIN         MALE   WHITE     YES                                                                                                  
+BRUNO           WESSENDORF      MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+RAYMON          HENEISEN        MALE   WHITE     NO                                                                                                   
+ALEXANDER       BUZZELLE        MALE   WHITE     YES                                                                                                  
+VAL             DEHASS          MALE   WHITE     NO                                                                                                   
+ELISHA          WENNER          MALE   WHITE     NO                                                                                                   
+DENNY           MYRIE           MALE   WHITE     NO                                                                                                   
+LEVI            DAGGETT         MALE   WHITE     NO                                                                                                   
+ELROY           RODRIQUZ        MALE   WHITE     NO                                                                                                   
+MILTON          BROSCHINSKY     MALE   WHITE     NO                                                                                                   
+AMOS            BIRKETT         MALE   WHITE     NO                                                                                                   
+SHELTON         BURN            MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+DEANGELO        FRAIRE          MALE   WHITE     NO                                                                                                   
+FAUSTO          KERSCHER        MALE   WHITE     NO                                                                                                   
+FREDDIE         COOTS           MALE   WHITE     NO                                                                                                   
+GRADY           NEAGLE          MALE   WHITE     YES                                                                                                  
+DAVIS           CARDI           MALE   WHITE     NO                                                                                                   
+AL              SWANT           MALE   WHITE     YES                                                                                                  
+PABLO           ADAMCIK         MALE   WHITE     NO                                                                                                   
+CHRISTOPHER     COFFIELD        MALE   WHITE     NO                                                                                                   
+ROLLAND         LEDWELL         MALE   WHITE     NO                                                                                                   
+KENNY           HOPSKINS        MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JC              GIUS            MALE   WHITE     NO                                                                                                   
+JOHNNIE         BIRO            MALE   WHITE     YES                                                                                                  
+STERLING        HEACOCK         MALE   WHITE     YES                                                                                                  
+MARK            GOOLSBY         MALE   WHITE     NO                                                                                                   
+IKE             ZUKOSKI         MALE   WHITE     NO                                                                                                   
+ROY             LAHNE           MALE   WHITE     NO                                                                                                   
+ISAIAS          ZELLEFROW       MALE   WHITE     NO                                                                                                   
+HARLAND         VIERLING        MALE   WHITE     NO                                                                                                   
+COLTON          EDMONSTON       MALE   WHITE     NO                                                                                                   
+DONG            WEINGARD        MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ALBERT          MCCRELESS       MALE   WHITE     NO                                                                                                   
+GARFIELD        CASSADA         MALE   WHITE     NO                                                                                                   
+IVORY           GHOSN           MALE   WHITE     NO                                                                                                   
+CASEY           ERLING          MALE   WHITE     YES                                                                                                  
+JUNIOR          NEAL            MALE   WHITE     NO                                                                                                   
+KAREEM          SEYMORE         MALE   WHITE     NO                                                                                                   
+ALEXIS          YOSTEN          MALE   WHITE     NO                                                                                                   
+ROBT            DURGAN          MALE   WHITE     NO                                                                                                   
+RIGOBERTO       MOLLET          MALE   WHITE     YES                                                                                                  
+MERLIN          MOENING         MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+GUY             ROAM            MALE   WHITE     YES                                                                                                  
+KYLE            DECOSTA         MALE   WHITE     NO                                                                                                   
+QUENTIN         GELLER          MALE   WHITE     NO                                                                                                   
+BOBBIE          BROSCHINSKY     MALE   WHITE     YES                                                                                                  
+SPENCER         TOMBERLIN       MALE   WHITE     NO                                                                                                   
+HERIBERTO       SORDIA          MALE   WHITE     NO                                                                                                   
+WILBER          FEGER           MALE   WHITE     NO                                                                                                   
+PARKER          FORMICHELLI     MALE   WHITE     YES                                                                                                  
+GREGORY         MONTAN          MALE   WHITE     NO                                                                                                   
+WAYNE           PYTLOVANY       MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ARNOLDO         CERRITELLI      MALE   WHITE     NO                                                                                                   
+MATTHEW         CIULLO          MALE   WHITE     NO                                                                                                   
+SHELTON         SIEKER          MALE   WHITE     NO                                                                                                   
+TRACEY          HINT            MALE   WHITE     NO                                                                                                   
+EFRAIN          PAPALLO         MALE   WHITE     NO                                                                                                   
+KENTON          EMECHE          MALE   WHITE     NO                                                                                                   
+REID            ALMA            MALE   WHITE     NO                                                                                                   
+JOESPH          NATANI          MALE   WHITE     NO                                                                                                   
+ROD             MEHARG          MALE   WHITE     NO                                                                                                   
+HARLEY          JEKOT           MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+KELVIN          ROMESBURG       MALE   WHITE     NO                                                                                                   
+MERRILL         SENEGAL         MALE   WHITE     NO                                                                                                   
+HUNTER          CEASER          MALE   WHITE     NO                                                                                                   
+STEVIE          STDENIS         MALE   WHITE     NO                                                                                                   
+SHAWN           RIOSECO         MALE   WHITE     NO                                                                                                   
+TRENTON         BOHNSACK        MALE   WHITE     NO                                                                                                   
+NORMAN          BERNOTAS        MALE   WHITE     NO                                                                                                   
+JARRETT         KACERSKI        MALE   WHITE     NO                                                                                                   
+ROGER           CASSADAY        MALE   WHITE     YES                                                                                                  
+JOSPEH          BOUDLE          MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ELLIOT          WEAKLY          MALE   WHITE     NO                                                                                                   
+RUBEN           CURE            MALE   WHITE     NO                                                                                                   
+LENARD          SHADOAN         MALE   WHITE     YES                                                                                                  
+TYSON           FLATO           MALE   WHITE     NO                                                                                                   
+KERRY           WASIELEWSKI     MALE   WHITE     YES                                                                                                  
+ERICK           YE              MALE   WHITE     NO                                                                                                   
+LYMAN           OXFORD          MALE   WHITE     YES                                                                                                  
+EDWARD          SALMINEN        MALE   WHITE     NO                                                                                                   
+JEWEL           ROUSELL         MALE   WHITE     NO                                                                                                   
+HERIBERTO       BYRGE           MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+DARRELL         SCARPINO        MALE   WHITE     NO                                                                                                   
+BRADLY          BONIFIELD       MALE   WHITE     NO                                                                                                   
+THADDEUS        LOUGE           MALE   WHITE     NO                                                                                                   
+DOUG            BABINSKI        MALE   WHITE     NO                                                                                                   
+SPENCER         LECHLITER       MALE   WHITE     NO                                                                                                   
+EMERSON         SKATES          MALE   WHITE     NO                                                                                                   
+SALVADOR        GAETZ           MALE   WHITE     NO                                                                                                   
+DARON           LOCKHART        MALE   WHITE     NO                                                                                                   
+DEVON           PETRAMALE       MALE   WHITE     YES                                                                                                  
+ARON            GRUBEL          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CESAR           MUNSEY          MALE   WHITE     NO                                                                                                   
+BILLY           WYDO            MALE   WHITE     NO                                                                                                   
+AHMAD           PRONTO          MALE   WHITE     NO                                                                                                   
+DONOVAN         KONDOS          MALE   WHITE     NO                                                                                                   
+RICKY           ADDO            MALE   WHITE     NO                                                                                                   
+ALBERT          SLAGHT          MALE   WHITE     NO                                                                                                   
+QUINCY          LEPS            MALE   WHITE     NO                                                                                                   
+YOUNG           MINTZER         MALE   WHITE     NO                                                                                                   
+TRINIDAD        KOTTWITZ        MALE   WHITE     YES                                                                                                  
+TOMMIE          SEVEDGE         MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+MARIANO         ZAZULA          MALE   WHITE     NO                                                                                                   
+ERICK           BROSTROM        MALE   WHITE     NO                                                                                                   
+JOSPEH          DESAK           MALE   WHITE     NO                                                                                                   
+LESLEY          WINSTEAD        MALE   WHITE     NO                                                                                                   
+ELLIOT          DORWARD         MALE   WHITE     NO                                                                                                   
+KELLY           LAUTER          MALE   WHITE     NO                                                                                                   
+RUPERT          KUCEL           MALE   WHITE     NO                                                                                                   
+BENNIE          GULKE           MALE   WHITE     NO                                                                                                   
+ZACHARIAH       DESANTIS        MALE   WHITE     NO                                                                                                   
+CLAUDE          COLLEDGE        MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+GRAIG           ZIEK            MALE   WHITE     NO                                                                                                   
+ROLF            BANG            MALE   WHITE     YES                                                                                                  
+QUINTON         RACE            MALE   WHITE     YES                                                                                                  
+GLEN            DESILVIO        MALE   WHITE     NO                                                                                                   
+JOAQUIN         GILLIAND        MALE   WHITE     YES                                                                                                  
+BARRY           NOWLAND         MALE   WHITE     YES                                                                                                  
+GUSTAVO         VASSEL          MALE   WHITE     YES                                                                                                  
+AHMED           DEMYAN          MALE   WHITE     NO                                                                                                   
+ERNEST          MATHIEW         MALE   WHITE     NO                                                                                                   
+THADDEUS        MAHOLMES        MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ANTIONE         ODOMES          MALE   WHITE     NO                                                                                                   
+CAREY           JIN             MALE   WHITE     NO                                                                                                   
+ADAN            HAGGLUND        MALE   WHITE     YES                                                                                                  
+RODGER          LANGANKE        MALE   WHITE     NO                                                                                                   
+MOSE            PHOMMAJACK      MALE   WHITE     NO                                                                                                   
+JEROLD          BIDDICK         MALE   WHITE     NO                                                                                                   
+CLYDE           BELLOTTI        MALE   WHITE     NO                                                                                                   
+PRINCE          STAMER          MALE   WHITE     NO                                                                                                   
+EMANUEL         NOTTE           MALE   WHITE     YES                                                                                                  
+REGGIE          MERINE          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+CESAR           APADACA         MALE   WHITE     YES                                                                                                  
+TERRANCE        PALMORE         MALE   WHITE     NO                                                                                                   
+RUEBEN          TRUMBLE         MALE   WHITE     NO                                                                                                   
+GAVIN           BEGAN           MALE   WHITE     NO                                                                                                   
+AVERY           MATSON          MALE   WHITE     NO                                                                                                   
+LYNDON          TJARKS          MALE   WHITE     NO                                                                                                   
+SCOT            SCHECHTMAN      MALE   WHITE     NO                                                                                                   
+SAL             UPCHURCH        MALE   WHITE     NO                                                                                                   
+RYAN            READ            MALE   WHITE     NO                                                                                                   
+PALMER          SWILLE          MALE   WHITE     YES                                                                                                  
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+GERARD          YERIAN          MALE   WHITE     NO                                                                                                   
+ROSARIO         POLEMENI        MALE   WHITE     NO                                                                                                   
+JODY            RIVINIUS        MALE   WHITE     NO                                                                                                   
+AMBROSE         SNELLENBERGER   MALE   WHITE     NO                                                                                                   
+KERMIT          NY              MALE   WHITE     NO                                                                                                   
+WILLARD         DUSTON          MALE   WHITE     NO                                                                                                   
+DON             IVERY           MALE   WHITE     YES                                                                                                  
+IRVIN           LOBELLO         MALE   WHITE     NO                                                                                                   
+OLLIE           NESSER          MALE   WHITE     NO                                                                                                   
+JEWEL           DEMARZIO        MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ABEL            GUINYARD        MALE   WHITE     NO                                                                                                   
+FRANK           SPAAR           MALE   WHITE     NO                                                                                                   
+MITCHELL        KER             MALE   WHITE     YES                                                                                                  
+JORDON          THAKE           MALE   WHITE     NO                                                                                                   
+DEWAYNE         THORNOCK        MALE   WHITE     NO                                                                                                   
+JOHNSON         RITCHKO         MALE   WHITE     NO                                                                                                   
+SEBASTIAN       TREGLIA         MALE   WHITE     NO                                                                                                   
+EDGARDO         GARTHWAITE      MALE   WHITE     NO                                                                                                   
+COLBY           PASKEL          MALE   WHITE     NO                                                                                                   
+TYSON           GUZIAK          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+ZACK            STUBBENDECK     MALE   WHITE     NO                                                                                                   
+HERBERT         ORDUNA          MALE   WHITE     NO                                                                                                   
+MARION          ALLEBACH        MALE   WHITE     NO                                                                                                   
+GONZALO         FERGUSEN        MALE   WHITE     NO                                                                                                   
+GRANVILLE       VIEL            MALE   WHITE     NO                                                                                                   
+MOSES           HORTEIN         MALE   WHITE     NO                                                                                                   
+LEONARDO        REWITZER        MALE   WHITE     NO                                                                                                   
+CARROLL         TARDY           MALE   WHITE     NO                                                                                                   
+DESMOND         COOKSLEY        MALE   WHITE     NO                                                                                                   
+NATHAN          GILANI          MALE   WHITE     NO                                                                                                   
+
+                                                 Marriage                                                                                             
+First Name      Last Name       Gender Ethnicity Status                                                                                               
+=============== =============== ====== ========= ========                                                                                             
+JOHNNIE         CURIE           MALE   WHITE     NO                                                                                                   
+ROMEO           VIG             MALE   WHITE     NO                                                                                                   
+
+842 rows selected.
+
+SQL> spool off

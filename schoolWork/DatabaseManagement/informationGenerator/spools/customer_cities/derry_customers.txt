@@ -1,0 +1,102 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'DERRY'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+EDNA            BAISEY          781 MEMORIAL DR           03038                                                                                       
+ROLF            BANG            161 RIVERDALE AVE         03038                                                                                       
+ALLYSON         BARANSKI        847 KARIN ST              03038                                                                                       
+BETTY           BARTLONE        674 KINGS CT              03038                                                                                       
+CLYDE           BELLOTTI        320 LAVISTA ST            03038                                                                                       
+RUSSEL          BETTY           277 MARTEL DR             03038                                                                                       
+JOSPEH          BOUDLE          840 PARKVIEW ST           03038                                                                                       
+EDMUNDO         CHOMKA          166 ROY AVE               03038                                                                                       
+NOVA            COGGAN          516 HAYWARD ST            03038                                                                                       
+GUADALUPE       CRAYTON         630 WOODMAN ST            03038                                                                                       
+DELILA          DELOGE          598 MANNING ST            03038                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+LACRESHA        DOMINICI        579 SPRAGUE ST            03038                                                                                       
+EWA             EISENSTADT      348 LINGARD ST            03038                                                                                       
+FRANCES         FAILS           556 PUBLIC ST             03038                                                                                       
+FRANCIS         FERRIE          472 LENOX AVE             03038                                                                                       
+HERTA           FESTERMAN       983 MANNING ST            03038                                                                                       
+MAGDALENE       FLAMIO          456 WESTON RD             03038                                                                                       
+EARLINE         GARVERICK       847 TAYLOR ST             03038                                                                                       
+CHARA           GIBSON          151 WATSON ST             03038                                                                                       
+JC              GIUS            290 ELMHURST AVE          03038                                                                                       
+OLIVE           GORRI           890 SILVER ST             03038                                                                                       
+KYLA            GREGORY         818 EMERALD ST            03038                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ABEL            GUINYARD        745 PURCHASE ST           03038                                                                                       
+SERENA          HAKANSON        749 HILLCREST AVE         03038                                                                                       
+ELSY            HEMRY           608 COTTAGE AVE           03038                                                                                       
+NAIDA           HODEL           338 WOLCOTT ST            03038                                                                                       
+CHRISTIANA      HOTTON          511 JANET CT              03038                                                                                       
+PA              INGRUM          416 KENDALL AVE           03038                                                                                       
+DONOVAN         KONDOS          934 NORFOLK ST            03038                                                                                       
+DINO            KOPLIN          502 WITT AVE              03038                                                                                       
+NGA             KRAUT           388 HOSLEY ST             03038                                                                                       
+LORA            LACEWELL        639 HAYWARD ST            03038                                                                                       
+MATHILDA        LAME            531 WATERMAN ST           03038                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ANGLA           LAWTER          900 MANNING ST            03038                                                                                       
+ROD             LERPER          861 MERRIMACK ST          03038                                                                                       
+ADRIA           LOUKS           550 PRESIDENT RD          03038                                                                                       
+OSVALDO         MADALINSKI      293 VIEW ST               03038                                                                                       
+ERNEST          MATHIEW         117 HAMPTON ST            03038                                                                                       
+MYRTIS          MIDDLEBROOKS    873 PINEHURST ST          03038                                                                                       
+SHIELA          MINNATEE        115 PURDUE ST             03038                                                                                       
+PENELOPE        NORKO           292 ROCKWOOD WAY          03038                                                                                       
+TERRANCE        PALMORE         425 FOWLER ST             03038                                                                                       
+TORRI           PLAMER          848 WOODMAN ST            03038                                                                                       
+ROSARIO         POLEMENI        560 SEWALL ST             03038                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ANALISA         POLLART         383 BROOKLYN AVE          03038                                                                                       
+MELYNDA         QUATTRONE       549 LAVISTA ST            03038                                                                                       
+ALYSON          RACKOW          557 RICHARD ST            03038                                                                                       
+MOHAMMAD        RAMJAN          888 KILBY ST              03038                                                                                       
+CAMERON         RIEGLE          899 JEWETT ST             03038                                                                                       
+JOHNSON         RITCHKO         639 COTTAGE AVE           03038                                                                                       
+MARISELA        RUDNEY          574 CYPRESS ST            03038                                                                                       
+IMA             SALZ            352 BOYNTON CT            03038                                                                                       
+KAREEM          SEYMORE         531 RICHARD ST            03038                                                                                       
+WENDIE          SMIGEL          990 MCILVIN ST            03038                                                                                       
+BRUCE           SNEARY          511 LUCILLE ST            03038                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+AMBROSE         SNELLENBERGER   270 STEVENS ST            03038                                                                                       
+DONNELL         SPREEN          965 GANTRY ST             03038                                                                                       
+ZACK            STUBBENDECK     562 LAKE AVE              03038                                                                                       
+ANNALEE         SUFFIELD        789 LAXSON AVE            03038                                                                                       
+DANIELA         SWIFT           446 WINTHROP ST           03038                                                                                       
+ADRIANNE        TEEGARDEN       332 BRAD CT               03038                                                                                       
+MARCO           TSUDA           338 FOSTER AVE            03038                                                                                       
+JACOB           TWOMEY          927 GREENLEAF ST          03038                                                                                       
+ANASTASIA       UNGARO          532 SILVER ST             03038                                                                                       
+GLORIA          VASBINDER       133 RICHARD ST            03038                                                                                       
+SHAUNTE         VINALL          512 LINCOLN ST            03038                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+PERRY           WESTWATER       250 PEPPERIDGE DR         03038                                                                                       
+BETTY           WHALER          766 LUCILLE ST            03038                                                                                       
+THOMASINE       WOMBACHER       572 DORIS ST              03038                                                                                       
+EVELIN          WONNACOTT       570 TAYLOR ST             03038                                                                                       
+
+70 rows selected.
+
+SQL> spool off

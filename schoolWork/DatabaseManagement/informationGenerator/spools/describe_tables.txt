@@ -1,0 +1,65 @@
+SQL> set linesize 80
+SQL> desc employee_data;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL VARCHAR2(8)
+ FIRST_NAME                                NOT NULL VARCHAR2(15)
+ LAST_NAME                                 NOT NULL VARCHAR2(15)
+
+SQL> desc employee_address_data;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ADDRESS_ID                                NOT NULL VARCHAR2(8)
+ EMPLOYEE_ID                               NOT NULL VARCHAR2(8)
+ STREET                                    NOT NULL VARCHAR2(25)
+ CITY                                      NOT NULL VARCHAR2(11)
+ STATE                                     NOT NULL VARCHAR2(13)
+ COUNTRY                                   NOT NULL VARCHAR2(13)
+ ZIPCODE                                   NOT NULL VARCHAR2(5)
+ PHONE_NUMBER                                       VARCHAR2(13)
+
+SQL> desc employee_job_data;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ JOB_ID                                    NOT NULL VARCHAR2(8)
+ EMPLOYEE_ID                               NOT NULL VARCHAR2(8)
+ DEPARTMENT                                NOT NULL VARCHAR2(22)
+ SALARY                                    NOT NULL NUMBER
+
+SQL> desc customer_packages;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGE_ID                                NOT NULL VARCHAR2(5)
+ TYPE                                      NOT NULL VARCHAR2(6)
+ PRICE                                     NOT NULL FLOAT(126)
+
+SQL> desc customer_data;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUSTOMER_ID                               NOT NULL VARCHAR2(8)
+ PACKAGE_ID                                NOT NULL VARCHAR2(5)
+ FIRST_NAME                                NOT NULL VARCHAR2(15)
+ LAST_NAME                                 NOT NULL VARCHAR2(15)
+
+SQL> desc customer_address_data;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ADDRESS_ID                                NOT NULL VARCHAR2(8)
+ CUSTOMER_ID                               NOT NULL VARCHAR2(8)
+ STREET                                    NOT NULL VARCHAR2(25)
+ CITY                                      NOT NULL VARCHAR2(11)
+ STATE                                     NOT NULL VARCHAR2(13)
+ COUNTRY                                   NOT NULL VARCHAR2(13)
+ ZIPCODE                                   NOT NULL VARCHAR2(5)
+ PHONE_NUMBER                                       VARCHAR2(13)
+
+SQL> desc customer_demographics;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEMOGRAPHICS_ID                           NOT NULL VARCHAR2(8)
+ CUSTOMER_ID                               NOT NULL VARCHAR2(8)
+ GENDER                                             VARCHAR2(6)
+ ETHNICITY                                          VARCHAR2(5)
+ MARRIAGE_STATUS                                    VARCHAR2(3)
+
+SQL> spool off

@@ -1,0 +1,198 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'NASHUA'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+DONTE           AVELLANO        338 BRENT ST              03060                                                                                       
+MILAN           BECK            481 LILAC CT              03060                                                                                       
+DARCIE          BHANDARI        774 LEO ST                03060                                                                                       
+JOHNNIE         BIRO            153 WHALLEY RD            03060                                                                                       
+JULIANE         BORNS           221 SPRINGDALE RD         03060                                                                                       
+JUDSON          BUTTITTA        170 ROSEMONT AVE          03060                                                                                       
+CHARLES         BUYES           576 GARFIELD ST           03060                                                                                       
+SIMON           CHARTIER        553 GABRIELLE ST          03060                                                                                       
+CHERYLE         CHEVES          218 RICHARD ST            03060                                                                                       
+DESMOND         COOKSLEY        999 RANDALL ST            03060                                                                                       
+KYLEE           DEEDRICK        181 MARTIN ST             03060                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ROSIA           DESLAURIER      532 PORTER ST             03060                                                                                       
+BOBBYE          ERCEK           757 LAWTON ST             03060                                                                                       
+CYTHIA          GUGLIELMINA     606 RIVERDALE AVE         03060                                                                                       
+SHERLENE        HATZENBUHLER    589 SEWALL ST             03060                                                                                       
+DON             IVERY           115 JOSHUA DR             03060                                                                                       
+KATERINE        MCENROE         577 CRESCENT RD           03060                                                                                       
+FIDELA          MEETER          256 CLIFF ST              03060                                                                                       
+AUNDREA         MROCZKOWSKI     222 GREEN ST              03060                                                                                       
+ARMIDA          NERI            860 BAKER ST              03060                                                                                       
+HERBERT         ORDUNA          632 ELMWOOD AVE           03060                                                                                       
+JERROD          PABON           304 OAKWOOD AVE           03060                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+PERCY           POSTLETHWAIT    489 SEWALL ST             03060                                                                                       
+TRINH           PROSPERIE       565 TRAFFORD ST           03060                                                                                       
+OTHA            PUSKARICH       219 FREMONT ST            03060                                                                                       
+BRYANNA         QUIRALTE        797 MERRIMACK ST          03060                                                                                       
+JEANICE         RANSDELL        275 MASSABESIC ST         03060                                                                                       
+EMMIE           SABBATINI       470 WILDWOOD ST           03060                                                                                       
+FREDRIC         SCHLOEMER       869 LANCASTER AVE         03060                                                                                       
+ALBERTO         SENTI           659 KENNEY ST             03060                                                                                       
+KRISTIN         STAVER          304 TROLLEY WAY           03060                                                                                       
+KORY            TASCH           212 HILLCREST AVE         03060                                                                                       
+LACY            THUNBERG        772 CEDAR ST              03060                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+VAN             WALLWORK        305 SPRUCE ST             03060                                                                                       
+KERRY           WASIELEWSKI     497 PRATT CT              03060                                                                                       
+MARIANO         ZAZULA          579 SOMMERVILLE ST        03060                                                                                       
+CHIQUITA        ABLIN           674 BOW ST                03061                                                                                       
+VERTIE          BLARE           222 DEWEY ST              03061                                                                                       
+JONNA           BOUGHNER        762 WILSON ST             03061                                                                                       
+ISRAEL          CERRONI         774 EMERALD ST            03061                                                                                       
+TEMEKA          CROFT           985 EDNA ST               03061                                                                                       
+KYLE            DECOSTA         897 ALMEDA ST             03061                                                                                       
+TANNER          DETULLIO        995 GRAY ST               03061                                                                                       
+SALVADOR        GAETZ           547 LAKE AVE              03061                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+GREGORY         GRIGNON         587 KILBY ST              03061                                                                                       
+BENNIE          GULKE           443 SUMMER ST             03061                                                                                       
+ROSLYN          HAFFLING        116 CANTON ST             03061                                                                                       
+CRAIG           HONOR           963 SLADE AVE             03061                                                                                       
+CATRICE         LUKANDER        445 CHERRY AVE            03061                                                                                       
+CLINT           MOLYNEAUX       948 WESTWOOD DR           03061                                                                                       
+MARK            ORRICK          130 CEDAR ST              03061                                                                                       
+DONETTE         PRUDHOMME       561 CELESTE ST            03061                                                                                       
+BRENDAN         RAPACKI         788 MAURICE ST            03061                                                                                       
+JAMILA          RUNYAN          168 GOSSELIN RD           03061                                                                                       
+WILLETTE        SALTOURIDES     464 DALE ST               03061                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+ALEX            SEARING         575 TRAFFORD ST           03061                                                                                       
+FATIMAH         STOVIAK         983 WILDWOOD ST           03061                                                                                       
+EDEN            TARRY           384 SIMONE ST             03061                                                                                       
+RICH            TESTERMAN       238 MEMORIAL DR           03061                                                                                       
+SLYVIA          UBILES          991 EDOUARD ST            03061                                                                                       
+BRUNO           WESSENDORF      570 WILLOW ST             03061                                                                                       
+LUPE            ANESI           787 ROYCRAFT RD           03062                                                                                       
+BERRY           ATES            779 PLUMMER ST            03062                                                                                       
+ELLIOT          BEAMES          968 HAYWARD ST            03062                                                                                       
+CORAL           BENNETH         602 WILSON ST             03062                                                                                       
+SHAWNTA         BOTELHO         704 JOHNSON ST            03062                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+SILAS           DAPONTE         439 EDOUARD ST            03062                                                                                       
+MAGDALENE       DAVALOS         452 STERLING AVE          03062                                                                                       
+GLEN            DESILVIO        109 ELIZABETH AVE         03062                                                                                       
+YEN             EISENBRANDT     326 ARMAND AVE            03062                                                                                       
+JIMMY           FAGIN           542 HOLLY AVE             03062                                                                                       
+FREDRIC         FAIRALL         117 MASSABESIC ST         03062                                                                                       
+JAKE            FEDEZKO         152 TYLER AVE             03062                                                                                       
+RAYMON          HENEISEN        837 GLENDALE AVE          03062                                                                                       
+CHIN            HUYARD          133 ELMHURST AVE          03062                                                                                       
+HELAINE         JUI             487 EDOUARD ST            03062                                                                                       
+KELLY           LAUTER          608 SHEFFIELD RD          03062                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+KENNETH         LUSHER          345 HAYES AVE             03062                                                                                       
+GENNY           MOQUIN          743 HAMPTON ST            03062                                                                                       
+CESAR           MUNSEY          278 HAYES AVE             03062                                                                                       
+CARLETTA        NERSESIAN       988 GEM DR                03062                                                                                       
+FREDRICKA       OLEJARZ         269 GRAY ST               03062                                                                                       
+ZANDRA          PETIT           840 LAUREL ST             03062                                                                                       
+WAYNE           PYTLOVANY       337 VANDORA DR            03062                                                                                       
+SHAWN           RIOSECO         368 VIEW ST               03062                                                                                       
+GUY             ROAM            440 DUNBAR ST             03062                                                                                       
+WARREN          SHEERIN         998 HARVARD ST            03062                                                                                       
+DORETHA         SIMLEY          404 CLIFFORD AVE          03062                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+LONNIE          STARRICK        813 HEDGEROSE WAY         03062                                                                                       
+ELLIOT          WEAKLY          421 ELMWOOD AVE           03062                                                                                       
+ERICK           YE              282 WILLOW ST             03062                                                                                       
+MELVA           ZOMORODI        452 PARKVIEW ST           03062                                                                                       
+NELIA           BANKSON         428 MASSABESIC ST         03063                                                                                       
+EDDIE           BEILINSON       196 BATCHELDER AVE        03063                                                                                       
+ROSE            BRUGGMAN        148 DALE ST               03063                                                                                       
+ALEXANDER       BUZZELLE        113 STERLING AVE          03063                                                                                       
+JULIET          CANDY           855 BELL ST               03063                                                                                       
+DOLLIE          CARLILE         964 HICKORY ST            03063                                                                                       
+JOHNNIE         CURIE           722 MAYNARD AVE           03063                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+DENNIS          DELAND          188 ELMWOOD AVE           03063                                                                                       
+GIUSEPPE        DENMARK         719 OAKDALE AVE           03063                                                                                       
+ROSARIA         GAWLAK          551 FORESTEDGE WAY        03063                                                                                       
+TYSON           GUZIAK          278 LEO ST                03063                                                                                       
+IN              HEHIR           391 BENTON ST             03063                                                                                       
+KENNY           HOPSKINS        250 FALLS AVE             03063                                                                                       
+OMER            HYSINGER        764 NEWBURY RD            03063                                                                                       
+THADDEUS        LOUGE           694 GREENLEAF ST          03063                                                                                       
+CHARLOTT        MCCOSKEY        716 LAUREN DR             03063                                                                                       
+GREGORY         MONTAN          383 KEVIN ST              03063                                                                                       
+ALVINA          NYBO            381 FOWLER ST             03063                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+EDWARDO         OKUTSU          965 CHASE AVE             03063                                                                                       
+VIVIEN          PETROFF         552 ARMAND AVE            03063                                                                                       
+NOBUKO          PROKUP          811 ROSEMONT AVE          03063                                                                                       
+AHMAD           PRONTO          783 SHERWOOD DR           03063                                                                                       
+EDWARD          SALMINEN        136 WELCH AVE             03063                                                                                       
+EDDIE           SCHIVELEY       602 ROSEDALE AVE          03063                                                                                       
+WINONA          SHUMSKY         648 JOSHUA DR             03063                                                                                       
+TERA            SODAWASSER      941 CROWLEY ST            03063                                                                                       
+LINH            TARTAGLIA       629 MILTON ST             03063                                                                                       
+KAREN           TRAMELL         934 HUDSON ST             03063                                                                                       
+GIL             TROXIL          193 SARGENT RD            03063                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+SINA            AGONOY          244 CIRCLE RD             03064                                                                                       
+NAKIA           ALFONZO         761 RICHARD ST            03064                                                                                       
+MAVIS           BARTYLLA        395 DALE ST               03064                                                                                       
+BRAD            CASTELLOW       570 WOODMAN ST            03064                                                                                       
+NOBLE           CONFREY         744 FREMONT ST            03064                                                                                       
+BRUCE           FECHTIG         262 CHERRY AVE            03064                                                                                       
+NATHAN          GILANI          911 SHEFFIELD RD          03064                                                                                       
+MARLON          HASELHUHN       357 VALENTINE DR          03064                                                                                       
+AIDE            HATLEE          719 PURDUE ST             03064                                                                                       
+TRINIDAD        HEZIAK          387 HAYWARD ST            03064                                                                                       
+SLYVIA          HOSKIN          654 ARCH ST               03064                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+TERRA           HOUGAS          284 FOX ST                03064                                                                                       
+EDMUNDO         LAMBECK         183 MAPLEWOOD ST          03064                                                                                       
+APOLONIA        MONDOK          216 KRAKOW AVE            03064                                                                                       
+LYMAN           OXFORD          983 ELMWOOD AVE           03064                                                                                       
+JULIUS          PARLER          348 COTTER CT             03064                                                                                       
+CATHEY          PICHE           464 NORRIS ST             03064                                                                                       
+JEANNETTA       STAVRIDES       636 HARRINGTON AVE        03064                                                                                       
+RICHIE          STRING          931 JEWETT ST             03064                                                                                       
+BUFORD          SYPOLT          986 STEVENS ST            03064                                                                                       
+SENAIDA         TRONSTAD        797 MITCHELL ST           03064                                                                                       
+GERI            TRUDEN          829 CHARLOTTE ST          03064                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+HOLLIS          VANWASSENHOVE   375 DORCHESTER ST         03064                                                                                       
+ROMEO           VIG             884 POND DR               03064                                                                                       
+
+145 rows selected.
+
+SQL> spool off

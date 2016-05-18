@@ -1,0 +1,91 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.street, customer_address_data.zipcode
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_address_data.customer_id = customer_data.customer_id
+  5  WHERE customer_address_data.city like 'SALEM'
+  6  ORDER BY customer_address_data.zipcode, customer_data.last_name;
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+SHAWN           BAYERL          598 WELCH AVE             03089                                                                                       
+NORMAN          BERNOTAS        459 ROSE AVE              03089                                                                                       
+JACKELYN        BIA             819 CONSTANT ST           03089                                                                                       
+ANDREAS         BLAKEWAY        216 RIVERDALE AVE         03089                                                                                       
+SHELTON         BURN            166 HAYWARD ST            03089                                                                                       
+HERIBERTO       BYRGE           573 MOORESVILLE RD        03089                                                                                       
+GARFIELD        CASSADA         200 HARRINGTON AVE        03089                                                                                       
+HOLLIS          CHRISTIE        142 RIDGEWOOD ST          03089                                                                                       
+ORPHA           COLLON          185 PLUMMER ST            03089                                                                                       
+VALORIE         CONNIFF         767 CAMERON ST            03089                                                                                       
+LEVI            DAGGETT         811 PUBLIC ST             03089                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+GRADY           DEJONGE         223 LEON AVE              03089                                                                                       
+PATRICIA        DUMENY          739 COTTAGE AVE           03089                                                                                       
+CLEMENTINA      DUNNELL         398 MEMORIAL DR           03089                                                                                       
+GALINA          DYMEK           211 CONSTANT ST           03089                                                                                       
+RYAN            ELLIOT          450 LINGARD ST            03089                                                                                       
+EMELIA          ESANNASON       877 EDOUARD ST            03089                                                                                       
+CELINDA         EVINS           290 CLAREMONT AVE         03089                                                                                       
+MICKIE          FALSETTI        677 MANCHESTER ST         03089                                                                                       
+GONZALO         FERGUSEN        651 RICHARD ST            03089                                                                                       
+NOEL            GELLIS          508 VAL ST                03089                                                                                       
+KYM             HARRADON        716 RAMSAY ST             03089                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+BELKIS          HASLETT         769 WILLOW ST             03089                                                                                       
+ECHO            HECKER          129 CLIFFORD AVE          03089                                                                                       
+NOREEN          HELSTAD         951 VANDORA DR            03089                                                                                       
+JERALDINE       HINDERAKER      706 WARSAW AVE            03089                                                                                       
+JONNA           HWEE            612 LAKE AVE              03089                                                                                       
+TRACY           ISAGAWA         911 KEYSTONE RD           03089                                                                                       
+RAISA           JANECZEK        543 ARMAND AVE            03089                                                                                       
+SHAQUITA        JOHNSTON        244 PRESCOTT ST           03089                                                                                       
+RICHARD         KABINA          161 ROBERT CT             03089                                                                                       
+JARRETT         KACERSKI        987 MYSTIC ST             03089                                                                                       
+JAMIE           KUBAS           341 SPRUCE ST             03089                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+JEANELLE        LAIBLE          663 HOME AVE              03089                                                                                       
+DEVON           LOIACONA        405 GOLD ST               03089                                                                                       
+BOOKER          MADRIGAL        252 ELIZABETH AVE         03089                                                                                       
+RAUL            MARISCAL        955 HAYWARD ST            03089                                                                                       
+KIRBY           MICHARD         182 LINCOLN ST            03089                                                                                       
+MERLIN          MOENING         781 PLUMMER ST            03089                                                                                       
+JOELLA          MOLESWORTH      528 JONES ST              03089                                                                                       
+JUNIOR          NEAL            581 PUBLIC ST             03089                                                                                       
+SHERRY          OSTERFELD       451 CROSS ST              03089                                                                                       
+LANDON          PERTUIT         510 PRESCOTT ST           03089                                                                                       
+AUDREY          PESHEK          505 SHASTA ST             03089                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+DEE             PULS            249 PINEHURST ST          03089                                                                                       
+BRITTNEY        RHYNARD         717 PROUT AVE             03089                                                                                       
+NAOMI           ROMBOUGH        959 FOX ST                03089                                                                                       
+CAREY           SANIATAN        881 PURDUE ST             03089                                                                                       
+NESTOR          SCHWADRON       768 HAYWARD ST            03089                                                                                       
+WALTER          SHUTTY          208 TAYLOR ST             03089                                                                                       
+CONNIE          SIGARS          370 SILVER ST             03089                                                                                       
+ALBERT          SLAGHT          573 ELMHURST AVE          03089                                                                                       
+BERNITA         STUDLER         579 WOODLAWN DR           03089                                                                                       
+CARROLL         TARDY           355 WILMOT ST             03089                                                                                       
+ROD             TELLIS          797 WILSON ST             03089                                                                                       
+
+First Name      Last Name       Street                    Zipcode                                                                                     
+=============== =============== ========================= =======                                                                                     
+LATONYA         TOMKOWICZ       988 VILLA ST              03089                                                                                       
+EUGENIA         UNTERSEHER      885 KILBY ST              03089                                                                                       
+GUSTAVO         VASSEL          156 TITUS AVE             03089                                                                                       
+DEREK           WEIMER          449 SANDYS WAY            03089                                                                                       
+GWENDOLYN       WETZ            769 ROSEMONT AVE          03089                                                                                       
+TAMAR           WILCOXEN        666 SPRUCE ST             03089                                                                                       
+KENNETH         WOJNER          676 HICKORY ST            03089                                                                                       
+
+62 rows selected.
+
+SQL> spool off

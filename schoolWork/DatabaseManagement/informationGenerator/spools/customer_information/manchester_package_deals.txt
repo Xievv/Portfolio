@@ -1,0 +1,320 @@
+SQL> set linesize 150
+SQL> SELECT customer_data.first_name, customer_data.last_name, customer_address_data.city, customer_packages.type, customer_packages.price
+  2  FROM customer_data
+  3  INNER JOIN customer_address_data
+  4  ON customer_data.customer_id=customer_address_data.customer_id
+  5  INNER JOIN customer_packages
+  6  ON customer_data.package_id=customer_packages.package_id
+  7  WHERE customer_address_data.city LIKE 'MANCHESTER'
+  8  ORDER BY customer_packages.price DESC;
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+RODGER          LANGANKE        MANCHESTER  GOLD     $14.99                                                                                           
+JEFFRY          JURGENSON       MANCHESTER  GOLD     $14.99                                                                                           
+DEWAYNE         THORNOCK        MANCHESTER  GOLD     $14.99                                                                                           
+YANG            MAZZARIELLO     MANCHESTER  GOLD     $14.99                                                                                           
+PARKER          FORMICHELLI     MANCHESTER  GOLD     $14.99                                                                                           
+CHERRYL         PRUIETT         MANCHESTER  GOLD     $14.99                                                                                           
+JOESPH          NATANI          MANCHESTER  GOLD     $14.99                                                                                           
+KELVIN          ROMESBURG       MANCHESTER  GOLD     $14.99                                                                                           
+EMERSON         SKATES          MANCHESTER  GOLD     $14.99                                                                                           
+GABRIELE        DUNNAVANT       MANCHESTER  GOLD     $14.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+TRINIDAD        KOTTWITZ        MANCHESTER  GOLD     $14.99                                                                                           
+KITTIE          CHINO           MANCHESTER  GOLD     $14.99                                                                                           
+ELROY           RODRIQUZ        MANCHESTER  GOLD     $14.99                                                                                           
+FAUSTO          KERSCHER        MANCHESTER  GOLD     $14.99                                                                                           
+AL              SWANT           MANCHESTER  GOLD     $14.99                                                                                           
+LAYNE           CHAVOUS         MANCHESTER  GOLD     $14.99                                                                                           
+IVORY           GHOSN           MANCHESTER  GOLD     $14.99                                                                                           
+DREMA           CAMPI           MANCHESTER  GOLD     $14.99                                                                                           
+REYNA           KACKLEY         MANCHESTER  GOLD     $14.99                                                                                           
+BOBBIE          BROSCHINSKY     MANCHESTER  GOLD     $14.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+DELTA           RUGER           MANCHESTER  GOLD     $14.99                                                                                           
+LAURA           LASCANO         MANCHESTER  GOLD     $14.99                                                                                           
+KARON           GIRARDOT        MANCHESTER  GOLD     $14.99                                                                                           
+DANIEL          RODWELL         MANCHESTER  GOLD     $14.99                                                                                           
+DIANNE          PARTIBLE        MANCHESTER  GOLD     $14.99                                                                                           
+GEORGIANA       TACY            MANCHESTER  GOLD     $14.99                                                                                           
+RENETTA         CORNMAN         MANCHESTER  GOLD     $14.99                                                                                           
+GEORGEANN       SIFERS          MANCHESTER  GOLD     $14.99                                                                                           
+SAUL            REEBER          MANCHESTER  GOLD     $14.99                                                                                           
+SORAYA          LEAN            MANCHESTER  GOLD     $14.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+PORFIRIO        KAZMER          MANCHESTER  GOLD     $14.99                                                                                           
+MYRNA           BOHLKEN         MANCHESTER  GOLD     $14.99                                                                                           
+KEITH           RUPPEL          MANCHESTER  GOLD     $14.99                                                                                           
+ALDO            YANNONE         MANCHESTER  GOLD     $14.99                                                                                           
+NATHALIE        TRAUTMAN        MANCHESTER  GOLD     $14.99                                                                                           
+HILLARY         BRIGNOLO        MANCHESTER  GOLD     $14.99                                                                                           
+FRITZ           CHHEANG         MANCHESTER  GOLD     $14.99                                                                                           
+ALFREDA         ZIELONKO        MANCHESTER  GOLD     $14.99                                                                                           
+ARIEL           BAIER           MANCHESTER  GOLD     $14.99                                                                                           
+FELIX           SAMA            MANCHESTER  GOLD     $14.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+JUAN            BARROWS         MANCHESTER  GOLD     $14.99                                                                                           
+IMELDA          PRESUME         MANCHESTER  GOLD     $14.99                                                                                           
+ALBERTINE       VILLALUZ        MANCHESTER  GOLD     $14.99                                                                                           
+JORDON          SIRIN           MANCHESTER  GOLD     $14.99                                                                                           
+KASEY           GRUSTAS         MANCHESTER  GOLD     $14.99                                                                                           
+BRETT           SONDRUP         MANCHESTER  GOLD     $14.99                                                                                           
+EDUARDO         OBNEGON         MANCHESTER  GOLD     $14.99                                                                                           
+TYRON           KOTTKE          MANCHESTER  GOLD     $14.99                                                                                           
+WILLARD         DUSTON          MANCHESTER  GOLD     $14.99                                                                                           
+BARRY           NOWLAND         MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+THADDEUS        MAHOLMES        MANCHESTER  SILVER    $9.99                                                                                           
+ADAN            HAGGLUND        MANCHESTER  SILVER    $9.99                                                                                           
+MOSE            PHOMMAJACK      MANCHESTER  SILVER    $9.99                                                                                           
+MONIKA          LAYEL           MANCHESTER  SILVER    $9.99                                                                                           
+JEROLD          BIDDICK         MANCHESTER  SILVER    $9.99                                                                                           
+EMANUEL         NOTTE           MANCHESTER  SILVER    $9.99                                                                                           
+REGGIE          MERINE          MANCHESTER  SILVER    $9.99                                                                                           
+GAVIN           BEGAN           MANCHESTER  SILVER    $9.99                                                                                           
+GRAZYNA         LACAILLE        MANCHESTER  SILVER    $9.99                                                                                           
+CIERA           SALIS           MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+MITCHELL        KER             MANCHESTER  SILVER    $9.99                                                                                           
+LEIDA           TIENDA          MANCHESTER  SILVER    $9.99                                                                                           
+BENITA          NIESENT         MANCHESTER  SILVER    $9.99                                                                                           
+SANDIE          LINDHOLM        MANCHESTER  SILVER    $9.99                                                                                           
+BRONWYN         RANSIER         MANCHESTER  SILVER    $9.99                                                                                           
+EFRAIN          PAPALLO         MANCHESTER  SILVER    $9.99                                                                                           
+VANITA          GROWDEN         MANCHESTER  SILVER    $9.99                                                                                           
+MERRILL         SENEGAL         MANCHESTER  SILVER    $9.99                                                                                           
+BRITTANY        RURY            MANCHESTER  SILVER    $9.99                                                                                           
+TERINA          SCHAAD          MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+MATHA           LASELLE         MANCHESTER  SILVER    $9.99                                                                                           
+CLARE           DEMONTIGNY      MANCHESTER  SILVER    $9.99                                                                                           
+BETTYE          BISACCIA        MANCHESTER  SILVER    $9.99                                                                                           
+TYSON           FLATO           MANCHESTER  SILVER    $9.99                                                                                           
+KOURTNEY        ALLIMAN         MANCHESTER  SILVER    $9.99                                                                                           
+DARRELL         SCARPINO        MANCHESTER  SILVER    $9.99                                                                                           
+KARA            BAISEY          MANCHESTER  SILVER    $9.99                                                                                           
+ERIN            VORSE           MANCHESTER  SILVER    $9.99                                                                                           
+CLAUDE          COLLEDGE        MANCHESTER  SILVER    $9.99                                                                                           
+DARRIN          OKULA           MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+DONN            TROENDLE        MANCHESTER  SILVER    $9.99                                                                                           
+ANGELE          BRANDNER        MANCHESTER  SILVER    $9.99                                                                                           
+MARK            GOOLSBY         MANCHESTER  SILVER    $9.99                                                                                           
+HARLAND         VIERLING        MANCHESTER  SILVER    $9.99                                                                                           
+GEARLDINE       VONSOOSTEN      MANCHESTER  SILVER    $9.99                                                                                           
+ALLA            JAROSZ          MANCHESTER  SILVER    $9.99                                                                                           
+WENDI           EVERLEY         MANCHESTER  SILVER    $9.99                                                                                           
+SAMMY           SALM            MANCHESTER  SILVER    $9.99                                                                                           
+BLYTHE          NORDAN          MANCHESTER  SILVER    $9.99                                                                                           
+LORRINE         SLOANE          MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+COLLETTE        CAIAZZO         MANCHESTER  SILVER    $9.99                                                                                           
+CHUCK           LAHMERS         MANCHESTER  SILVER    $9.99                                                                                           
+CRISTOPHER      SUSTAR          MANCHESTER  SILVER    $9.99                                                                                           
+NEWTON          RINDONE         MANCHESTER  SILVER    $9.99                                                                                           
+WALLY           SCHWENTKER      MANCHESTER  SILVER    $9.99                                                                                           
+LENITA          BZHYAN          MANCHESTER  SILVER    $9.99                                                                                           
+CHRISTIAN       BESECKER        MANCHESTER  SILVER    $9.99                                                                                           
+LAMAR           TONDREAU        MANCHESTER  SILVER    $9.99                                                                                           
+ROMEO           FANTROY         MANCHESTER  SILVER    $9.99                                                                                           
+RAQUEL          COSME           MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+QUYEN           RULLAN          MANCHESTER  SILVER    $9.99                                                                                           
+KENNA           HORAK           MANCHESTER  SILVER    $9.99                                                                                           
+DEVIN           TRAYCHEFF       MANCHESTER  SILVER    $9.99                                                                                           
+COLBY           MEHRER          MANCHESTER  SILVER    $9.99                                                                                           
+DARIA           YARMAN          MANCHESTER  SILVER    $9.99                                                                                           
+CLINT           ABERSON         MANCHESTER  SILVER    $9.99                                                                                           
+LAUNA           KEAR            MANCHESTER  SILVER    $9.99                                                                                           
+ERROL           SMIGEL          MANCHESTER  SILVER    $9.99                                                                                           
+RENEA           SCHROPE         MANCHESTER  SILVER    $9.99                                                                                           
+TRISHA          PUEBLA          MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+CAROLA          HLASTALA        MANCHESTER  SILVER    $9.99                                                                                           
+VINCENT         HOLDER          MANCHESTER  SILVER    $9.99                                                                                           
+JULENE          GOODHEART       MANCHESTER  SILVER    $9.99                                                                                           
+JC              EGWUOHUA        MANCHESTER  SILVER    $9.99                                                                                           
+FLORENE         KLINNER         MANCHESTER  SILVER    $9.99                                                                                           
+HARRIS          STOLIKER        MANCHESTER  SILVER    $9.99                                                                                           
+JONATHON        GAUTIER         MANCHESTER  SILVER    $9.99                                                                                           
+ERNA            WHEDON          MANCHESTER  SILVER    $9.99                                                                                           
+EDUARDO         ILLES           MANCHESTER  SILVER    $9.99                                                                                           
+FLETA           AMUNDSON        MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+NIKOLE          WEIGLEB         MANCHESTER  SILVER    $9.99                                                                                           
+CHRISSY         TARVIS          MANCHESTER  SILVER    $9.99                                                                                           
+RUSSEL          DECATO          MANCHESTER  SILVER    $9.99                                                                                           
+CLIFFORD        SCHWIEBERT      MANCHESTER  SILVER    $9.99                                                                                           
+MARCO           ARICHABALA      MANCHESTER  SILVER    $9.99                                                                                           
+DEWAYNE         EAGLESTON       MANCHESTER  SILVER    $9.99                                                                                           
+SHARLA          LOOPER          MANCHESTER  SILVER    $9.99                                                                                           
+NED             HELBLING        MANCHESTER  SILVER    $9.99                                                                                           
+BOYD            SHONT           MANCHESTER  SILVER    $9.99                                                                                           
+ANTONIETTA      DEHAY           MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+CELESTINA       SCHMID          MANCHESTER  SILVER    $9.99                                                                                           
+AARON           ZERRING         MANCHESTER  SILVER    $9.99                                                                                           
+NORMAND         WIMPEY          MANCHESTER  SILVER    $9.99                                                                                           
+EMERSON         GILMORE         MANCHESTER  SILVER    $9.99                                                                                           
+PERRY           HAVENS          MANCHESTER  SILVER    $9.99                                                                                           
+KRIS            HAFLEY          MANCHESTER  SILVER    $9.99                                                                                           
+HEATHER         CREGAR          MANCHESTER  SILVER    $9.99                                                                                           
+AURORA          TAUL            MANCHESTER  SILVER    $9.99                                                                                           
+BROOKS          HOWLIN          MANCHESTER  SILVER    $9.99                                                                                           
+GENIE           PICOU           MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+RAFAEL          HAMMETTE        MANCHESTER  SILVER    $9.99                                                                                           
+AMOS            OLEN            MANCHESTER  SILVER    $9.99                                                                                           
+CHANG           JELINEK         MANCHESTER  SILVER    $9.99                                                                                           
+AUGUSTINA       WENGERT         MANCHESTER  SILVER    $9.99                                                                                           
+SHAKIRA         HAMBURG         MANCHESTER  SILVER    $9.99                                                                                           
+OWEN            REMPE           MANCHESTER  SILVER    $9.99                                                                                           
+WILEY           TREMEL          MANCHESTER  SILVER    $9.99                                                                                           
+BORIS           LAMER           MANCHESTER  SILVER    $9.99                                                                                           
+FLOYD           LEGHORN         MANCHESTER  SILVER    $9.99                                                                                           
+MONTE           DEROUSSE        MANCHESTER  SILVER    $9.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+LAREE           TALLIE          MANCHESTER  SILVER    $9.99                                                                                           
+CASANDRA        LOOSEY          MANCHESTER  BRONZE    $4.99                                                                                           
+AUSTIN          CLAYBOURN       MANCHESTER  BRONZE    $4.99                                                                                           
+RICHIE          HOUSE           MANCHESTER  BRONZE    $4.99                                                                                           
+LUTHER          LARK            MANCHESTER  BRONZE    $4.99                                                                                           
+JANESSA         WILTS           MANCHESTER  BRONZE    $4.99                                                                                           
+ANTIONE         ODOMES          MANCHESTER  BRONZE    $4.99                                                                                           
+ENEIDA          MENEUS          MANCHESTER  BRONZE    $4.99                                                                                           
+CAMILLE         TORRA           MANCHESTER  BRONZE    $4.99                                                                                           
+CHERYL          DESANTOS        MANCHESTER  BRONZE    $4.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+PRINCE          STAMER          MANCHESTER  BRONZE    $4.99                                                                                           
+JULIET          AMESCUA         MANCHESTER  BRONZE    $4.99                                                                                           
+MERRI           PEBWORTH        MANCHESTER  BRONZE    $4.99                                                                                           
+AMIRA           DOAKES          MANCHESTER  BRONZE    $4.99                                                                                           
+DARREL          MOZDZIERZ       MANCHESTER  BRONZE    $4.99                                                                                           
+GERALD          BOBLAK          MANCHESTER  BRONZE    $4.99                                                                                           
+NATALIA         COUILLARD       MANCHESTER  BRONZE    $4.99                                                                                           
+JULIUS          MACHOLD         MANCHESTER  BRONZE    $4.99                                                                                           
+SUNSHINE        TESSNER         MANCHESTER  BRONZE    $4.99                                                                                           
+MAURINE         LOVE            MANCHESTER  BRONZE    $4.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+MATTHEW         CIULLO          MANCHESTER  BRONZE    $4.99                                                                                           
+SHELTON         SIEKER          MANCHESTER  BRONZE    $4.99                                                                                           
+KENTON          EMECHE          MANCHESTER  BRONZE    $4.99                                                                                           
+UN              GRANADA         MANCHESTER  BRONZE    $4.99                                                                                           
+VERNA           ALEXANDERS      MANCHESTER  BRONZE    $4.99                                                                                           
+KYLA            SPARTIN         MANCHESTER  BRONZE    $4.99                                                                                           
+BELINDA         SEPER           MANCHESTER  BRONZE    $4.99                                                                                           
+BRADLY          BONIFIELD       MANCHESTER  BRONZE    $4.99                                                                                           
+SPENCER         LECHLITER       MANCHESTER  BRONZE    $4.99                                                                                           
+IVAN            KESS            MANCHESTER  BRONZE    $4.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+MAYE            MIKULICH        MANCHESTER  BRONZE    $4.99                                                                                           
+JOSPEH          DESAK           MANCHESTER  BRONZE    $4.99                                                                                           
+DEIDRE          OERTLE          MANCHESTER  BRONZE    $4.99                                                                                           
+ZACHARIAH       DESANTIS        MANCHESTER  BRONZE    $4.99                                                                                           
+DAMON           JAKUBEK         MANCHESTER  BRONZE    $4.99                                                                                           
+ART             BROADNAX        MANCHESTER  BRONZE    $4.99                                                                                           
+ARON            WERKHOVEN       MANCHESTER  BRONZE    $4.99                                                                                           
+VAL             DEHASS          MANCHESTER  BRONZE    $4.99                                                                                           
+DEANGELO        FRAIRE          MANCHESTER  BRONZE    $4.99                                                                                           
+BRIANNA         LIEBERT         MANCHESTER  BRONZE    $4.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+RIGOBERTO       MOLLET          MANCHESTER  BRONZE    $4.99                                                                                           
+KALA            SCHARPMAN       MANCHESTER  BRONZE    $4.99                                                                                           
+ALETHIA         BIRK            MANCHESTER  BRONZE    $4.99                                                                                           
+LASONYA         EVASCO          MANCHESTER  BRONZE    $4.99                                                                                           
+WALKER          OLLER           MANCHESTER  BRONZE    $4.99                                                                                           
+JANINE          MINIX           MANCHESTER  BRONZE    $4.99                                                                                           
+ALESIA          BEAUDETTE       MANCHESTER  BRONZE    $4.99                                                                                           
+DARELL          BEAMAN          MANCHESTER  BRONZE    $4.99                                                                                           
+ERIN            CABILES         MANCHESTER  BRONZE    $4.99                                                                                           
+MICHAEL         CARMOLLI        MANCHESTER  BRONZE    $4.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+MONNIE          FLYNT           MANCHESTER  BRONZE    $4.99                                                                                           
+COLUMBUS        EERKES          MANCHESTER  BRONZE    $4.99                                                                                           
+FREEMAN         JORINSCAY       MANCHESTER  BRONZE    $4.99                                                                                           
+MELISSA         MANDAHL         MANCHESTER  BRONZE    $4.99                                                                                           
+JOHNIE          DYRESON         MANCHESTER  BRONZE    $4.99                                                                                           
+JULISSA         ESTRIN          MANCHESTER  BRONZE    $4.99                                                                                           
+DIGNA           PRAWDZIK        MANCHESTER  BRONZE    $4.99                                                                                           
+DANILO          VANDEUSEN       MANCHESTER  BRONZE    $4.99                                                                                           
+GREGORIO        YAMAUCHI        MANCHESTER  BRONZE    $4.99                                                                                           
+JUNIOR          CALDEIRA        MANCHESTER  BRONZE    $4.99                                                                                           
+
+                                            Package                                                                                                   
+First Name      Last Name       City        Type      Price                                                                                           
+=============== =============== =========== ======= =======                                                                                           
+CHERRIE         ONSTEAD         MANCHESTER  BRONZE    $4.99                                                                                           
+RUEBEN          STARCHMAN       MANCHESTER  BRONZE    $4.99                                                                                           
+SELINA          SHAH            MANCHESTER  BRONZE    $4.99                                                                                           
+DEBBRA          EBBERS          MANCHESTER  BRONZE    $4.99                                                                                           
+NA              LIGGANS         MANCHESTER  BRONZE    $4.99                                                                                           
+ADRIAN          ENTWISTLE       MANCHESTER  BRONZE    $4.99                                                                                           
+HERMILA         BASCLE          MANCHESTER  BRONZE    $4.99                                                                                           
+TINY            JUERGENS        MANCHESTER  BRONZE    $4.99                                                                                           
+JARRED          CERQUEIRA       MANCHESTER  BRONZE    $4.99                                                                                           
+
+219 rows selected.
+
+SQL> spool off
